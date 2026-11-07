@@ -387,19 +387,17 @@ Hay dos servicios en Kyra Cloud:
 
 La tienda queda en `https://<servidor>/mya/` y la API en `https://<servidor>/mya-api/`.
 
-**Configuración** (pestaña *Variables de Entorno* de `mya-footwear-store`): las mismas claves de
-`backend/.env.example` con los datos del hosting (`DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASS`,
-`JWT_SECRET`, `CORS_ORIGINS`, `FRONTEND_URL`, `WOMPI_*`…). `Config.php` lee primero `backend/.env` y,
-para lo que no esté ahí, usa `getenv()`. Al guardar, el servidor se reinicia unos segundos.
+**Configuración: `backend/.env` en el servidor.** Tiene las mismas claves de `backend/.env.example`
+con los datos del hosting (`DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASS`, `JWT_SECRET`, `CORS_ORIGINS`,
+`FRONTEND_URL`, `WOMPI_*`…). Para cambiar algo (por ejemplo poner las llaves de Wompi):
+**Archivos** → `backend` → `.env` → editar y guardar. Se aplica en la siguiente petición, sin reiniciar.
+El archivo no está en git, los zips no lo tocan y no se puede abrir desde internet (está fuera de
+`public/`).
 
-> **Ojo:** el panel puede mostrar "No hay variables de entorno configuradas" aunque el servidor sí las
-> tenga, y **Guardar reemplaza todas**. Antes de guardar ahí, revisa en la Terminal con
-> `env | cut -d= -f1 | sort`; si la lista del panel está vacía, hay que volver a importar las 16
-> (incluidas `DB_PASS` y `JWT_SECRET`) o se borran.
->
-> Por eso, al cambiar el subdominio, `FRONTEND_URL` y `CORS_ORIGINS` se actualizaron en un
-> `backend/.env` creado en el servidor (no está en git y los zips no lo tocan). Si vuelves a cambiar el
-> subdominio, edita ese archivo en **Archivos** → `backend/.env`.
+> **No uses la pestaña *Variables de Entorno* de Kyra.** En el Hosting Web el panel no puede leer las
+> variables (su API responde 404 al pedirlas), así que siempre se ve vacío, y **Guardar reemplaza
+> todas** por lo que haya en pantalla. La API ya no depende de ellas: `Config.php` lee primero
+> `backend/.env` y solo usa `getenv()` para lo que no esté en el archivo.
 
 ### Actualizar la tienda publicada
 
@@ -424,11 +422,11 @@ Si cambias la estructura de la base, aplica la migración nueva desde la Termina
 
 ### Cargar o reiniciar la base de datos en el hosting
 
-En la **Terminal** de `mya-footwear-store` (usa la contraseña de las variables de entorno, no hay que
+En la **Terminal** de `mya-footwear-store` (usa la contraseña de `backend/.env`, no hay que
 escribirla). **Borra y vuelve a crear todas las tablas** con los datos de prueba:
 
 ```bash
-cd /var/www/html && php -r '$p=new PDO("mysql:host=".getenv("DB_HOST").";port=3306;charset=utf8mb4",getenv("DB_USER"),getenv("DB_PASS"),[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);$p->exec("SET time_zone=\x27-05:00\x27");foreach(["database/schema.sql","database/seed.sql"] as $f){$s=$p->query(file_get_contents($f));do{}while($s->nextRowset());echo "$f OK\n";}'
+cd /var/www/html && php -r 'require "backend/vendor/autoload.php";use App\Config\Config as C;C::cargar("backend/.env");$p=new PDO("mysql:host=".C::get("DB_HOST").";port=3306;charset=utf8mb4",C::get("DB_USER"),C::get("DB_PASS"),[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);$p->exec("SET time_zone=\x27-05:00\x27");foreach(["database/schema.sql","database/seed.sql"] as $f){$s=$p->query(file_get_contents($f));do{}while($s->nextRowset());echo "$f OK\n";}'
 ```
 
 El `SET time_zone` hace que las fechas del seed queden en hora de Colombia.

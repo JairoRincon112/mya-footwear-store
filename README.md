@@ -375,18 +375,53 @@ MySQL, SSL y `mod_rewrite`. Con el túnel abierto, el webhook de Wompi se puede 
 
 ## Publicar en Kyra Cloud (hosting)
 
-El servidor es de tipo Hosting Web con PHP (Apache, PHP 8.4 con GD y pdo_mysql, Composer, sin Node).
-Clona el repositorio en `/var/www/html` y publica `/var/www/html/public`, así que la tienda queda en
-`https://<servidor>/mya/` y la API en `https://<servidor>/mya-api/`.
+Tienda publicada: <https://mya-footwear-store-4b37a7.kyracloud.com/mya/>
 
-1. Pestaña **GitHub**: vincular este repositorio (rama `main`).
-2. Pestaña **Terminal**: `cd backend && composer install --no-dev --optimize-autoloader`.
-3. Pestaña **Variables de Entorno**: las mismas claves de `backend/.env.example` con los datos del
-   hosting (`DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASS`, `JWT_SECRET`, `CORS_ORIGINS`, `FRONTEND_URL`,
-   `WOMPI_*`…). `Config.php` las lee con `getenv()` cuando no hay `.env`.
-4. Base de datos MySQL: cargar `database/schema.sql` y luego `database/seed.sql`.
+Hay dos servicios en Kyra Cloud:
 
-Para actualizar: `npm run build` en local, commit, `git push` y desplegar de nuevo.
+| Servicio | Tipo | Qué es |
+|---|---|---|
+| `mya-footwear-store` | Hosting Web PHP | Apache, PHP 8.4 con GD y pdo_mysql, Composer, sin Node. Publica `/var/www/html/public` |
+| `mya-db` | MariaDB 11 | Base `mya_footwear`, usuario `mya`. Host interno en la red privada: `mya-db-0969203a` |
+
+La tienda queda en `https://<servidor>/mya/` y la API en `https://<servidor>/mya-api/`.
+
+**Configuración** (pestaña *Variables de Entorno* de `mya-footwear-store`): las mismas claves de
+`backend/.env.example` con los datos del hosting (`DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASS`,
+`JWT_SECRET`, `CORS_ORIGINS`, `FRONTEND_URL`, `WOMPI_*`…). `Config.php` las lee con `getenv()` cuando
+no hay `.env`. Al guardar, el servidor se reinicia unos segundos.
+
+### Actualizar la tienda publicada
+
+La vinculación con GitHub del panel no funciona en el Hosting Web (muestra "vinculado" pero no lo
+guarda), así que se actualiza subiendo un .zip:
+
+1. Haz commit y `git push` de tus cambios.
+2. Doble clic en `herramientas/empaquetar-despliegue.bat`. Compila el frontend y crea
+   `herramientas/mya-footwear-store.zip` con el último commit. Si la compilación cambió archivos,
+   te pide hacer commit primero.
+3. En Kyra: servidor `mya-footwear-store` → **Archivos** → en la raíz, **Subir Archivo** → el zip →
+   **Confirmar subida**.
+4. Pestaña **Terminal**:
+
+   ```bash
+   cd /var/www/html && unzip -oq mya-footwear-store.zip && rm mya-footwear-store.zip
+   cd backend && composer install --no-dev --optimize-autoloader --no-interaction
+   ```
+
+Esto no toca la base de datos, las variables de entorno ni las imágenes subidas desde el panel.
+Si cambias la estructura de la base, aplica la migración nueva desde la Terminal.
+
+### Cargar o reiniciar la base de datos en el hosting
+
+En la **Terminal** de `mya-footwear-store` (usa la contraseña de las variables de entorno, no hay que
+escribirla). **Borra y vuelve a crear todas las tablas** con los datos de prueba:
+
+```bash
+cd /var/www/html && php -r '$p=new PDO("mysql:host=".getenv("DB_HOST").";port=3306;charset=utf8mb4",getenv("DB_USER"),getenv("DB_PASS"),[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);$p->exec("SET time_zone=\x27-05:00\x27");foreach(["database/schema.sql","database/seed.sql"] as $f){$s=$p->query(file_get_contents($f));do{}while($s->nextRowset());echo "$f OK\n";}'
+```
+
+El `SET time_zone` hace que las fechas del seed queden en hora de Colombia.
 
 ## Actualizar una base de datos existente
 

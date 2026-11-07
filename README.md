@@ -375,7 +375,8 @@ MySQL, SSL y `mod_rewrite`. Con el túnel abierto, el webhook de Wompi se puede 
 
 ## Publicar en Kyra Cloud (hosting)
 
-Tienda publicada: <https://mya-footwear-store-4b37a7.kyracloud.com/mya/>
+Tienda publicada: <https://mya-footwear-store.kyracloud.com> (redirige a `/mya/`). El subdominio se
+elige en la pestaña **Nginx / HTTPS** → *Subdominio gratis* → *Cambiar*.
 
 Hay dos servicios en Kyra Cloud:
 
@@ -388,8 +389,17 @@ La tienda queda en `https://<servidor>/mya/` y la API en `https://<servidor>/mya
 
 **Configuración** (pestaña *Variables de Entorno* de `mya-footwear-store`): las mismas claves de
 `backend/.env.example` con los datos del hosting (`DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASS`,
-`JWT_SECRET`, `CORS_ORIGINS`, `FRONTEND_URL`, `WOMPI_*`…). `Config.php` las lee con `getenv()` cuando
-no hay `.env`. Al guardar, el servidor se reinicia unos segundos.
+`JWT_SECRET`, `CORS_ORIGINS`, `FRONTEND_URL`, `WOMPI_*`…). `Config.php` lee primero `backend/.env` y,
+para lo que no esté ahí, usa `getenv()`. Al guardar, el servidor se reinicia unos segundos.
+
+> **Ojo:** el panel puede mostrar "No hay variables de entorno configuradas" aunque el servidor sí las
+> tenga, y **Guardar reemplaza todas**. Antes de guardar ahí, revisa en la Terminal con
+> `env | cut -d= -f1 | sort`; si la lista del panel está vacía, hay que volver a importar las 16
+> (incluidas `DB_PASS` y `JWT_SECRET`) o se borran.
+>
+> Por eso, al cambiar el subdominio, `FRONTEND_URL` y `CORS_ORIGINS` se actualizaron en un
+> `backend/.env` creado en el servidor (no está en git y los zips no lo tocan). Si vuelves a cambiar el
+> subdominio, edita ese archivo en **Archivos** → `backend/.env`.
 
 ### Actualizar la tienda publicada
 

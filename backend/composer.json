@@ -1,0 +1,21 @@
+{
+    "name": "mya/footwear-api",
+    "description": "API REST de MyA FOOTWEAR STORE en PHP puro con arquitectura MVC",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.1",
+        "ext-pdo": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-fileinfo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}

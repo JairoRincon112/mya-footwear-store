@@ -1,0 +1,14 @@
+# Al publicar la app compilada en Apache (http://localhost/mya/),
+# cualquier ruta de Vue (ej. /mya/producto/superstar) se resuelve con index.html.
+
+# No mostrar listados de carpetas (ej. /mya/assets/)
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /mya/
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /mya/index.html [L]
+</IfModule>

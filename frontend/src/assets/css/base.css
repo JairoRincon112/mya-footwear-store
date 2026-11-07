@@ -1,0 +1,380 @@
+/* =========================================================================
+   Estilos globales de MyA FOOTWEAR STORE
+   Tomados del diseño original (home.css / segunda.css): variables, menú
+   principal fijo y tipografía Poppins. Los estilos de cada pantalla viven
+   en su componente (<style scoped>), como antes vivían en su propio .css.
+   ========================================================================= */
+
+:root {
+    /* color */
+    --first-color: hsl(24, 100%, 50%);
+    --title-color: hsl(0, 0%, 0%);
+    --text-color: hsl(0, 0%, 0%);
+    --body-color: hsl(0, 19%, 93%);
+    --container-color: hsl(0, 0%, 99%);
+
+    /* colores de apoyo para formularios y paneles */
+    --naranja: #ff6600;
+    --naranja-claro: #ff8533;
+    --gris-borde: #bbbbbb;
+    --gris-suave: #eeeeee;
+    --texto-secundario: #555555;
+    --error: #b00020;
+    --exito: #1b6e2c;
+
+    /* font and typography */
+    --body-font: "Poppins", sans-serif;
+    --h2-font-size: 1.25rem;
+    --small-font-size: .813rem;
+
+    /* alto del menú fijo, para que el contenido no quede debajo */
+    --alto-header: 100px;
+}
+
+@media screen and (min-width: 1120px) {
+    :root {
+        --h2-font-size: 1.5rem;
+        --small-font-size: .875rem;
+    }
+}
+
+/*------------------------------------------- base ------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Al saltar a un ancla o enfocar un campo, que no quede tapado por el menú fijo */
+html {
+    scroll-padding-top: calc(var(--alto-header) + 16px);
+}
+
+a {
+    color: var(--title-color);
+}
+
+/* Todos los títulos usan la tipografía del carrusel: Poppins extra gruesa y compacta */
+h1,
+h2 {
+    color: var(--title-color);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+h3 {
+    letter-spacing: -0.01em;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+/*-------------------------------------------------- MENU PRINCIPAL ----------------------------------------------------*/
+
+header.menu-principal {
+    display: flex;
+    min-height: 70px;
+    background-color: #ff6600;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px;
+    width: 80px;
+    margin-right: 20px;
+    border-radius: 60%;
+    object-fit: cover;
+}
+
+/* Tipografía del menú con el mismo estilo del carrusel: Poppins gruesa y compacta */
+.clase_empresa {
+    font-size: 2em;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+header.menu-principal nav a,
+header.menu-principal nav .saludo {
+    position: relative;
+    display: inline-block;
+    padding: 6px 0;
+    margin-right: 34px;
+    font-size: .86rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+}
+
+/* Subrayado que crece al pasar el mouse y queda fijo en la página actual */
+header.menu-principal nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .25s ease;
+}
+
+header.menu-principal nav a:hover {
+    color: #fff;
+}
+
+header.menu-principal nav a:hover::after,
+header.menu-principal nav a.router-link-exact-active::after {
+    transform: scaleX(1);
+}
+
+header.menu-principal nav a.router-link-exact-active {
+    color: #fff;
+}
+
+header.menu-principal nav .saludo {
+    letter-spacing: .02em;
+    text-transform: none;
+}
+
+header.menu-principal nav.con-sesion a,
+header.menu-principal nav.con-sesion .saludo {
+    margin-right: 20px;
+}
+
+header.menu-principal nav .saludo {
+    white-space: nowrap;
+}
+
+@media (max-width: 1100px) {
+    header.menu-principal nav a,
+    header.menu-principal nav .saludo {
+        margin-right: 18px;
+        letter-spacing: .08em;
+    }
+}
+
+@media (max-width: 700px) {
+    :root {
+        --alto-header: 190px;
+    }
+
+    header.menu-principal {
+        flex-direction: column;
+    }
+
+    header.menu-principal nav {
+        padding: 10px 0px;
+        text-align: center;
+    }
+
+    header.menu-principal nav a,
+    header.menu-principal nav .saludo,
+    header.menu-principal nav.con-sesion a,
+    header.menu-principal nav.con-sesion .saludo {
+        margin: 0 6px;
+        font-size: .78rem;
+        letter-spacing: .06em;
+    }
+
+    .clase_empresa {
+        font-size: 1.6em;
+    }
+}
+
+/* Títulos de cada vista (Mi cuenta, Checkout, Mis pedidos...) con el estilo del carrusel */
+.titulo_descuento {
+    margin: 36px 16px 28px;
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: var(--title-color);
+}
+
+.titulo_descuento::after {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 4px;
+    margin: 14px auto 0;
+    background: var(--naranja);
+    border-radius: 4px;
+}
+
+/*------------------------------------------- componentes comunes ------------------------------------------*/
+
+.boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 18px;
+    font-weight: 600;
+    color: #000;
+    background: var(--naranja);
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color .2s ease;
+}
+
+.boton:hover:not(:disabled) {
+    background: var(--naranja-claro);
+}
+
+.boton:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+}
+
+.boton-secundario {
+    background: var(--gris-suave);
+}
+
+.boton-secundario:hover:not(:disabled) {
+    background: #dddddd;
+}
+
+.boton-peligro {
+    color: #fff;
+    background: #b3261e;
+}
+
+.boton-peligro:hover:not(:disabled) {
+    background: #8c1d18;
+}
+
+.boton-pequeno {
+    padding: 6px 12px;
+    font-size: .85rem;
+}
+
+.boton:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--naranja);
+    outline-offset: 2px;
+}
+
+.alerta {
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: .92rem;
+}
+
+.alerta-error {
+    color: var(--error);
+    background: #fdecea;
+}
+
+.alerta-exito {
+    color: var(--exito);
+    background: #e7f4ea;
+}
+
+.cargando {
+    padding: 40px 16px;
+    text-align: center;
+    color: var(--texto-secundario);
+}
+
+.cargando i {
+    margin-right: 8px;
+    color: var(--naranja);
+}
+
+.solo-lectores {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Formularios del login y del panel */
+.formulario {
+    display: grid;
+    gap: 14px;
+}
+
+.campo {
+    display: grid;
+    gap: 4px;
+    min-width: 0; /* evita que campos anchos (fecha y hora) se monten sobre la columna vecina */
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font-weight: 400;
+    background: #fff;
+    border: 1px solid var(--gris-borde);
+    border-radius: 8px;
+}
+
+.campo textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.campo.con-error input,
+.campo.con-error select,
+.campo.con-error textarea {
+    border-color: var(--error);
+}
+
+.campo .error-campo {
+    font-size: .82rem;
+    font-weight: 400;
+    color: var(--error);
+}
+
+.campo-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: .92rem;
+}

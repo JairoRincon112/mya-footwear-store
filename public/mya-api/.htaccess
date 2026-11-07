@@ -1,0 +1,14 @@
+# Redirige todas las peticiones al router frontal (index.php),
+# excepto los archivos que existen (imágenes de productos).
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Conserva la cabecera Authorization (token JWT) para PHP.
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>

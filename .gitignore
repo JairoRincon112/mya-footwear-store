@@ -1,0 +1,27 @@
+# Credenciales y configuración local (nunca se suben)
+backend/.env
+frontend/.env
+frontend/.env.local
+
+# Correos guardados en modo MAIL_DRIVER=log
+backend/storage/
+
+# Dependencias (se instalan con composer / npm)
+backend/vendor/
+frontend/node_modules/
+
+# Compilado viejo del frontend. Ahora "npm run build" deja la app en public/mya,
+# que SÍ se versiona porque el hosting no tiene Node para compilarla.
+frontend/dist/
+
+# Imágenes subidas desde el panel (las del catálogo inicial sí se versionan)
+public/mya-api/uploads/*
+!public/mya-api/uploads/.htaccess
+
+# Sistema y editores
+.vscode/
+desktop.ini
+Thumbs.db
+.DS_Store
+*.log
+herramientas/direccion-publica.txt

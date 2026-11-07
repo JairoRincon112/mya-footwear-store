@@ -19,7 +19,7 @@ Write-Host 'Compilando el frontend...' -ForegroundColor Cyan
 Push-Location (Join-Path $raiz 'frontend')
 try {
     npm run build
-    if ($LASTEXITCODE -ne 0) { throw 'Falló npm run build.' }
+    if ($LASTEXITCODE -ne 0) { throw 'Fallo npm run build.' }
 } finally {
     Pop-Location
 }
@@ -29,7 +29,7 @@ try {
     $pendientes = git status --porcelain
     if ($pendientes) {
         Write-Host ''
-        Write-Host 'Hay cambios sin commit (incluida la compilación nueva):' -ForegroundColor Yellow
+        Write-Host 'Hay cambios sin commit (incluida la compilacion nueva):' -ForegroundColor Yellow
         Write-Host ($pendientes -join "`n")
         Write-Host ''
         Write-Host 'Haz commit y git push, y vuelve a ejecutar este script.' -ForegroundColor Yellow
@@ -37,7 +37,7 @@ try {
     }
 
     git archive --format=zip -o $zip HEAD
-    if ($LASTEXITCODE -ne 0) { throw 'Falló git archive.' }
+    if ($LASTEXITCODE -ne 0) { throw 'Fallo git archive.' }
 } finally {
     Pop-Location
 }
@@ -45,4 +45,4 @@ try {
 $tamano = [math]::Round((Get-Item $zip).Length / 1MB, 1)
 Write-Host ''
 Write-Host "Listo: $zip ($tamano MB)" -ForegroundColor Green
-Write-Host 'Súbelo en Kyra Cloud -> servidor mya-footwear-store -> Archivos.'
+Write-Host 'Subelo en Kyra Cloud -> servidor mya-footwear-store -> Archivos.'

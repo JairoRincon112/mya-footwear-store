@@ -13,6 +13,9 @@ use App\Core\HttpException;
  */
 final class Variante extends Model
 {
+    /** Movimientos que el personal puede registrar a mano (venta y devolución por cancelación las genera Pedido). */
+    public const TIPOS_MANUALES = ['entrada', 'ajuste', 'devolucion'];
+
     /** @return array<string, mixed>|null */
     public function buscarPorId(int $id): ?array
     {
@@ -87,7 +90,8 @@ final class Variante extends Model
     }
 
     /**
-     * Suma o resta unidades al stock de forma segura:
+     * Movimiento manual de inventario (entrada, ajuste o devolución) hecho por el personal.
+     * Aplica las reglas del inventario y suma o resta unidades de forma segura:
      * SELECT ... FOR UPDATE bloquea la fila hasta terminar la transacción, así dos
      * personas no pueden modificar el mismo stock al mismo tiempo.
      *
@@ -95,6 +99,8 @@ final class Variante extends Model
      */
     public function ajustarStock(int $id, int $cantidad, string $tipo, ?string $motivo, int $usuarioId): int
     {
+        $this->validarMovimientoManual($cantidad, $tipo, $motivo);
+
         return Database::transaccion(function () use ($id, $cantidad, $tipo, $motivo, $usuarioId): int {
             $stock = $this->stockBloqueado($id);
 
@@ -151,6 +157,26 @@ final class Variante extends Model
 
             return $nuevoStock;
         });
+    }
+
+    /**
+     * Reglas de un movimiento manual: la cantidad no puede ser cero, solo el tipo "ajuste"
+     * puede restar unidades y todo ajuste debe explicar su motivo (queda en el historial).
+     */
+    private function validarMovimientoManual(int $cantidad, string $tipo, ?string $motivo): void
+    {
+        if (!in_array($tipo, self::TIPOS_MANUALES, true)) {
+            throw HttpException::validacion(['tipo' => 'Tipo de movimiento no válido.']);
+        }
+        if ($cantidad === 0) {
+            throw HttpException::validacion(['cantidad' => 'La cantidad no puede ser cero.']);
+        }
+        if ($tipo !== 'ajuste' && $cantidad < 0) {
+            throw HttpException::validacion(['cantidad' => 'Para descontar unidades usa el tipo "ajuste".']);
+        }
+        if ($tipo === 'ajuste' && trim((string) $motivo) === '') {
+            throw HttpException::validacion(['motivo' => 'Explica el motivo del ajuste.']);
+        }
     }
 
     /**

@@ -101,7 +101,7 @@ final class VarianteController extends Controller
     /**
      * PATCH /api/variantes/{id}/stock
      *   { "tipo": "entrada", "cantidad": 5, "motivo": "Llegó pedido del proveedor" }
-     * entrada y devolucion suman unidades; ajuste puede sumar o restar (corrección de inventario).
+     * El controlador solo valida el formato; las reglas del inventario las aplica Variante.
      */
     public function ajustarStock(Request $request): void
     {
@@ -112,20 +112,10 @@ final class VarianteController extends Controller
         }
 
         $datos = Validator::validar($request->cuerpo(), [
-            'tipo' => 'requerido|en:entrada,ajuste,devolucion',
+            'tipo' => 'requerido|en:' . implode(',', Variante::TIPOS_MANUALES),
             'cantidad' => 'requerido|entero|minimo:-100000|maximo:100000',
             'motivo' => 'texto|max:255',
         ]);
-
-        if ($datos['cantidad'] === 0) {
-            throw HttpException::validacion(['cantidad' => 'La cantidad no puede ser cero.']);
-        }
-        if ($datos['tipo'] !== 'ajuste' && $datos['cantidad'] < 0) {
-            throw HttpException::validacion(['cantidad' => 'Para descontar unidades usa el tipo "ajuste".']);
-        }
-        if ($datos['tipo'] === 'ajuste' && empty($datos['motivo'])) {
-            throw HttpException::validacion(['motivo' => 'Explica el motivo del ajuste.']);
-        }
 
         $variantes->ajustarStock(
             $variante['id'],

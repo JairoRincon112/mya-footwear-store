@@ -43,7 +43,8 @@ async function cotizar(cupon = cuponAplicado.value) {
     // Si una oferta empezó o terminó, el carrito queda con el precio real.
     carrito.actualizarPrecios(cotizacion.value.lineas)
   } catch (e) {
-    errorGeneral.value = e.message
+    // El detalle de la regla que no se cumplió (por ejemplo, el máximo por producto) viene en errores.items.
+    errorGeneral.value = e.errores?.items ? `${e.message} ${e.errores.items}` : e.message
   } finally {
     cotizando.value = false
   }

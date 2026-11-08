@@ -96,27 +96,84 @@ final class Variante extends Model
     public function ajustarStock(int $id, int $cantidad, string $tipo, ?string $motivo, int $usuarioId): int
     {
         return Database::transaccion(function () use ($id, $cantidad, $tipo, $motivo, $usuarioId): int {
-            $fila = $this->obtenerUno('SELECT stock FROM variantes WHERE id = :id FOR UPDATE', ['id' => $id]);
-            if ($fila === null) {
-                throw HttpException::noEncontrado('La variante no existe.');
-            }
+            $stock = $this->stockBloqueado($id);
 
-            $nuevoStock = (int) $fila['stock'] + $cantidad;
+            $nuevoStock = $stock + $cantidad;
             if ($nuevoStock < 0) {
                 throw HttpException::validacion(
-                    ['cantidad' => "No puedes descontar más unidades de las disponibles ({$fila['stock']})."]
+                    ['cantidad' => "No puedes descontar más unidades de las disponibles ($stock)."]
                 );
             }
 
-            $this->ejecutar('UPDATE variantes SET stock = :stock WHERE id = :id', ['stock' => $nuevoStock, 'id' => $id]);
+            $this->guardarStock($id, $nuevoStock);
             $this->registrarMovimiento($id, $usuarioId, $tipo, $cantidad, $nuevoStock, $motivo);
 
             return $nuevoStock;
         });
     }
 
+    /**
+     * Descuenta las unidades vendidas en un pedido y registra el movimiento "venta".
+     * Gestión de pedidos la llama dentro de su propia transacción, así que si algo
+     * falla después, el descuento también se deshace.
+     *
+     * @return int Stock resultante
+     */
+    public function descontarPorVenta(int $id, int $cantidad, int $usuarioId, int $pedidoId): int
+    {
+        return Database::transaccion(function () use ($id, $cantidad, $usuarioId, $pedidoId): int {
+            $stock = $this->stockBloqueado($id);
+            if ($stock < $cantidad) {
+                throw new HttpException(409, 'Algunos productos de tu carrito cambiaron.', [
+                    'items' => "Un producto de tu carrito solo tiene $stock unidades disponibles.",
+                ]);
+            }
+
+            $nuevoStock = $stock - $cantidad;
+            $this->guardarStock($id, $nuevoStock);
+            $this->registrarMovimiento($id, $usuarioId, 'venta', -$cantidad, $nuevoStock, "Pedido #$pedidoId", $pedidoId);
+
+            return $nuevoStock;
+        });
+    }
+
+    /**
+     * Devuelve al inventario las unidades de un pedido cancelado y registra el movimiento "devolucion".
+     *
+     * @return int Stock resultante
+     */
+    public function devolverPorCancelacion(int $id, int $cantidad, int $usuarioId, int $pedidoId): int
+    {
+        return Database::transaccion(function () use ($id, $cantidad, $usuarioId, $pedidoId): int {
+            $nuevoStock = $this->stockBloqueado($id) + $cantidad;
+            $this->guardarStock($id, $nuevoStock);
+            $this->registrarMovimiento($id, $usuarioId, 'devolucion', $cantidad, $nuevoStock, "Pedido #$pedidoId cancelado", $pedidoId);
+
+            return $nuevoStock;
+        });
+    }
+
+    /**
+     * Lee el stock bloqueando la fila (SELECT ... FOR UPDATE) hasta que termine la transacción,
+     * así dos personas no pueden modificar el mismo stock al mismo tiempo.
+     */
+    private function stockBloqueado(int $id): int
+    {
+        $fila = $this->obtenerUno('SELECT stock FROM variantes WHERE id = :id FOR UPDATE', ['id' => $id]);
+        if ($fila === null) {
+            throw HttpException::noEncontrado('La variante no existe.');
+        }
+
+        return (int) $fila['stock'];
+    }
+
+    private function guardarStock(int $id, int $stock): void
+    {
+        $this->ejecutar('UPDATE variantes SET stock = :stock WHERE id = :id', ['stock' => $stock, 'id' => $id]);
+    }
+
     /** Registra un cambio de stock en el historial (movimientos_inventario). */
-    public function registrarMovimiento(
+    private function registrarMovimiento(
         int $varianteId,
         ?int $usuarioId,
         string $tipo,

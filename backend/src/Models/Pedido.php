@@ -179,14 +179,8 @@ final class Pedido extends Model
                         'subtotal' => number_format($linea['subtotal'], 2, '.', ''),
                     ]
                 );
-                $this->ejecutar(
-                    'UPDATE variantes SET stock = :stock WHERE id = :id',
-                    ['stock' => $linea['stock_resultante'], 'id' => $linea['variante_id']]
-                );
-                $variantes->registrarMovimiento(
-                    $linea['variante_id'], $clienteId, 'venta', -$linea['cantidad'],
-                    $linea['stock_resultante'], "Pedido #$pedidoId", $pedidoId
-                );
+                // Inventario se encarga del stock; el pedido solo lo solicita.
+                $variantes->descontarPorVenta($linea['variante_id'], $linea['cantidad'], $clienteId, $pedidoId);
             }
 
             return $pedidoId;
@@ -367,13 +361,7 @@ final class Pedido extends Model
         );
 
         foreach ($lineas as $linea) {
-            $fila = $this->obtenerUno('SELECT stock FROM variantes WHERE id = :id FOR UPDATE', ['id' => $linea['variante_id']]);
-            $nuevoStock = (int) $fila['stock'] + (int) $linea['cantidad'];
-            $this->ejecutar('UPDATE variantes SET stock = :stock WHERE id = :id', ['stock' => $nuevoStock, 'id' => $linea['variante_id']]);
-            $variantes->registrarMovimiento(
-                (int) $linea['variante_id'], $usuarioId, 'devolucion', (int) $linea['cantidad'],
-                $nuevoStock, "Pedido #$pedidoId cancelado", $pedidoId
-            );
+            $variantes->devolverPorCancelacion((int) $linea['variante_id'], (int) $linea['cantidad'], $usuarioId, $pedidoId);
         }
     }
 

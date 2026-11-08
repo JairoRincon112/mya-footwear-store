@@ -8,6 +8,7 @@ use App\Core\HttpException;
 use App\Core\Request;
 use App\Core\Response;
 use App\Core\Validator;
+use App\Descuentos\EstrategiasDescuento;
 use App\Models\Cupon;
 
 /**
@@ -64,7 +65,7 @@ final class CuponController extends Controller
         $datos = Validator::validar($request->cuerpo(), [
             'codigo' => 'requerido|codigo',
             'descripcion' => 'texto|max:255',
-            'tipo' => 'requerido|en:' . implode(',', Cupon::TIPOS),
+            'tipo' => 'requerido|en:' . implode(',', EstrategiasDescuento::tipos()),
             'valor' => 'requerido|numerico|minimo:1|maximo:99999999',
             'minimo_compra' => 'numerico|minimo:0|maximo:99999999',
             'usos_maximos' => 'entero|minimo:1|maximo:1000000',
@@ -74,8 +75,10 @@ final class CuponController extends Controller
             'activo' => 'booleano',
         ]);
 
-        if ($datos['tipo'] === 'porcentaje' && $datos['valor'] > 90) {
-            throw HttpException::validacion(['valor' => 'El porcentaje máximo es 90 %.']);
+        // Cada tipo de cupón valida su propio valor (patrón Strategy).
+        $errorValor = EstrategiasDescuento::para($datos['tipo'])->validarValor((float) $datos['valor']);
+        if ($errorValor !== null) {
+            throw HttpException::validacion(['valor' => $errorValor]);
         }
         if (!empty($datos['inicio']) && !empty($datos['fin']) && $datos['inicio'] >= $datos['fin']) {
             throw HttpException::validacion(['fin' => 'La fecha de fin debe ser posterior a la de inicio.']);

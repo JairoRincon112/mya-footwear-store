@@ -31,7 +31,8 @@ function estadoDe(cupon) {
   return { texto: 'Vigente', clase: 'etiqueta-activa' }
 }
 
-const descripcionValor = (cupon) => (cupon.tipo === 'porcentaje' ? `${cupon.valor} %` : formatearPrecio(cupon.valor))
+// El servidor envía el valor ya descrito por la estrategia de su tipo ("10 %", "$20.000").
+const descripcionValor = (cupon) => cupon.valor_texto ?? formatearPrecio(cupon.valor)
 
 async function cargar() {
   cargando.value = true

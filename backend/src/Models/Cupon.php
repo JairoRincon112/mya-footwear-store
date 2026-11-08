@@ -4,15 +4,16 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use App\Descuentos\EstrategiasDescuento;
+
 /**
- * Cupones de descuento.
- *   tipo "porcentaje": valor = % de descuento sobre el subtotal (1 a 90).
- *   tipo "valor":      valor = pesos que se descuentan (nunca más que el subtotal).
+ * Cupones de descuento (contexto del patrón Strategy).
+ * Aquí están las reglas comunes a todos los tipos: vigencia, usos, compra mínima,
+ * redondeo al peso y que el descuento nunca supere el subtotal. Lo que cambia según
+ * el tipo ("porcentaje", "valor") lo resuelve su estrategia en App\Descuentos.
  */
 final class Cupon extends Model
 {
-    public const TIPOS = ['porcentaje', 'valor'];
-
     /** @return array<string, mixed>|null */
     public function buscarPorCodigo(string $codigo, bool $bloquear = false): ?array
     {
@@ -61,9 +62,7 @@ final class Cupon extends Model
 
     public function calcularDescuento(array $cupon, float $subtotal): float
     {
-        $descuento = $cupon['tipo'] === 'porcentaje'
-            ? $subtotal * $cupon['valor'] / 100
-            : $cupon['valor'];
+        $descuento = EstrategiasDescuento::para($cupon['tipo'])->calcular($subtotal, $cupon['valor']);
 
         // Pesos colombianos: se redondea al peso y nunca supera el subtotal.
         return (float) min(round($descuento), $subtotal);
@@ -155,6 +154,7 @@ final class Cupon extends Model
     {
         $cupon['id'] = (int) $cupon['id'];
         $cupon['valor'] = (float) $cupon['valor'];
+        $cupon['valor_texto'] = EstrategiasDescuento::para($cupon['tipo'])->describir($cupon['valor']);
         $cupon['minimo_compra'] = (float) $cupon['minimo_compra'];
         $cupon['usos_maximos'] = $cupon['usos_maximos'] === null ? null : (int) $cupon['usos_maximos'];
         $cupon['usos'] = (int) $cupon['usos'];

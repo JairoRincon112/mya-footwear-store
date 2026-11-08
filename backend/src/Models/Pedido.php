@@ -29,6 +29,9 @@ final class Pedido extends Model
         'cancelado' => [],
     ];
 
+    /** Regla de negocio: un pedido no puede llevar más de esta cantidad de la misma variante. */
+    public const MAXIMO_UNIDADES_POR_LINEA = 10;
+
     /**
      * Calcula el pedido con los precios vigentes (incluidas ofertas) y el cupón.
      * La usan la vista previa del checkout (POST /api/pedidos/cotizar) y la compra real,
@@ -43,6 +46,8 @@ final class Pedido extends Model
      */
     public function cotizar(array $cantidades, ?string $codigoCupon, int $clienteId, bool $bloquear = false): array
     {
+        $this->validarCantidades($cantidades);
+
         $lineas = [];
         $errores = [];
 
@@ -365,9 +370,40 @@ final class Pedido extends Model
         }
     }
 
-    public function clienteDe(int $id): ?int
+    /**
+     * Cancelación hecha por el propio cliente: solo sobre sus pedidos y solo mientras
+     * están pendientes. Si el pedido es de otra persona se responde como si no existiera.
+     */
+    public function cancelarPorCliente(int $id, int $clienteId): void
     {
-        $fila = $this->obtenerUno('SELECT cliente_id FROM pedidos WHERE id = :id', ['id' => $id]);
-        return $fila === null ? null : (int) $fila['cliente_id'];
+        Database::transaccion(function () use ($id, $clienteId): void {
+            $pedido = $this->obtenerUno('SELECT cliente_id, estado FROM pedidos WHERE id = :id FOR UPDATE', ['id' => $id]);
+            if ($pedido === null || (int) $pedido['cliente_id'] !== $clienteId) {
+                throw HttpException::noEncontrado('El pedido no existe.');
+            }
+            if ($pedido['estado'] !== 'pendiente') {
+                throw HttpException::validacion(['estado' => 'Solo puedes cancelar pedidos pendientes. Escríbenos si necesitas ayuda.']);
+            }
+
+            $this->cambiarEstado($id, 'cancelado', $clienteId, false);
+        });
+    }
+
+    /**
+     * Regla de negocio: máximo de unidades por variante en un mismo pedido.
+     * Se revisa sobre las cantidades ya agrupadas, por si la misma variante llega repetida.
+     *
+     * @param array<int, int> $cantidades variante_id => cantidad
+     */
+    private function validarCantidades(array $cantidades): void
+    {
+        foreach ($cantidades as $cantidad) {
+            if ($cantidad > self::MAXIMO_UNIDADES_POR_LINEA) {
+                throw HttpException::validacion(
+                    ['items' => 'Puedes llevar máximo ' . self::MAXIMO_UNIDADES_POR_LINEA . ' unidades de cada producto por pedido.'],
+                    'Revisa las cantidades de tu carrito.'
+                );
+            }
+        }
     }
 }

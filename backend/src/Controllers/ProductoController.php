@@ -13,6 +13,7 @@ use App\Core\Texto;
 use App\Core\Validator;
 use App\Models\Color;
 use App\Models\Marca;
+use App\Models\Pedido;
 use App\Models\Producto;
 use App\Models\ProductoImagen;
 use finfo;
@@ -80,6 +81,8 @@ final class ProductoController extends Controller
             throw HttpException::noEncontrado('El producto no existe o no está disponible.');
         }
 
+        // La tienda usa este límite para no ofrecer más unidades de las que acepta un pedido.
+        $producto['maximo_por_linea'] = Pedido::MAXIMO_UNIDADES_POR_LINEA;
         Response::ok($producto);
     }
 

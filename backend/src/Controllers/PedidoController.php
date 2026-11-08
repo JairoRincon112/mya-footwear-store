@@ -15,8 +15,6 @@ use App\Models\Pedido;
  */
 final class PedidoController extends Controller
 {
-    private const MAXIMO_UNIDADES_POR_LINEA = 10;
-
     /**
      * POST /api/pedidos (cliente)
      * {
@@ -103,7 +101,8 @@ final class PedidoController extends Controller
         foreach ($items as $item) {
             $linea = Validator::validar(is_array($item) ? $item : [], [
                 'variante_id' => 'requerido|entero|minimo:1',
-                'cantidad' => 'requerido|entero|minimo:1|maximo:' . self::MAXIMO_UNIDADES_POR_LINEA,
+                // Solo el formato; el máximo por producto es una regla de negocio de Pedido.
+                'cantidad' => 'requerido|entero|minimo:1',
             ]);
             $cantidades[$linea['variante_id']] = ($cantidades[$linea['variante_id']] ?? 0) + $linea['cantidad'];
         }
@@ -178,15 +177,7 @@ final class PedidoController extends Controller
     {
         $id = $this->idDeRuta($request);
         $pedidos = new Pedido();
-
-        if ($pedidos->clienteDe($id) !== $this->usuarioId($request)) {
-            throw HttpException::noEncontrado('El pedido no existe.');
-        }
-        if ($pedidos->buscar($id)['estado'] !== 'pendiente') {
-            throw HttpException::validacion(['estado' => 'Solo puedes cancelar pedidos pendientes. Escríbenos si necesitas ayuda.']);
-        }
-
-        $pedidos->cambiarEstado($id, 'cancelado', $this->usuarioId($request), false);
+        $pedidos->cancelarPorCliente($id, $this->usuarioId($request));
         Response::ok($pedidos->buscar($id), 'Tu pedido fue cancelado.');
     }
 

@@ -43,7 +43,7 @@ onBeforeUnmount(() => document.removeEventListener('keydown', cerrarConEscape))
             <div class="cantidad">
               <button type="button" aria-label="Quitar una unidad" :disabled="item.cantidad <= 1" @click="carrito.cambiarCantidad(item.varianteId, item.cantidad - 1)">−</button>
               <span>{{ item.cantidad }}</span>
-              <button type="button" aria-label="Agregar una unidad" :disabled="item.cantidad >= item.stock" @click="carrito.cambiarCantidad(item.varianteId, item.cantidad + 1)">+</button>
+              <button type="button" aria-label="Agregar una unidad" :disabled="item.cantidad >= carrito.limiteDe(item)" @click="carrito.cambiarCantidad(item.varianteId, item.cantidad + 1)">+</button>
               <button type="button" class="quitar" @click="carrito.quitar(item.varianteId)">Quitar</button>
             </div>
           </div>

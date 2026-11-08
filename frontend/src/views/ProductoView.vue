@@ -4,7 +4,7 @@ import { computed, ref, watch } from 'vue'
 import productoService from '@/services/productoService'
 import { urlImagen } from '@/services/api'
 import PrecioProducto from '@/components/PrecioProducto.vue'
-import { useCarritoStore } from '@/stores/carrito'
+import { limiteDeLinea, useCarritoStore } from '@/stores/carrito'
 import { formatearFecha } from '@/utils/formato'
 
 const props = defineProps({
@@ -66,7 +66,9 @@ const imagenes = computed(() => {
 })
 
 const enCarrito = computed(() => carrito.items.find((item) => item.varianteId === varianteElegida.value?.id)?.cantidad ?? 0)
-const disponibleParaAgregar = computed(() => Math.max(0, (varianteElegida.value?.stock ?? 0) - enCarrito.value))
+// Respeta el stock y el máximo de unidades por producto que define el negocio.
+const limiteVariante = computed(() => limiteDeLinea(varianteElegida.value?.stock ?? 0, producto.value?.maximo_por_linea))
+const disponibleParaAgregar = computed(() => Math.max(0, limiteVariante.value - enCarrito.value))
 
 watch(colorId, () => {
   tallaId.value = null
@@ -187,6 +189,9 @@ function agregarAlCarrito() {
 
             <p class="disponibilidad">
               <template v-if="!varianteElegida">Elige una talla para ver la disponibilidad.</template>
+              <template v-else-if="disponibleParaAgregar === 0 && limiteVariante < varianteElegida.stock">
+                Ya tienes en el carrito el máximo de {{ limiteVariante }} unidades por producto.
+              </template>
               <template v-else-if="disponibleParaAgregar === 0">Ya tienes en el carrito todas las unidades disponibles.</template>
               <template v-else-if="varianteElegida.stock <= 3">¡Últimas {{ varianteElegida.stock }} unidades!</template>
               <template v-else>{{ varianteElegida.stock }} unidades disponibles.</template>

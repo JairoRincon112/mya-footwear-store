@@ -7,6 +7,14 @@ import { almacenamiento } from '@/utils/formato'
 
 const CLAVE_CARRITO = 'mya_carrito'
 
+/** Unidades que admite una línea: el stock, o el máximo por producto si es menor. */
+export function limiteDeLinea(stock, maximoPorLinea) {
+  return maximoPorLinea ? Math.min(stock, maximoPorLinea) : stock
+}
+
+// Las líneas guardadas antes de existir "limite" usan el stock.
+const limiteDe = (item) => item.limite ?? item.stock
+
 export const useCarritoStore = defineStore('carrito', () => {
   const items = ref(almacenamiento.leer(CLAVE_CARRITO, []))
   const abierto = ref(false)
@@ -16,12 +24,18 @@ export const useCarritoStore = defineStore('carrito', () => {
 
   watch(items, (valor) => almacenamiento.guardar(CLAVE_CARRITO, valor), { deep: true })
 
-  /** Agrega una variante; nunca supera el stock disponible. Devuelve la cantidad final. */
+  /**
+   * Agrega una variante. Nunca supera el límite de la línea: el stock disponible o el
+   * máximo por producto que publica el servidor (maximo_por_linea), el que sea menor.
+   * Devuelve la cantidad final.
+   */
   function agregar(producto, variante, cantidad = 1) {
+    const limite = limiteDeLinea(variante.stock, producto.maximo_por_linea)
     const existente = items.value.find((item) => item.varianteId === variante.id)
     if (existente) {
-      existente.cantidad = Math.min(variante.stock, existente.cantidad + cantidad)
       existente.stock = variante.stock
+      existente.limite = limite
+      existente.cantidad = Math.min(limite, existente.cantidad + cantidad)
       return existente.cantidad
     }
 
@@ -35,15 +49,16 @@ export const useCarritoStore = defineStore('carrito', () => {
       precio: producto.precio,
       imagen: producto.imagen,
       stock: variante.stock,
-      cantidad: Math.min(variante.stock, cantidad),
+      limite,
+      cantidad: Math.min(limite, cantidad),
     })
-    return Math.min(variante.stock, cantidad)
+    return Math.min(limite, cantidad)
   }
 
   function cambiarCantidad(varianteId, cantidad) {
     const item = items.value.find((linea) => linea.varianteId === varianteId)
     if (item) {
-      item.cantidad = Math.max(1, Math.min(item.stock, cantidad))
+      item.cantidad = Math.max(1, Math.min(limiteDe(item), cantidad))
     }
   }
 
@@ -63,5 +78,5 @@ export const useCarritoStore = defineStore('carrito', () => {
     }
   }
 
-  return { items, abierto, cantidadTotal, total, agregar, cambiarCantidad, quitar, vaciar, actualizarPrecios }
+  return { items, abierto, cantidadTotal, total, agregar, cambiarCantidad, quitar, vaciar, actualizarPrecios, limiteDe }
 })

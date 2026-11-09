@@ -99,15 +99,15 @@ porque el hosting publica `public/mya` tal como está en el repositorio.
 
 ## Usuarios de prueba
 
-| Rol | Correo | Contraseña |
-|---|---|---|
-| Administrador | admin@myafootwear.com | Admin123* |
-| Vendedor | vendedor@myafootwear.com | Vendedor123* |
-| Vendedor | santiago.herrera@myafootwear.com | Vendedor123* |
-| Cliente | cliente@example.com | Cliente123* |
-| Cliente | andres.perez@example.com | Cliente123* |
+| Rol | Correo |
+|---|---|
+| Administrador | admin@myafootwear.com |
+| Vendedor | vendedor@myafootwear.com |
+| Vendedor | santiago.herrera@myafootwear.com |
+| Cliente | cliente@example.com |
+| Cliente | andres.perez@example.com |
 
-Son contraseñas de demostración: cámbialas antes de publicar el sitio. Chrome puede mostrar un aviso de "contraseña filtrada" porque son débiles.
+Las contraseñas de estas cuentas no se publican en el repositorio. Pídelas al equipo del proyecto.
 
 ## Permisos por rol
 
@@ -210,7 +210,7 @@ Ejemplo con PowerShell:
 
 ```powershell
 $login = Invoke-RestMethod -Method Post -Uri http://localhost/mya-api/api/auth/login `
-  -ContentType 'application/json' -Body '{"email":"admin@myafootwear.com","password":"Admin123*"}'
+  -ContentType 'application/json' -Body '{"email":"admin@myafootwear.com","password":"<contraseña>"}'
 $token = $login.data.token
 Invoke-RestMethod -Uri "http://localhost/mya-api/api/productos?marca=nike&por_pagina=3" -Headers @{ Authorization = "Bearer $token" }
 ```

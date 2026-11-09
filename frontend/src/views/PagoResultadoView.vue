@@ -48,7 +48,7 @@ async function verificar() {
     }
   } catch (e) {
     estado.value = 'error'
-    mensaje.value = e.message
+    mensaje.value = e.errores?.id ?? e.message
   }
 }
 

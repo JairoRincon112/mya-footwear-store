@@ -74,6 +74,7 @@ final class Wompi
         $curl = curl_init($url);
         curl_setopt_array($curl, [
             CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_CONNECTTIMEOUT => 5, // si Wompi no contesta en 5 s, no se deja al cliente esperando
             CURLOPT_TIMEOUT => 15,
             CURLOPT_HTTPHEADER => [
                 'Accept: application/json',
@@ -85,6 +86,7 @@ final class Wompi
         $errorRed = curl_error($curl);
 
         if ($cuerpo === false) {
+            self::registrar("sin conexión al consultar $transaccionId: $errorRed");
             throw new HttpException(502, 'No pudimos comunicarnos con Wompi. Intenta de nuevo en unos segundos.' . (Config::booleano('APP_DEBUG') ? " ($errorRed)" : ''));
         }
         if ($estado === 404) {
@@ -93,9 +95,16 @@ final class Wompi
 
         $respuesta = json_decode((string) $cuerpo, true);
         if ($estado !== 200 || !is_array($respuesta['data'] ?? null)) {
+            self::registrar("respuesta inesperada (HTTP $estado) al consultar $transaccionId");
             throw new HttpException(502, 'Wompi respondió con un error al consultar la transacción.');
         }
         return $respuesta['data'];
+    }
+
+    /** Deja el fallo en el log del servidor. Nunca se escriben llaves ni datos de tarjetas. */
+    private static function registrar(string $detalle): void
+    {
+        error_log('[Wompi] ' . $detalle);
     }
 
     /**

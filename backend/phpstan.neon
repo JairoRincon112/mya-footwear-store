@@ -1,0 +1,8 @@
+# Análisis estático del backend (PHPStan). Nivel 5: tipos de argumentos y retornos,
+# llamadas a métodos inexistentes y código inalcanzable.
+parameters:
+    level: 5
+    paths:
+        - src
+        - bin
+    tmpDir: storage/phpstan

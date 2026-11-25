@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Pruebas automatizadas del backend. Ejecutar: vendor/bin/phpunit -->
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="tests/bootstrap.php"
+         colors="false"
+         cacheDirectory="storage/phpunit"
+         testdox="true">
+    <testsuites>
+        <testsuite name="unitarias">
+            <directory>tests/Unit</directory>
+        </testsuite>
+        <testsuite name="integracion">
+            <directory>tests/Integracion</directory>
+        </testsuite>
+    </testsuites>
+    <source>
+        <include>
+            <directory>src</directory>
+        </include>
+    </source>
+</phpunit>

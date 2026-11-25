@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- Estándar de codificación del backend: PSR-12. -->
+<ruleset name="MyA">
+    <description>PSR-12 para el código propio del backend</description>
+    <file>src</file>
+    <file>bin</file>
+    <arg name="extensions" value="php" />
+    <arg value="sp" />
+    <rule ref="PSR12" />
+</ruleset>

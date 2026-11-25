@@ -10,6 +10,8 @@ const routes = [
   { path: '/producto/:slug', name: 'producto', component: () => import('@/views/ProductoView.vue'), props: true },
   { path: '/contacto', name: 'contacto', component: () => import('@/views/ContactoView.vue') },
   { path: '/login', name: 'login', component: () => import('@/views/LoginView.vue'), meta: { soloInvitados: true } },
+  // Ingreso del vendedor y del administrador (enlace del candado en el pie de página).
+  { path: '/acceso-personal', name: 'acceso-personal', component: () => import('@/views/LoginView.vue'), meta: { soloInvitados: true, personal: true } },
   { path: '/recuperar', name: 'recuperar', component: () => import('@/views/RecuperarView.vue'), meta: { soloInvitados: true } },
   { path: '/restablecer', name: 'restablecer', component: () => import('@/views/RestablecerView.vue') },
   { path: '/mi-cuenta', name: 'mi-cuenta', component: () => import('@/views/MiCuentaView.vue'), meta: { requiereSesion: true } },
@@ -69,6 +71,7 @@ const routes = [
         props: true,
       },
       { path: 'inventario', name: 'panel-inventario', component: () => import('@/views/panel/InventarioAdmin.vue') },
+      { path: 'devoluciones', name: 'panel-devoluciones', component: () => import('@/views/panel/DevolucionesAdmin.vue') },
       { path: 'mensajes', name: 'panel-mensajes', component: () => import('@/views/panel/MensajesAdmin.vue') },
       { path: 'reportes', name: 'panel-reportes', component: () => import('@/views/panel/ReportesAdmin.vue') },
       {
@@ -104,7 +107,8 @@ router.beforeEach(async (to) => {
   await auth.inicializar()
 
   if (to.matched.some((ruta) => ruta.meta.requiereSesion) && !auth.autenticado) {
-    return { name: 'login', query: { redirect: to.fullPath } }
+    const destino = to.path.startsWith('/panel') ? 'acceso-personal' : 'login'
+    return { name: destino, query: { redirect: to.fullPath } }
   }
 
   // Cada nivel de la ruta puede exigir roles (ej. /panel y /panel/productos/nuevo).

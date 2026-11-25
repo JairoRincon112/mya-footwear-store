@@ -197,7 +197,7 @@ function alternarOfertas() {
   font-weight: 700;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: #c24e00;
+  color: #a8521f;
 }
 
 .titulo-marca {

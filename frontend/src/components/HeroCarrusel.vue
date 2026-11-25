@@ -270,7 +270,7 @@ onBeforeUnmount(() => clearInterval(reloj))
 
 <style scoped>
 .hero {
-  --naranja-hero: #ff6600;
+  --naranja-hero: #c9672e;
   /* alto de la imagen según la pantalla, para que el carrusel completo quepa sin desplazarse */
   --alto-visual: clamp(300px, calc(100vh - var(--alto-header) - 170px), 460px);
   position: relative;
@@ -293,7 +293,7 @@ onBeforeUnmount(() => clearInterval(reloj))
   width: 520px;
   height: 520px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 102, 0, 0.55) 0%, rgba(255, 102, 0, 0) 70%);
+  background: radial-gradient(circle, rgba(201, 103, 46, 0.55) 0%, rgba(201, 103, 46, 0) 70%);
   transform: translateY(-50%);
   filter: blur(10px);
   animation: respirar 6s ease-in-out infinite;
@@ -372,9 +372,9 @@ onBeforeUnmount(() => clearInterval(reloj))
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--naranja-hero);
-  border: 1px solid rgba(255, 102, 0, 0.45);
+  border: 1px solid rgba(201, 103, 46, 0.45);
   border-radius: 999px;
-  background: rgba(255, 102, 0, 0.08);
+  background: rgba(201, 103, 46, 0.08);
 }
 
 .texto h1,
@@ -414,14 +414,14 @@ onBeforeUnmount(() => clearInterval(reloj))
   color: #000;
   background: var(--naranja-hero);
   border-radius: 999px;
-  box-shadow: 0 10px 30px -8px rgba(255, 102, 0, 0.7);
+  box-shadow: 0 10px 30px -8px rgba(201, 103, 46, 0.7);
   transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
 
 .cta:hover {
   transform: translateY(-2px);
-  background: #ff8533;
-  box-shadow: 0 14px 34px -8px rgba(255, 102, 0, 0.85);
+  background: #d9814f;
+  box-shadow: 0 14px 34px -8px rgba(201, 103, 46, 0.85);
 }
 
 .cta-fantasma {
@@ -572,7 +572,7 @@ onBeforeUnmount(() => clearInterval(reloj))
   color: #000;
   background: var(--naranja-hero);
   border-radius: 50%;
-  box-shadow: 0 10px 30px -6px rgba(255, 102, 0, 0.8);
+  box-shadow: 0 10px 30px -6px rgba(201, 103, 46, 0.8);
   transform: rotate(12deg) translateZ(40px);
   animation: latir 2.4s ease-in-out infinite;
 }

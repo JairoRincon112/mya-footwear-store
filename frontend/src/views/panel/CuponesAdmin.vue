@@ -1,5 +1,6 @@
 <script setup>
 // Cupones de descuento (solo admin): crear, editar, activar y desactivar.
+import MenuAcciones from '@/components/MenuAcciones.vue'
 import { onMounted, reactive, ref } from 'vue'
 import adminService from '@/services/adminService'
 import { formatearFecha, formatearPrecio } from '@/utils/formato'
@@ -235,8 +236,13 @@ onMounted(cargar)
               <td class="numero">{{ formatearPrecio(cupon.descuento_total) }}</td>
               <td><span class="etiqueta" :class="estadoDe(cupon).clase">{{ estadoDe(cupon).texto }}</span></td>
               <td class="acciones">
-                <button type="button" class="boton boton-secundario boton-pequeno" @click="editar(cupon)">Editar</button>
-                <button type="button" class="boton boton-secundario boton-pequeno" @click="alternar(cupon)">{{ cupon.activo ? 'Desactivar' : 'Activar' }}</button>
+                <MenuAcciones
+                  :etiqueta="`Acciones del cupón ${cupon.codigo}`"
+                  :items="[
+                    { texto: 'Editar', icono: 'fa-pen', accion: () => editar(cupon) },
+                    { texto: cupon.activo ? 'Desactivar' : 'Activar', icono: cupon.activo ? 'fa-ban' : 'fa-circle-check', peligro: cupon.activo, accion: () => alternar(cupon) },
+                  ]"
+                />
               </td>
             </tr>
           </tbody>
@@ -278,15 +284,4 @@ onMounted(cargar)
   letter-spacing: 1px;
 }
 
-.etiqueta-programado {
-  color: #0b4f8a;
-  background: #e2effb;
-}
-
-.acciones {
-  display: flex;
-  gap: 6px;
-  justify-content: flex-end;
-  white-space: nowrap;
-}
 </style>

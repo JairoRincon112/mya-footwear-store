@@ -155,7 +155,7 @@ onMounted(async () => {
 .relleno {
   height: 100%;
   min-width: 2px;
-  background: #e05a00;
+  background: #c9672e;
   border-radius: 4px;
 }
 

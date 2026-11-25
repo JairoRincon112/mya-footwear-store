@@ -80,6 +80,6 @@ async function enviar() {
 
 .volver {
   font-size: .9rem;
-  color: #c24e00;
+  color: #a8521f;
 }
 </style>

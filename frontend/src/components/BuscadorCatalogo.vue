@@ -270,7 +270,7 @@ onBeforeUnmount(() => {
 .abierto .caja,
 .caja:focus-within {
   border-color: var(--naranja);
-  box-shadow: 0 10px 30px -12px rgba(255, 102, 0, 0.45);
+  box-shadow: 0 10px 30px -12px rgba(201, 103, 46, 0.45);
 }
 
 .icono {

@@ -1,6 +1,7 @@
 <script setup>
 // Crear y editar un producto: datos, imágenes, variantes (talla + color) y stock.
 // El administrador puede editar todo; el vendedor solo consulta y ajusta stock.
+import MenuAcciones from '@/components/MenuAcciones.vue'
 import { computed, reactive, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import productoService from '@/services/productoService'
@@ -440,10 +441,13 @@ async function guardarAjuste() {
                       </span>
                     </td>
                     <td class="acciones">
-                      <button type="button" class="boton boton-secundario boton-pequeno" @click="abrirAjuste(variante)">Ajustar stock</button>
-                      <button v-if="puedeEditar" type="button" class="boton boton-secundario boton-pequeno" @click="alternarVariante(variante)">
-                        {{ variante.activo ? 'Desactivar' : 'Activar' }}
-                      </button>
+                      <MenuAcciones
+                        :etiqueta="`Acciones de ${variante.sku}`"
+                        :items="[
+                          { texto: 'Ajustar stock', icono: 'fa-sliders', accion: () => abrirAjuste(variante) },
+                          puedeEditar && { texto: variante.activo ? 'Desactivar' : 'Activar', icono: variante.activo ? 'fa-ban' : 'fa-circle-check', peligro: variante.activo, accion: () => alternarVariante(variante) },
+                        ]"
+                      />
                     </td>
                   </tr>
                   <tr v-if="ajuste.varianteId === variante.id" class="fila-ajuste">
@@ -550,7 +554,7 @@ async function guardarAjuste() {
   padding: 0 6px;
   font-size: .92rem;
   font-weight: 600;
-  color: #c24e00;
+  color: #a8521f;
 }
 
 .galeria {
@@ -601,12 +605,6 @@ async function guardarAjuste() {
   background: conic-gradient(#e53935, #fdd835, #43a047, #1e88e5, #8e24aa, #e53935);
 }
 
-.acciones {
-  display: flex;
-  gap: 6px;
-  justify-content: flex-end;
-  white-space: nowrap;
-}
 
 .fila-ajuste td {
   background: #fff8f2;
@@ -674,7 +672,7 @@ async function guardarAjuste() {
 .enlace {
   margin-left: 10px;
   font-size: .82rem;
-  color: #c24e00;
+  color: #a8521f;
   text-decoration: underline;
   background: none;
   border: 0;

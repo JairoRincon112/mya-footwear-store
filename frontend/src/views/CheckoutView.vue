@@ -288,7 +288,7 @@ async function confirmar() {
 
 .en-oferta {
   font-size: .78rem;
-  color: #c24e00;
+  color: #a8521f;
 }
 
 .precio {

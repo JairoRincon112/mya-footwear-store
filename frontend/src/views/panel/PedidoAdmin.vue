@@ -2,8 +2,9 @@
 // Detalle de un pedido en el panel: el personal lo avanza de estado o lo cancela.
 import { ref, watch } from 'vue'
 import DetallePedido from '@/components/DetallePedido.vue'
+import EstadoDevolucion from '@/components/EstadoDevolucion.vue'
 import pedidoService from '@/services/pedidoService'
-import { ESTADOS_PEDIDO } from '@/utils/formato'
+import { ESTADOS_PEDIDO, TIPOS_DEVOLUCION } from '@/utils/formato'
 
 const props = defineProps({
   id: { type: String, required: true },
@@ -17,7 +18,7 @@ const guardando = ref(false)
 
 const ACCIONES = {
   pagado: 'Confirmar pago',
-  enviado: 'Marcar como enviado',
+  enviado: 'Marcar en tránsito',
   entregado: 'Marcar como entregado',
   cancelado: 'Cancelar pedido',
 }
@@ -82,7 +83,7 @@ async function cambiarEstado(estado) {
           </button>
         </div>
         <p v-else class="texto-secundario">Este pedido está {{ ESTADOS_PEDIDO[pedido.estado].texto.toLowerCase() }} y ya no cambia de estado.</p>
-        <p class="texto-secundario flujo">Flujo: Pendiente → Pagado → Enviado → Entregado. Solo se cancela antes de enviarse.</p>
+        <p class="texto-secundario flujo">Flujo: Pendiente → Pagado → En tránsito → Entregado. Solo se cancela antes de salir en tránsito.</p>
       </div>
 
       <div class="panel-tarjeta">
@@ -95,6 +96,17 @@ async function cambiarEstado(estado) {
           · Ref. {{ pedido.pago.referencia }}
           <template v-if="pedido.pago.transaccion_id"> · Transacción {{ pedido.pago.transaccion_id }}</template>
         </p>
+      </div>
+
+      <div v-if="pedido.devoluciones?.length" class="panel-tarjeta">
+        <h3>Devoluciones de este pedido</h3>
+        <ul class="lista-devoluciones">
+          <li v-for="devolucion in pedido.devoluciones" :key="devolucion.id">
+            <span><strong>#{{ devolucion.id }}</strong> · {{ TIPOS_DEVOLUCION[devolucion.tipo]?.texto }} · {{ devolucion.producto }} ({{ devolucion.cantidad }})</span>
+            <EstadoDevolucion :estado="devolucion.estado" />
+          </li>
+        </ul>
+        <RouterLink :to="{ name: 'panel-devoluciones' }" class="boton boton-secundario boton-pequeno">Gestionar en Devoluciones</RouterLink>
       </div>
     </template>
   </section>
@@ -127,4 +139,22 @@ async function cambiarEstado(estado) {
 .pago-rechazado,
 .pago-anulado,
 .pago-error { color: var(--error); background: #fdecea; }
+
+.lista-devoluciones {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.lista-devoluciones li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eef0f2;
+}
 </style>

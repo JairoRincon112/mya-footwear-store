@@ -1,5 +1,6 @@
 <script setup>
 // Administración de usuarios (solo admin): crear, editar, activar y desactivar.
+import MenuAcciones from '@/components/MenuAcciones.vue'
 import { computed, onMounted, reactive, ref, watch } from 'vue'
 import Paginacion from '@/components/Paginacion.vue'
 import adminService from '@/services/adminService'
@@ -166,6 +167,12 @@ onMounted(cargar)
     </div>
 
     <div class="panel-tarjeta">
+      <div class="semaforo" role="group" aria-label="Filtrar por estado">
+        <button type="button" class="sem-neutro" :class="{ activo: filtros.activo === '' }" :aria-pressed="filtros.activo === ''" @click="filtros.activo = ''"><i class="fa-solid fa-list" aria-hidden="true"></i>Todos</button>
+        <button type="button" class="sem-verde" :class="{ activo: filtros.activo === '1' }" :aria-pressed="filtros.activo === '1'" @click="filtros.activo = '1'"><span class="luz" aria-hidden="true"></span>Activos</button>
+        <button type="button" class="sem-rojo" :class="{ activo: filtros.activo === '0' }" :aria-pressed="filtros.activo === '0'" @click="filtros.activo = '0'"><span class="luz" aria-hidden="true"></span>Desactivados</button>
+      </div>
+
       <form class="filtros" role="search" @submit.prevent>
         <label class="campo">
           Buscar
@@ -176,14 +183,6 @@ onMounted(cargar)
           <select v-model="filtros.rol">
             <option value="">Todos</option>
             <option v-for="(texto, clave) in ROLES" :key="clave" :value="clave">{{ texto }}</option>
-          </select>
-        </label>
-        <label class="campo">
-          Estado
-          <select v-model="filtros.activo">
-            <option value="">Todos</option>
-            <option value="1">Activos</option>
-            <option value="0">Desactivados</option>
           </select>
         </label>
       </form>
@@ -217,15 +216,13 @@ onMounted(cargar)
                 <span class="etiqueta" :class="usuario.activo ? 'etiqueta-activa' : 'etiqueta-inactiva'">{{ usuario.activo ? 'Activo' : 'Desactivado' }}</span>
               </td>
               <td class="acciones">
-                <button type="button" class="boton boton-secundario boton-pequeno" @click="editar(usuario)">Editar</button>
-                <button
-                  type="button"
-                  class="boton boton-secundario boton-pequeno"
-                  :disabled="usuario.id === auth.usuario?.id"
-                  @click="alternarActivo(usuario)"
-                >
-                  {{ usuario.activo ? 'Desactivar' : 'Activar' }}
-                </button>
+                <MenuAcciones
+                  :etiqueta="`Acciones de ${usuario.nombre}`"
+                  :items="[
+                    { texto: 'Editar', icono: 'fa-pen', accion: () => editar(usuario) },
+                    { texto: usuario.activo ? 'Desactivar' : 'Activar', icono: usuario.activo ? 'fa-user-slash' : 'fa-user-check', peligro: usuario.activo, deshabilitado: usuario.id === auth.usuario?.id, accion: () => alternarActivo(usuario) },
+                  ]"
+                />
               </td>
             </tr>
           </tbody>
@@ -251,17 +248,11 @@ onMounted(cargar)
 
 .filtros {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 12px;
   margin-bottom: 16px;
 }
 
-.acciones {
-  display: flex;
-  gap: 6px;
-  justify-content: flex-end;
-  white-space: nowrap;
-}
 
 @media (max-width: 640px) {
   .filtros {

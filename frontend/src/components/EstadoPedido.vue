@@ -29,28 +29,34 @@ const info = computed(() => ESTADOS_PEDIDO[props.estado] ?? { texto: props.estad
   border-radius: 20px;
 }
 
+/* Colores de semáforo, iguales a los filtros del panel:
+   amarillo = pendiente, azul = pagado, naranja = en tránsito, verde = entregado, rojo = cancelado. */
+.estado {
+  border: 1.5px solid currentColor;
+}
+
 .estado-pendiente {
-  color: #7a4b00;
-  background: #fff1d6;
+  color: #7a5600;
+  background: #fff6d6;
 }
 
 .estado-pagado {
-  color: #0b4f8a;
-  background: #e2effb;
+  color: #0d47a1;
+  background: #e3effb;
 }
 
 .estado-enviado {
-  color: #5a2d91;
-  background: #efe6fa;
+  color: #a84300;
+  background: #fdeedd;
 }
 
 .estado-entregado {
-  color: #1b6e2c;
-  background: #e7f4ea;
+  color: #17692e;
+  background: #e6f4ea;
 }
 
 .estado-cancelado {
-  color: #5f5f5f;
-  background: #ececec;
+  color: #b71c1c;
+  background: #fdecea;
 }
 </style>

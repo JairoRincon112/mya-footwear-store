@@ -158,6 +158,6 @@ async function cambiarClave() {
 
 .enlace-pedidos a {
   font-weight: 600;
-  color: #c24e00;
+  color: #a8521f;
 }
 </style>

@@ -1,9 +1,9 @@
 <script setup>
-// Inicio de sesión y registro de clientes.
-// "Ingresar como" (desplegable): la persona elige si entra como cliente, vendedor o
-// administrador. El rol viaja a la API, que solo entrega el token si la cuenta
-// tiene ese rol. Al entrar, cada rol va directo a su zona (tienda o panel).
-// El último rol elegido se recuerda en este navegador.
+// Inicio de sesión.
+// /login es solo para clientes (inicio de sesión y registro).
+// /acceso-personal es el ingreso del vendedor y del administrador: se llega por el
+// candado del pie de página, así los clientes no ven esa opción en el menú.
+// El rol viaja a la API, que solo entrega el token si la cuenta tiene ese rol.
 import { computed, nextTick, onBeforeUnmount, onMounted, reactive, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
@@ -27,9 +27,9 @@ const ROLES = [
     valor: 'vendedor',
     nombre: 'Vendedor',
     icono: 'fa-store',
-    descripcion: 'Gestiona pedidos, inventario y mensajes',
+    descripcion: 'Gestiona pedidos, inventario y devoluciones',
     titulo: 'Listo para vender',
-    beneficios: ['Atiende y actualiza pedidos', 'Controla el stock por talla y color', 'Responde los mensajes de clientes'],
+    beneficios: ['Atiende y actualiza pedidos', 'Controla el stock por talla y color', 'Atiende las devoluciones de los clientes'],
     boton: 'Entrar al panel',
   },
   {
@@ -43,6 +43,10 @@ const ROLES = [
   },
 ]
 const CLAVE_ROL = 'mya_rol_login'
+
+/** true en /acceso-personal (vendedor o administrador). */
+const esPersonal = route.meta.personal === true
+const rolesVisibles = ROLES.filter((r) => (r.valor === 'cliente') !== esPersonal)
 
 const modo = ref('login') // 'login' | 'registro'
 const rolElegido = ref(rolInicial())
@@ -59,13 +63,10 @@ const enviando = ref(false)
 const rol = computed(() => ROLES.find((r) => r.valor === rolElegido.value) ?? ROLES[0])
 const sesionExpirada = computed(() => route.query.expirada === '1')
 
-/** Rol con el que abre el login: si viene de una página del panel, personal; si no, el último usado. */
+/** Clientes: siempre 'cliente'. Personal: el último rol usado (vendedor por defecto). */
 function rolInicial() {
-  const destino = String(route.query.redirect ?? '')
-  const guardado = almacenamiento.leer(CLAVE_ROL)
-  if (destino.startsWith('/checkout') || destino.startsWith('/mi-')) return 'cliente'
-  if (destino.startsWith('/panel') && guardado !== 'admin') return 'vendedor'
-  return ROLES.some((r) => r.valor === guardado) ? guardado : 'cliente'
+  if (!esPersonal) return 'cliente'
+  return almacenamiento.leer(CLAVE_ROL) === 'admin' ? 'admin' : 'vendedor'
 }
 
 function elegirRol(valor) {
@@ -79,7 +80,7 @@ function elegirRol(valor) {
 
 function abrirSelector() {
   desplegado.value = !desplegado.value
-  indiceResaltado.value = ROLES.findIndex((r) => r.valor === rolElegido.value)
+  indiceResaltado.value = rolesVisibles.findIndex((r) => r.valor === rolElegido.value)
 }
 
 /** Teclado del desplegable: flechas para moverse, Enter para elegir, Escape para cerrar. */
@@ -91,9 +92,9 @@ function teclaSelector(evento) {
     }
     return
   }
-  if (evento.key === 'ArrowDown') indiceResaltado.value = (indiceResaltado.value + 1) % ROLES.length
-  else if (evento.key === 'ArrowUp') indiceResaltado.value = (indiceResaltado.value + ROLES.length - 1) % ROLES.length
-  else if (evento.key === 'Enter' || evento.key === ' ') elegirRol(ROLES[indiceResaltado.value].valor)
+  if (evento.key === 'ArrowDown') indiceResaltado.value = (indiceResaltado.value + 1) % rolesVisibles.length
+  else if (evento.key === 'ArrowUp') indiceResaltado.value = (indiceResaltado.value + rolesVisibles.length - 1) % rolesVisibles.length
+  else if (evento.key === 'Enter' || evento.key === ' ') elegirRol(rolesVisibles[indiceResaltado.value].valor)
   else if (evento.key === 'Escape') desplegado.value = false
   else return
   evento.preventDefault()
@@ -178,13 +179,13 @@ function registrarse() {
 
       <!-- Formulario -->
       <section class="tarjeta">
-        <h1>{{ modo === 'login' ? 'Iniciar sesión' : 'Crear cuenta' }}</h1>
-        <p class="bajada">{{ modo === 'login' ? 'Elige cómo vas a ingresar y escribe tus datos.' : 'Crea tu cuenta de cliente en segundos.' }}</p>
+        <h1>{{ modo === 'registro' ? 'Crear cuenta' : esPersonal ? 'Acceso del personal' : 'Iniciar sesión' }}</h1>
+        <p class="bajada">{{ modo === 'registro' ? 'Crea tu cuenta de cliente en segundos.' : esPersonal ? 'Acceso exclusivo para el personal de la tienda.' : 'Escribe tus datos para entrar a tu cuenta.' }}</p>
 
         <p v-if="sesionExpirada && modo === 'login'" class="alerta alerta-error">Tu sesión expiró. Inicia sesión de nuevo.</p>
 
         <!-- Desplegable "Ingresar como" -->
-        <div v-if="modo === 'login'" ref="selector" class="selector" :class="{ abierto: desplegado }">
+        <div v-if="esPersonal" ref="selector" class="selector" :class="{ abierto: desplegado }">
           <span id="etiqueta-rol" class="selector-etiqueta">Ingresar como</span>
           <button
             type="button"
@@ -202,9 +203,9 @@ function registrarse() {
           </button>
 
           <Transition name="despliega">
-            <ul v-show="desplegado" id="lista-roles" class="selector-lista" role="listbox" aria-labelledby="etiqueta-rol" :aria-activedescendant="`rol-${ROLES[indiceResaltado].valor}`">
+            <ul v-show="desplegado" id="lista-roles" class="selector-lista" role="listbox" aria-labelledby="etiqueta-rol" :aria-activedescendant="`rol-${rolesVisibles[indiceResaltado]?.valor}`">
               <li
-                v-for="(r, i) in ROLES"
+                v-for="(r, i) in rolesVisibles"
                 :id="`rol-${r.valor}`"
                 :key="r.valor"
                 role="option"
@@ -256,6 +257,7 @@ function registrarse() {
             ¿Aún no tienes cuenta? <button type="button" @click="cambiarModo('registro')">Créala gratis</button>
           </p>
           <p v-else class="cambio-modo nota"><i class="fa-solid fa-circle-info"></i> Las cuentas de personal las crea el administrador.</p>
+          <p v-if="esPersonal" class="cambio-modo"><RouterLink :to="{ name: 'inicio' }">← Volver a la tienda</RouterLink></p>
         </form>
 
         <!-- Registro (solo clientes) -->
@@ -349,7 +351,7 @@ function registrarse() {
   width: 380px;
   height: 380px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 102, 0, 0.45) 0%, rgba(255, 102, 0, 0) 70%);
+  background: radial-gradient(circle, rgba(201, 103, 46, 0.45) 0%, rgba(201, 103, 46, 0) 70%);
   transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
   transform: translate(-30%, -60%);
   top: 0;
@@ -386,7 +388,7 @@ function registrarse() {
   color: #000;
   background: var(--naranja);
   border-radius: 18px;
-  box-shadow: 0 12px 30px -8px rgba(255, 102, 0, 0.8);
+  box-shadow: 0 12px 30px -8px rgba(201, 103, 46, 0.8);
 }
 
 .antetitulo {
@@ -426,7 +428,7 @@ function registrarse() {
   height: 24px;
   font-size: 0.7rem;
   color: var(--naranja);
-  background: rgba(255, 102, 0, 0.12);
+  background: rgba(201, 103, 46, 0.12);
   border-radius: 50%;
 }
 
@@ -496,7 +498,7 @@ function registrarse() {
 .selector-boton:focus-visible {
   background: #fff;
   border-color: var(--naranja);
-  box-shadow: 0 0 0 4px rgba(255, 102, 0, 0.15);
+  box-shadow: 0 0 0 4px rgba(201, 103, 46, 0.15);
   outline: none;
 }
 
@@ -609,7 +611,7 @@ function registrarse() {
 .campo .con-icono input:focus {
   background: #fff;
   border-color: var(--naranja);
-  box-shadow: 0 0 0 4px rgba(255, 102, 0, 0.15);
+  box-shadow: 0 0 0 4px rgba(201, 103, 46, 0.15);
   outline: none;
 }
 
@@ -649,7 +651,7 @@ function registrarse() {
   margin-top: -6px;
   font-size: 0.86rem;
   font-weight: 500;
-  color: #c24e00;
+  color: #a8521f;
 }
 
 .olvido:hover {
@@ -676,13 +678,13 @@ function registrarse() {
   background: var(--naranja);
   border: 0;
   border-radius: 999px;
-  box-shadow: 0 12px 26px -10px rgba(255, 102, 0, 0.8);
+  box-shadow: 0 12px 26px -10px rgba(201, 103, 46, 0.8);
   cursor: pointer;
   transition: transform 0.2s, background-color 0.2s;
 }
 
 .entrar:hover:not(:disabled) {
-  background: #ff8533;
+  background: #d9814f;
   transform: translateY(-2px);
 }
 
@@ -707,7 +709,7 @@ function registrarse() {
 
 .cambio-modo button {
   font-weight: 700;
-  color: #c24e00;
+  color: #a8521f;
   background: none;
   border: 0;
   cursor: pointer;

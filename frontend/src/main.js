@@ -16,7 +16,8 @@ alExpirar(() => {
   useAuthStore().cerrarSesion()
   const actual = router.currentRoute.value
   if (actual.matched.some((ruta) => ruta.meta.requiereSesion)) {
-    router.push({ name: 'login', query: { redirect: actual.fullPath, expirada: '1' } })
+    const destino = actual.path.startsWith('/panel') ? 'acceso-personal' : 'login'
+    router.push({ name: destino, query: { redirect: actual.fullPath, expirada: '1' } })
   }
 })
 

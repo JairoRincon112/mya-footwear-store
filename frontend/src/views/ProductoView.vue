@@ -315,7 +315,7 @@ function agregarAlCarrito() {
 .vence-oferta {
   margin-top: -8px;
   font-size: .88rem;
-  color: #c24e00;
+  color: #a8521f;
 }
 
 .descripcion {

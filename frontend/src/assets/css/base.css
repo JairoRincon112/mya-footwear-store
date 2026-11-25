@@ -7,15 +7,15 @@
 
 :root {
     /* color */
-    --first-color: hsl(24, 100%, 50%);
+    --first-color: hsl(22, 62%, 48%);
     --title-color: hsl(0, 0%, 0%);
     --text-color: hsl(0, 0%, 0%);
     --body-color: hsl(0, 19%, 93%);
     --container-color: hsl(0, 0%, 99%);
 
     /* colores de apoyo para formularios y paneles */
-    --naranja: #ff6600;
-    --naranja-claro: #ff8533;
+    --naranja: #c9672e;
+    --naranja-claro: #d9814f;
     --gris-borde: #bbbbbb;
     --gris-suave: #eeeeee;
     --texto-secundario: #555555;
@@ -92,7 +92,7 @@ textarea {
 header.menu-principal {
     display: flex;
     min-height: 70px;
-    background-color: #ff6600;
+    background-color: #c9672e;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
@@ -109,19 +109,25 @@ header.menu-principal {
     align-items: center;
 }
 
-.logo img {
-    height: 80px;
-    width: 80px;
-    margin-right: 20px;
-    border-radius: 60%;
-    object-fit: cover;
+.logo {
+    gap: 12px;
+}
+
+/* Logo en vector (componente LogoMya): nítido en cualquier pantalla */
+.logo-img {
+    flex-shrink: 0;
+    width: 58px;
+    height: 58px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, .25));
 }
 
 /* Tipografía del menú con el mismo estilo del carrusel: Poppins gruesa y compacta */
+/* Nombre de la tienda: en proporción con el menú (antes se veía mucho más grande). */
 .clase_empresa {
-    font-size: 2em;
+    font-size: 1.3rem;
     font-weight: 800;
-    letter-spacing: -0.03em;
+    letter-spacing: .01em;
+    line-height: 1.1;
 }
 
 header.menu-principal nav a,
@@ -208,7 +214,12 @@ header.menu-principal nav .saludo {
     }
 
     .clase_empresa {
-        font-size: 1.6em;
+        font-size: 1.15rem;
+    }
+
+    .logo-img {
+        width: 48px;
+        height: 48px;
     }
 }
 

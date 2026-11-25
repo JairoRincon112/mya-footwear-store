@@ -1,5 +1,6 @@
 <script setup>
 // Inventario: stock de todas las variantes, alerta de bajo stock, ajustes e historial.
+import MenuAcciones from '@/components/MenuAcciones.vue'
 import { onMounted, reactive, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import Paginacion from '@/components/Paginacion.vue'
@@ -104,6 +105,11 @@ onMounted(() => {
     </div>
 
     <div class="panel-tarjeta">
+      <div class="semaforo" role="group" aria-label="Filtrar existencias">
+        <button type="button" class="sem-neutro" :class="{ activo: !filtros.bajo_stock }" :aria-pressed="!filtros.bajo_stock" @click="filtros.bajo_stock = false"><i class="fa-solid fa-list" aria-hidden="true"></i>Todas</button>
+        <button type="button" class="sem-amarillo" :class="{ activo: filtros.bajo_stock }" :aria-pressed="filtros.bajo_stock" @click="filtros.bajo_stock = true"><span class="luz" aria-hidden="true"></span>Bajo stock (≤ {{ resultado.umbral }})</button>
+      </div>
+
       <form class="filtros" role="search" @submit.prevent>
         <label class="campo">
           Buscar
@@ -115,10 +121,6 @@ onMounted(() => {
             <option value="">Todas</option>
             <option v-for="marca in catalogo.marcas" :key="marca.id" :value="marca.slug">{{ marca.nombre }}</option>
           </select>
-        </label>
-        <label class="campo-check bajo">
-          <input v-model="filtros.bajo_stock" type="checkbox">
-          Solo bajo stock (≤ {{ resultado.umbral }})
         </label>
       </form>
 
@@ -158,8 +160,13 @@ onMounted(() => {
                   <template v-else>{{ variante.stock }}</template>
                 </td>
                 <td class="acciones">
-                  <button type="button" class="boton boton-secundario boton-pequeno" @click="abrirAjuste(variante)">Ajustar</button>
-                  <button type="button" class="boton boton-secundario boton-pequeno" @click="verHistorial(variante)">Historial</button>
+                  <MenuAcciones
+                    :etiqueta="`Acciones de ${variante.sku}`"
+                    :items="[
+                      { texto: 'Ajustar stock', icono: 'fa-sliders', accion: () => abrirAjuste(variante) },
+                      { texto: 'Ver historial', icono: 'fa-clock-rotate-left', accion: () => verHistorial(variante) },
+                    ]"
+                  />
                 </td>
               </tr>
 
@@ -234,7 +241,7 @@ onMounted(() => {
 <style scoped>
 .filtros {
   display: grid;
-  grid-template-columns: 2fr 1fr auto;
+  grid-template-columns: 2fr 1fr;
   gap: 12px;
   align-items: end;
   margin-bottom: 16px;
@@ -248,17 +255,6 @@ onMounted(() => {
   margin-bottom: 12px;
 }
 
-.etiqueta-bajo {
-  color: #7a4b00;
-  background: #fff1d6;
-}
-
-.acciones {
-  display: flex;
-  gap: 6px;
-  justify-content: flex-end;
-  white-space: nowrap;
-}
 
 .fila-extra > td {
   background: #fff8f2;

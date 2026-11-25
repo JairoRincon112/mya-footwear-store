@@ -53,10 +53,10 @@ onMounted(cargar)
     </div>
 
     <div class="panel-tarjeta">
-      <div class="pestanas" role="group" aria-label="Filtrar mensajes">
-        <button type="button" :class="{ activo: filtro === '0' }" @click="filtro = '0'">Sin leer</button>
-        <button type="button" :class="{ activo: filtro === '1' }" @click="filtro = '1'">Leídos</button>
-        <button type="button" :class="{ activo: filtro === '' }" @click="filtro = ''">Todos</button>
+      <div class="semaforo" role="group" aria-label="Filtrar mensajes">
+        <button type="button" class="sem-neutro" :class="{ activo: filtro === '' }" :aria-pressed="filtro === ''" @click="filtro = ''"><i class="fa-solid fa-list" aria-hidden="true"></i>Todos</button>
+        <button type="button" class="sem-amarillo" :class="{ activo: filtro === '0' }" :aria-pressed="filtro === '0'" @click="filtro = '0'"><span class="luz" aria-hidden="true"></span>Sin leer</button>
+        <button type="button" class="sem-verde" :class="{ activo: filtro === '1' }" :aria-pressed="filtro === '1'" @click="filtro = '1'"><span class="luz" aria-hidden="true"></span>Leídos</button>
       </div>
 
       <p v-if="error" class="alerta alerta-error">{{ error }}</p>
@@ -101,26 +101,6 @@ onMounted(cargar)
   color: #7a4b00;
   background: #fff1d6;
   border-radius: 20px;
-}
-
-.pestanas {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-
-.pestanas button {
-  padding: 6px 14px;
-  font-size: .88rem;
-  font-weight: 500;
-  background: var(--gris-suave);
-  border: 0;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.pestanas button.activo {
-  background: var(--naranja);
 }
 
 .mensajes {

@@ -155,7 +155,7 @@ import imagenPuma from '@/assets/img/home-puma.png'
 .service a.btn-1 {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #ff6600;
+  background-color: #c9672e;
   color: white;
   border-radius: 25px;
   font-size: 1rem;
@@ -237,7 +237,7 @@ import imagenPuma from '@/assets/img/home-puma.png'
 .btn3 {
   border-radius: 15px;
   display: block;
-  background-color: #ff6600;
+  background-color: #c9672e;
   width: 150px;
   font-weight: bold;
   text-align: center;

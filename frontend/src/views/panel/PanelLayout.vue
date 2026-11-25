@@ -9,7 +9,7 @@ const SECCIONES = [
   { ruta: 'panel-pedidos', texto: 'Pedidos', icono: 'fa-receipt' },
   { ruta: 'panel-productos', texto: 'Productos', icono: 'fa-shoe-prints' },
   { ruta: 'panel-inventario', texto: 'Inventario', icono: 'fa-boxes-stacked' },
-  { ruta: 'panel-mensajes', texto: 'Mensajes', icono: 'fa-envelope' },
+  { ruta: 'panel-devoluciones', texto: 'Devoluciones', icono: 'fa-rotate-left' },
   { ruta: 'panel-reportes', texto: 'Reportes', icono: 'fa-chart-column' },
   { ruta: 'panel-cupones', texto: 'Cupones', icono: 'fa-ticket', soloAdmin: true },
   { ruta: 'panel-usuarios', texto: 'Usuarios', icono: 'fa-users', soloAdmin: true },
@@ -40,24 +40,30 @@ const SECCIONES = [
 
 <style>
 /* Estilos compartidos por todas las pantallas del panel (sin scoped a propósito). */
+/* El panel ocupa toda la pantalla debajo de la barra naranja: sin franjas del
+   fondo de la tienda entre la barra, el menú y el contenido. */
 .panel {
   display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
-  gap: 24px;
-  max-width: 1300px;
+  grid-template-columns: 210px minmax(0, 1fr);
   min-height: 100vh;
-  margin: 0 auto;
-  padding: calc(var(--alto-header) + 24px) 16px 40px;
+  padding-top: var(--alto-header);
+  background: #fff;
 }
 
 .panel-menu {
   align-self: start;
   position: sticky;
-  top: calc(var(--alto-header) + 24px);
-  padding: 18px 12px;
+  top: var(--alto-header);
+  height: calc(100vh - var(--alto-header));
+  overflow-y: auto;
+  padding: 16px 10px;
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, .08);
+  border-right: 1px solid #e4e6ea;
+}
+
+.panel-contenido {
+  min-width: 0;
+  padding: 18px 22px 28px;
 }
 
 .panel-rol {
@@ -90,7 +96,7 @@ const SECCIONES = [
 
 .panel-menu a.activo {
   background: #fff3eb;
-  color: #c24e00;
+  color: #a8521f;
 }
 
 .panel-menu .deshabilitado {
@@ -104,11 +110,11 @@ const SECCIONES = [
 }
 
 .panel-tarjeta {
-  margin-bottom: 20px;
-  padding: 24px;
+  margin-bottom: 16px;
+  padding: 18px;
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, .08);
+  border: 1px solid #e4e6ea;
+  border-radius: 10px;
 }
 
 .panel-encabezado {
@@ -117,7 +123,7 @@ const SECCIONES = [
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .panel-encabezado h2 {
@@ -144,7 +150,7 @@ const SECCIONES = [
 
 .tabla th,
 .tabla td {
-  padding: 10px 12px;
+  padding: 9px 10px;
   text-align: left;
   vertical-align: middle;
   border-bottom: 1px solid #e6e6e6;
@@ -163,6 +169,22 @@ const SECCIONES = [
   font-variant-numeric: tabular-nums;
 }
 
+/* Columna de acciones: un solo botón «⋮» por fila. */
+.tabla td.acciones {
+  width: 1%;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Filas que abren el detalle al hacer clic. */
+.tabla .fila-clic {
+  cursor: pointer;
+}
+
+.tabla .fila-clic:hover td {
+  background: #fafbfc;
+}
+
 .miniatura {
   width: 48px;
   height: 48px;
@@ -171,28 +193,93 @@ const SECCIONES = [
   background: var(--gris-suave);
 }
 
+/* ---------- Semáforo del panel ----------
+   Los mismos colores en todas las secciones:
+   verde = activo / vigente / entregado / leído
+   amarillo = pendiente / bajo stock / sin leer
+   azul = pagado / programado
+   naranja = en tránsito
+   rojo = cancelado / agotado / desactivado / vencido */
+.sem-neutro { --color: #1d2430; --fondo: #fff; }
+.sem-verde { --color: #1e8e3e; --fondo: #e6f4ea; }
+.sem-amarillo { --color: #b58100; --fondo: #fff6d6; }
+.sem-azul { --color: #1565c0; --fondo: #e3effb; }
+.sem-naranja { --color: #d35400; --fondo: #fdeedd; }
+.sem-rojo { --color: #c62828; --fondo: #fdecea; }
+
+/* Botones de filtro: punto de color + borde; el seleccionado se rellena. */
+.semaforo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.semaforo button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--color, #1d2430);
+  background: var(--fondo, #fff);
+  border: 2px solid var(--color, #1d2430);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color .15s, color .15s;
+}
+
+.semaforo .luz {
+  width: 11px;
+  height: 11px;
+  background: var(--color);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, .7);
+}
+
+.semaforo button.activo {
+  color: #fff;
+  background: var(--color, #1d2430);
+}
+
+.semaforo button:focus-visible {
+  outline: 3px solid #1d2430;
+  outline-offset: 2px;
+}
+
+/* Etiquetas de estado dentro de las tablas: mismos colores del semáforo. */
 .etiqueta {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   padding: 2px 10px;
   font-size: .78rem;
   font-weight: 600;
+  border: 1.5px solid currentColor;
   border-radius: 20px;
   white-space: nowrap;
 }
 
 .etiqueta-activa {
-  color: var(--exito);
-  background: #e7f4ea;
+  color: #17692e;
+  background: #e6f4ea;
 }
 
-.etiqueta-inactiva {
-  color: #6b6b6b;
-  background: #ececec;
-}
-
+.etiqueta-inactiva,
 .etiqueta-agotada {
-  color: var(--error);
+  color: #b71c1c;
   background: #fdecea;
+}
+
+.etiqueta-bajo {
+  color: #7a5600;
+  background: #fff6d6;
+}
+
+.etiqueta-programado {
+  color: #0d47a1;
+  background: #e3effb;
 }
 
 .texto-secundario {
@@ -207,6 +294,13 @@ const SECCIONES = [
 
   .panel-menu {
     position: static;
+    height: auto;
+    border-right: 0;
+    border-bottom: 1px solid #e4e6ea;
+  }
+
+  .panel-contenido {
+    padding: 16px 14px 24px;
   }
 
   .panel-menu nav {

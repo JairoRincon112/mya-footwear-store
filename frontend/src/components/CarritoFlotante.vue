@@ -83,7 +83,7 @@ onBeforeUnmount(() => document.removeEventListener('keydown', cerrarConEscape))
 .carro {
   display: flex;
   align-items: center;
-  background-color: #ff6600;
+  background-color: #c9672e;
   z-index: 900;
   position: fixed;
   /* En el original estaba a media pantalla y tapaba tallas y botones; va en la esquina. */
@@ -281,7 +281,7 @@ onBeforeUnmount(() => document.removeEventListener('keydown', cerrarConEscape))
   padding: 10px;
   text-align: center;
   color: #ffffff;
-  background-color: #ff6600;
+  background-color: #c9672e;
   border: none;
   cursor: pointer;
 }

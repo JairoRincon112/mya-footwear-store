@@ -1,11 +1,14 @@
 <script setup>
 // Listado de pedidos para el personal, con filtros por estado, búsqueda y fechas.
+import MenuAcciones from '@/components/MenuAcciones.vue'
 import { onMounted, reactive, ref, watch } from 'vue'
+import { useRouter } from 'vue-router'
 import EstadoPedido from '@/components/EstadoPedido.vue'
 import Paginacion from '@/components/Paginacion.vue'
 import pedidoService from '@/services/pedidoService'
 import { ESTADOS_PEDIDO, formatearFecha, formatearPrecio } from '@/utils/formato'
 
+const router = useRouter()
 const filtros = reactive({ estado: '', q: '', desde: '', hasta: '', pagina: 1 })
 const resultado = ref({ items: [], total: 0, paginas: 0 })
 const cargando = ref(true)
@@ -35,6 +38,10 @@ watch(() => filtros.q, () => {
   temporizador = setTimeout(reiniciarYCargar, 350)
 })
 
+function abrirPedido(pedido) {
+  router.push({ name: 'panel-pedido', params: { id: pedido.id } })
+}
+
 function irAPagina(pagina) {
   filtros.pagina = pagina
   cargar()
@@ -50,16 +57,19 @@ onMounted(cargar)
     </div>
 
     <div class="panel-tarjeta">
-      <div class="estados" role="group" aria-label="Filtrar por estado">
-        <button type="button" :class="{ activo: filtros.estado === '' }" @click="filtros.estado = ''">Todos</button>
+      <div class="semaforo" role="group" aria-label="Filtrar por estado">
+        <button type="button" class="sem-neutro" :class="{ activo: filtros.estado === '' }" :aria-pressed="filtros.estado === ''" @click="filtros.estado = ''">
+          <i class="fa-solid fa-list" aria-hidden="true"></i>Todos
+        </button>
         <button
           v-for="(info, clave) in ESTADOS_PEDIDO"
           :key="clave"
           type="button"
-          :class="{ activo: filtros.estado === clave }"
+          :class="[info.semaforo, { activo: filtros.estado === clave }]"
+          :aria-pressed="filtros.estado === clave"
           @click="filtros.estado = clave"
         >
-          {{ info.texto }}
+          <span class="luz" aria-hidden="true"></span>{{ info.texto }}
         </button>
       </div>
 
@@ -98,9 +108,9 @@ onMounted(cargar)
             </tr>
           </thead>
           <tbody>
-            <tr v-for="pedido in resultado.items" :key="pedido.id">
+            <tr v-for="pedido in resultado.items" :key="pedido.id" class="fila-clic" @click="abrirPedido(pedido)">
               <td><strong>#{{ pedido.id }}</strong></td>
-              <td class="texto-secundario">{{ formatearFecha(pedido.creado_en) }}</td>
+              <td class="texto-secundario sin-salto">{{ formatearFecha(pedido.creado_en) }}</td>
               <td>
                 {{ pedido.cliente.nombre }}
                 <div class="texto-secundario">{{ pedido.cliente.email }}</div>
@@ -110,8 +120,8 @@ onMounted(cargar)
               <td class="numero">{{ formatearPrecio(pedido.total) }}</td>
               <td><EstadoPedido :estado="pedido.estado" /></td>
               <td class="texto-secundario">{{ pedido.vendedor ?? '—' }}</td>
-              <td>
-                <RouterLink :to="{ name: 'panel-pedido', params: { id: pedido.id } }" class="boton boton-secundario boton-pequeno">Ver</RouterLink>
+              <td class="acciones" @click.stop>
+                <MenuAcciones :etiqueta="`Acciones del pedido #${pedido.id}`" :items="[{ texto: 'Ver detalle', icono: 'fa-eye', to: { name: 'panel-pedido', params: { id: pedido.id } } }]" />
               </td>
             </tr>
           </tbody>
@@ -124,26 +134,10 @@ onMounted(cargar)
 </template>
 
 <style scoped>
-.estados {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 16px;
+.sin-salto {
+  white-space: nowrap;
 }
 
-.estados button {
-  padding: 6px 14px;
-  font-size: .88rem;
-  font-weight: 500;
-  background: var(--gris-suave);
-  border: 0;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.estados button.activo {
-  background: var(--naranja);
-}
 
 .filtros {
   display: grid;

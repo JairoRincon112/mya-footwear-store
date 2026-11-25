@@ -1,12 +1,15 @@
 <script setup>
 // Listado de productos del panel con filtros y paginación.
+import MenuAcciones from '@/components/MenuAcciones.vue'
 import { onMounted, reactive, ref, watch } from 'vue'
+import { useRouter } from 'vue-router'
 import productoService from '@/services/productoService'
 import { urlImagen } from '@/services/api'
 import { useAuthStore } from '@/stores/auth'
 import { useCatalogoStore } from '@/stores/catalogo'
 import { formatearPrecio } from '@/utils/formato'
 
+const router = useRouter()
 const auth = useAuthStore()
 const catalogo = useCatalogoStore()
 
@@ -74,6 +77,12 @@ onMounted(() => {
     </div>
 
     <div class="panel-tarjeta">
+      <div class="semaforo" role="group" aria-label="Filtrar por estado">
+        <button type="button" class="sem-neutro" :class="{ activo: filtros.estado === 'todos' }" :aria-pressed="filtros.estado === 'todos'" @click="filtros.estado = 'todos'"><i class="fa-solid fa-list" aria-hidden="true"></i>Todos</button>
+        <button type="button" class="sem-verde" :class="{ activo: filtros.estado === 'activos' }" :aria-pressed="filtros.estado === 'activos'" @click="filtros.estado = 'activos'"><span class="luz" aria-hidden="true"></span>Activos</button>
+        <button type="button" class="sem-rojo" :class="{ activo: filtros.estado === 'inactivos' }" :aria-pressed="filtros.estado === 'inactivos'" @click="filtros.estado = 'inactivos'"><span class="luz" aria-hidden="true"></span>Desactivados</button>
+      </div>
+
       <form class="filtros" role="search" @submit.prevent>
         <label class="campo">
           Buscar
@@ -84,14 +93,6 @@ onMounted(() => {
           <select v-model="filtros.marca">
             <option value="">Todas</option>
             <option v-for="marca in catalogo.marcas" :key="marca.id" :value="marca.slug">{{ marca.nombre }}</option>
-          </select>
-        </label>
-        <label class="campo">
-          Estado
-          <select v-model="filtros.estado">
-            <option value="todos">Todos</option>
-            <option value="activos">Activos</option>
-            <option value="inactivos">Desactivados</option>
           </select>
         </label>
       </form>
@@ -117,7 +118,7 @@ onMounted(() => {
             </tr>
           </thead>
           <tbody>
-            <tr v-for="producto in resultado.items" :key="producto.id">
+            <tr v-for="producto in resultado.items" :key="producto.id" class="fila-clic" @click="router.push({ name: 'panel-producto', params: { id: producto.id } })">
               <td><img :src="urlImagen(producto.imagen)" alt="" class="miniatura"></td>
               <td>
                 <strong>{{ producto.nombre }}</strong>
@@ -138,13 +139,14 @@ onMounted(() => {
                   {{ producto.activo ? 'Activo' : 'Desactivado' }}
                 </span>
               </td>
-              <td class="acciones">
-                <RouterLink :to="{ name: 'panel-producto', params: { id: producto.id } }" class="boton boton-secundario boton-pequeno">
-                  {{ auth.esAdmin ? 'Editar' : 'Ver / stock' }}
-                </RouterLink>
-                <button v-if="auth.esAdmin && producto.activo" type="button" class="boton boton-secundario boton-pequeno" @click="desactivar(producto)">
-                  Desactivar
-                </button>
+              <td class="acciones" @click.stop>
+                <MenuAcciones
+                  :etiqueta="`Acciones de ${producto.nombre}`"
+                  :items="[
+                    { texto: auth.esAdmin ? 'Editar' : 'Ver y ajustar stock', icono: auth.esAdmin ? 'fa-pen' : 'fa-eye', to: { name: 'panel-producto', params: { id: producto.id } } },
+                    auth.esAdmin && producto.activo && { texto: 'Desactivar', icono: 'fa-ban', peligro: true, accion: () => desactivar(producto) },
+                  ]"
+                />
               </td>
             </tr>
           </tbody>
@@ -163,17 +165,11 @@ onMounted(() => {
 <style scoped>
 .filtros {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 12px;
   margin-bottom: 16px;
 }
 
-.acciones {
-  display: flex;
-  gap: 6px;
-  justify-content: flex-end;
-  white-space: nowrap;
-}
 
 .paginacion {
   display: flex;

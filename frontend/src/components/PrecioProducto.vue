@@ -44,7 +44,7 @@ const porcentaje = computed(() =>
   font-size: .7em;
   font-weight: 700;
   color: #fff;
-  background: #c24e00;
+  background: #a8521f;
   border-radius: 20px;
   align-self: center;
 }

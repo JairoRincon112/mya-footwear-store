@@ -1,9 +1,11 @@
 <script setup>
-// Detalle de un pedido del cliente; puede cancelarlo mientras esté pendiente.
+// Detalle de un pedido del cliente; puede cancelarlo mientras esté pendiente
+// y pedir devoluciones cuando ya fue entregado.
 import { computed, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import BotonPagoWompi from '@/components/BotonPagoWompi.vue'
 import DetallePedido from '@/components/DetallePedido.vue'
+import DevolucionesPedido from '@/components/DevolucionesPedido.vue'
 import pedidoService from '@/services/pedidoService'
 
 const props = defineProps({
@@ -21,8 +23,8 @@ const esNuevo = computed(() => route.query.nuevo === '1')
 const TEXTO_PAGO = { pendiente: 'en proceso', aprobado: 'aprobado', rechazado: 'rechazado', anulado: 'anulado', error: 'con error' }
 const ICONO_PAGO = { pendiente: 'fa-hourglass-half', aprobado: 'fa-circle-check', rechazado: 'fa-circle-xmark', anulado: 'fa-ban', error: 'fa-triangle-exclamation' }
 
-async function cargar() {
-  cargando.value = true
+async function cargar(silencioso = false) {
+  if (!silencioso) cargando.value = true
   error.value = ''
   try {
     pedido.value = await pedidoService.obtener(props.id)
@@ -76,6 +78,8 @@ async function cancelar() {
             <button type="button" class="boton boton-secundario" @click="cancelar">Cancelar pedido</button>
           </div>
         </template>
+
+        <DevolucionesPedido :pedido="pedido" @actualizado="cargar(true)" />
       </div>
     </template>
   </main>

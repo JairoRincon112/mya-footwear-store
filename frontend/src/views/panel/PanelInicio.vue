@@ -48,12 +48,12 @@ onMounted(async () => {
         <ul class="pendientes">
           <li>
             <i class="fa-solid fa-clock"></i>
-            <span><strong>{{ resumen.pedidos_por_estado.pendiente }}</strong> pedidos pendientes de pago</span>
+            <span><strong>{{ resumen.pedidos_por_estado.pendiente }}</strong> {{ resumen.pedidos_por_estado.pendiente === 1 ? 'pedido pendiente' : 'pedidos pendientes' }} de pago</span>
             <RouterLink :to="{ name: 'panel-pedidos' }" class="boton boton-secundario boton-pequeno">Ver pedidos</RouterLink>
           </li>
           <li>
             <i class="fa-solid fa-credit-card"></i>
-            <span><strong>{{ resumen.pedidos_por_estado.pagado }}</strong> pedidos pagados por enviar</span>
+            <span><strong>{{ resumen.pedidos_por_estado.pagado }}</strong> {{ resumen.pedidos_por_estado.pagado === 1 ? 'pedido pagado' : 'pedidos pagados' }} por despachar</span>
             <RouterLink :to="{ name: 'panel-pedidos' }" class="boton boton-secundario boton-pequeno">Ver pedidos</RouterLink>
           </li>
           <li>
@@ -62,9 +62,9 @@ onMounted(async () => {
             <RouterLink :to="{ name: 'panel-inventario', query: { bajo_stock: '1' } }" class="boton boton-secundario boton-pequeno">Ver inventario</RouterLink>
           </li>
           <li>
-            <i class="fa-solid fa-envelope"></i>
-            <span><strong>{{ resumen.mensajes_no_leidos }}</strong> mensajes de contacto sin leer</span>
-            <RouterLink :to="{ name: 'panel-mensajes' }" class="boton boton-secundario boton-pequeno">Ver mensajes</RouterLink>
+            <i class="fa-solid fa-rotate-left"></i>
+            <span><strong>{{ resumen.devoluciones_por_revisar }}</strong> {{ resumen.devoluciones_por_revisar === 1 ? 'devolución por revisar' : 'devoluciones por revisar' }}</span>
+            <RouterLink :to="{ name: 'panel-devoluciones' }" class="boton boton-secundario boton-pequeno">Ver devoluciones</RouterLink>
           </li>
         </ul>
       </div>
@@ -117,7 +117,7 @@ onMounted(async () => {
 }
 
 .pendientes i {
-  color: #c24e00;
+  color: #a8521f;
   text-align: center;
 }
 

@@ -6,7 +6,7 @@ import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 import { useCatalogoStore } from '@/stores/catalogo'
 import { useCarritoStore } from '@/stores/carrito'
-import logo from '@/assets/img/logo.png'
+import LogoMya from '@/components/LogoMya.vue'
 
 const auth = useAuthStore()
 const catalogo = useCatalogoStore()
@@ -50,7 +50,7 @@ function salir() {
 <template>
   <header ref="cabecera" class="menu-principal">
     <RouterLink to="/" class="logo">
-      <img :src="logo" alt="">
+      <span class="logo-img"><LogoMya /></span>
       <h1 class="clase_empresa">MyA FOOTWEAR STORE</h1>
     </RouterLink>
 

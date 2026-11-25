@@ -93,7 +93,7 @@ const compacto = new Intl.NumberFormat('es-CO', { notation: 'compact', maximumFr
 
 <style scoped>
 .grafica-ventas {
-  --color-serie: #e05a00; /* naranja de la marca validado: contraste ≥ 3:1 sobre blanco */
+  --color-serie: #c9672e; /* naranja de la marca validado: contraste ≥ 3:1 sobre blanco */
 }
 
 .cabecera {

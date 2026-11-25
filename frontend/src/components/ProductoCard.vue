@@ -56,7 +56,7 @@ defineProps({
 }
 
 .agotado.oferta {
-  background: #c24e00;
+  background: #a8521f;
 }
 
 .card_data {

@@ -1,5 +1,7 @@
 <script setup>
 // Pie de página del diseño original (footer.html).
+// El candado del final lleva al acceso del personal (vendedor y administrador).
+const anio = new Date().getFullYear()
 </script>
 
 <template>
@@ -37,8 +39,14 @@
             <a href="https://www.youtube.com/channel/UCMIkzmM4B8WYh67yyo8gVog" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
           </div>
-          <div class="copyright"><p>&copy; MyA FOOTWEAR STORE</p></div>
         </div>
+      </div>
+      <div class="footer-final">
+        <p>&copy; {{ anio }} MyA FOOTWEAR STORE, Cúcuta. Todos los derechos reservados.</p>
+        <!-- Ingreso del personal: discreto, solo con el candado -->
+        <RouterLink :to="{ name: 'acceso-personal' }" class="acceso-personal" aria-label="Acceso del personal" title="Acceso del personal">
+          <i class="fa-solid fa-lock" aria-hidden="true"></i>
+        </RouterLink>
       </div>
     </div>
   </footer>
@@ -85,7 +93,7 @@
 }
 
 .footer-links ul li a:hover {
-  color: #ff6600;
+  color: #c9672e;
   padding-left: 6px;
 }
 
@@ -103,13 +111,40 @@
 }
 
 .social-link a:hover {
-  background-color: #ff6600;
+  background-color: #c9672e;
 }
 
-.copyright {
-  color: #ff6600;
-  text-align: right;
-  margin-top: 70px;
+.footer-final {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+  padding-top: 16px;
+  font-size: .85rem;
+  color: rgba(255, 255, 255, .6);
+  border-top: 1px solid rgba(255, 255, 255, .12);
+}
+
+.acceso-personal {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  color: rgba(255, 255, 255, .55);
+  border-radius: 6px;
+  transition: color .2s, background-color .2s;
+}
+
+.acceso-personal:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, .1);
+}
+
+.acceso-personal:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
 
 @media (max-width: 768px) {
@@ -134,9 +169,5 @@
     line-height: 30px;
   }
 
-  .copyright {
-    margin-top: 40px;
-    text-align: center;
-  }
 }
 </style>

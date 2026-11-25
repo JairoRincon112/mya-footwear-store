@@ -105,13 +105,13 @@ async function pagar() {
   background: var(--naranja);
   border: 0;
   border-radius: 999px;
-  box-shadow: 0 12px 26px -10px rgba(255, 102, 0, 0.8);
+  box-shadow: 0 12px 26px -10px rgba(201, 103, 46, 0.8);
   cursor: pointer;
   transition: transform 0.2s, background-color 0.2s;
 }
 
 .pagar:hover:not(:disabled) {
-  background: #ff8533;
+  background: #d9814f;
   transform: translateY(-2px);
 }
 

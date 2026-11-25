@@ -255,7 +255,7 @@ async function copiarCorreo() {
       <h2>Antes de escribir, quizá esto te ayude<span class="punto">.</span></h2>
       <details>
         <summary>¿Cómo veo el estado de mi pedido?</summary>
-        <p>Inicia sesión y entra a <RouterLink :to="{ name: 'mis-pedidos' }">Mis pedidos</RouterLink>: ahí ves cada pedido con su estado (pendiente, pagado, enviado o entregado).</p>
+        <p>Inicia sesión y entra a <RouterLink :to="{ name: 'mis-pedidos' }">Mis pedidos</RouterLink>: ahí ves cada pedido con su estado (pendiente, pagado, en tránsito o entregado).</p>
       </details>
       <details>
         <summary>Olvidé mi contraseña, ¿qué hago?</summary>
@@ -318,8 +318,8 @@ async function copiarCorreo() {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--naranja);
-  background: rgba(255, 102, 0, 0.08);
-  border: 1px solid rgba(255, 102, 0, 0.45);
+  background: rgba(201, 103, 46, 0.08);
+  border: 1px solid rgba(201, 103, 46, 0.45);
   border-radius: 999px;
 }
 
@@ -368,8 +368,8 @@ async function copiarCorreo() {
 
 a.canal:hover,
 .canal:has(.canal-enlace:hover) {
-  background: rgba(255, 102, 0, 0.1);
-  border-color: rgba(255, 102, 0, 0.5);
+  background: rgba(201, 103, 46, 0.1);
+  border-color: rgba(201, 103, 46, 0.5);
   transform: translateX(4px);
 }
 
@@ -594,7 +594,7 @@ form {
 .campo textarea:focus {
   background: #fff;
   border-color: var(--naranja);
-  box-shadow: 0 0 0 4px rgba(255, 102, 0, 0.15);
+  box-shadow: 0 0 0 4px rgba(201, 103, 46, 0.15);
 }
 
 .campo input:focus + label,
@@ -604,7 +604,7 @@ form {
   top: 6px;
   font-size: 0.74rem;
   font-weight: 600;
-  color: #c24e00;
+  color: #a8521f;
 }
 
 .campo .icono {
@@ -664,7 +664,7 @@ form {
 }
 
 .contador.casi {
-  color: #c24e00;
+  color: #a8521f;
 }
 
 .trampa {
@@ -693,13 +693,13 @@ form {
   background: var(--naranja);
   border: 0;
   border-radius: 999px;
-  box-shadow: 0 12px 26px -10px rgba(255, 102, 0, 0.8);
+  box-shadow: 0 12px 26px -10px rgba(201, 103, 46, 0.8);
   cursor: pointer;
   transition: transform 0.2s, background-color 0.2s;
 }
 
 .enviar:hover:not(:disabled) {
-  background: #ff8533;
+  background: #d9814f;
   transform: translateY(-2px);
 }
 
@@ -811,7 +811,7 @@ summary::after {
   height: 30px;
   font-size: 1.2rem;
   color: var(--naranja);
-  border: 1px solid rgba(255, 102, 0, 0.5);
+  border: 1px solid rgba(201, 103, 46, 0.5);
   border-radius: 50%;
   transition: transform 0.25s;
 }

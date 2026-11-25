@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Controllers;
 
-use App\Core\HttpException;
 use App\Core\Request;
 use App\Core\Response;
 use App\Models\Variante;
@@ -41,10 +40,7 @@ final class InventarioController extends Controller
     public function movimientos(Request $request): void
     {
         $variantes = new Variante();
-        $variante = $variantes->buscarPorId($this->idDeRuta($request));
-        if ($variante === null) {
-            throw HttpException::noEncontrado('La variante no existe.');
-        }
+        $variante = $this->encontrado($variantes->buscarPorId($this->idDeRuta($request)), 'La variante no existe.');
 
         Response::ok(['variante' => $variante, 'movimientos' => $variantes->movimientos($variante['id'])]);
     }

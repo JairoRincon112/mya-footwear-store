@@ -24,6 +24,17 @@ abstract class Controller
         return (int) $valor;
     }
 
+    /**
+     * Devuelve el registro que buscó el modelo o responde 404 con el mensaje dado.
+     *
+     * @param array<string, mixed>|null $registro
+     * @return array<string, mixed>
+     */
+    protected function encontrado(?array $registro, string $mensaje): array
+    {
+        return $registro ?? throw HttpException::noEncontrado($mensaje);
+    }
+
     /** Id del usuario autenticado (las rutas protegidas siempre lo tienen). */
     protected function usuarioId(Request $request): int
     {

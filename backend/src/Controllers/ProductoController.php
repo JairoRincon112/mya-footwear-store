@@ -72,10 +72,10 @@ final class ProductoController extends Controller
         $valor = $request->parametro('producto');
         $idOSlug = ctype_digit($valor) ? (int) $valor : $valor;
 
-        $producto = (new Producto())->buscar($idOSlug, $request->esPersonal());
-        if ($producto === null) {
-            throw HttpException::noEncontrado('El producto no existe o no está disponible.');
-        }
+        $producto = $this->encontrado(
+            (new Producto())->buscar($idOSlug, $request->esPersonal()),
+            'El producto no existe o no está disponible.'
+        );
 
         // La tienda usa este límite para no ofrecer más unidades de las que acepta un pedido.
         $producto['maximo_por_linea'] = Pedido::MAXIMO_UNIDADES_POR_LINEA;
@@ -161,10 +161,7 @@ final class ProductoController extends Controller
     public function eliminarImagen(Request $request): void
     {
         $imagenes = new ProductoImagen();
-        $imagen = $imagenes->buscarPorId($this->idDeRuta($request));
-        if ($imagen === null) {
-            throw HttpException::noEncontrado('La imagen no existe.');
-        }
+        $imagen = $this->encontrado($imagenes->buscarPorId($this->idDeRuta($request)), 'La imagen no existe.');
 
         $imagenes->eliminar($imagen['id']);
 

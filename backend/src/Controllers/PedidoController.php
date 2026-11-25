@@ -109,12 +109,10 @@ final class PedidoController extends Controller
         return $cantidades;
     }
 
+    /** El cupón es opcional: Validator ya devuelve null si llega vacío y lo omite si no llega. */
     private function codigoCupon(array $cuerpo): ?string
     {
-        if (!isset($cuerpo['cupon']) || $cuerpo['cupon'] === '' || $cuerpo['cupon'] === null) {
-            return null;
-        }
-        return Validator::validar($cuerpo, ['cupon' => 'codigo'])['cupon'];
+        return Validator::validar($cuerpo, ['cupon' => 'codigo'])['cupon'] ?? null;
     }
 
     /** GET /api/pedidos/mios (cliente) */

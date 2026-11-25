@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Controllers;
 
-use App\Core\HttpException;
 use App\Core\Request;
 use App\Core\Response;
 use App\Core\Validator;
@@ -82,10 +81,7 @@ final class DevolucionController extends Controller
         $devoluciones = new Devolucion();
         $devoluciones->cambiarEstado($id, $datos['estado'], $datos['respuesta'] ?? null, $this->usuarioId($request));
 
-        $devolucion = $devoluciones->buscar($id);
-        if ($devolucion === null) {
-            throw HttpException::noEncontrado('La devolución no existe.');
-        }
+        $devolucion = $this->encontrado($devoluciones->buscar($id), 'La devolución no existe.');
         Response::ok($devolucion, self::MENSAJES[$datos['estado']]);
     }
 }

@@ -37,9 +37,7 @@ final class CuponController extends Controller
     {
         $id = $this->idDeRuta($request);
         $cupones = new Cupon();
-        if ($cupones->buscarPorId($id) === null) {
-            throw HttpException::noEncontrado('El cupón no existe.');
-        }
+        $this->encontrado($cupones->buscarPorId($id), 'El cupón no existe.');
 
         $cupones->actualizar($id, $this->validar($request, $cupones, $id));
         Response::ok($cupones->buscarPorId($id), 'Cupón actualizado.');
@@ -50,9 +48,7 @@ final class CuponController extends Controller
     {
         $id = $this->idDeRuta($request);
         $cupones = new Cupon();
-        if ($cupones->buscarPorId($id) === null) {
-            throw HttpException::noEncontrado('El cupón no existe.');
-        }
+        $this->encontrado($cupones->buscarPorId($id), 'El cupón no existe.');
 
         $datos = Validator::validar($request->cuerpo(), ['activo' => 'requerido|booleano']);
         $cupones->cambiarActivo($id, $datos['activo']);

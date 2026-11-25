@@ -28,10 +28,7 @@ final class VarianteController extends Controller
      */
     public function crear(Request $request): void
     {
-        $producto = (new Producto())->buscarBasico($this->idDeRuta($request));
-        if ($producto === null) {
-            throw HttpException::noEncontrado('El producto no existe.');
-        }
+        $producto = $this->encontrado((new Producto())->buscarBasico($this->idDeRuta($request)), 'El producto no existe.');
 
         $datos = Validator::validar($request->cuerpo(), [
             'color_id' => 'requerido|entero',
@@ -80,10 +77,7 @@ final class VarianteController extends Controller
     public function actualizar(Request $request): void
     {
         $variantes = new Variante();
-        $variante = $variantes->buscarPorId($this->idDeRuta($request));
-        if ($variante === null) {
-            throw HttpException::noEncontrado('La variante no existe.');
-        }
+        $variante = $this->encontrado($variantes->buscarPorId($this->idDeRuta($request)), 'La variante no existe.');
 
         $datos = Validator::validar($request->cuerpo(), [
             'sku' => 'requerido|sku',
@@ -106,10 +100,7 @@ final class VarianteController extends Controller
     public function ajustarStock(Request $request): void
     {
         $variantes = new Variante();
-        $variante = $variantes->buscarPorId($this->idDeRuta($request));
-        if ($variante === null) {
-            throw HttpException::noEncontrado('La variante no existe.');
-        }
+        $variante = $this->encontrado($variantes->buscarPorId($this->idDeRuta($request)), 'La variante no existe.');
 
         $datos = Validator::validar($request->cuerpo(), [
             'tipo' => 'requerido|en:' . implode(',', Variante::TIPOS_MANUALES),

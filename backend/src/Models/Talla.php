@@ -31,7 +31,7 @@ final class Talla extends Model
         // Un marcador :t0, :t1, ... por cada id (sigue siendo consulta preparada).
         $marcadores = [];
         $parametros = [];
-        foreach (array_values($ids) as $posicion => $id) {
+        foreach ($ids as $posicion => $id) {
             $marcadores[] = ":t$posicion";
             $parametros["t$posicion"] = $id;
         }

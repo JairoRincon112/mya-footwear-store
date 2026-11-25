@@ -48,10 +48,7 @@ final class UsuarioController extends Controller
     {
         $id = $this->idDeRuta($request);
         $usuarios = new Usuario();
-        $usuario = $usuarios->buscarPorId($id);
-        if ($usuario === null) {
-            throw HttpException::noEncontrado('El usuario no existe.');
-        }
+        $this->encontrado($usuarios->buscarPorId($id), 'El usuario no existe.');
 
         // Al editar, la contraseña es opcional: solo se envía si se quiere cambiar.
         $reglas = array_replace(Usuario::REGLAS_CUENTA, ['password' => Usuario::REGLA_PASSWORD]) + self::reglaRol();
@@ -79,9 +76,7 @@ final class UsuarioController extends Controller
     {
         $id = $this->idDeRuta($request);
         $usuarios = new Usuario();
-        if ($usuarios->buscarPorId($id) === null) {
-            throw HttpException::noEncontrado('El usuario no existe.');
-        }
+        $this->encontrado($usuarios->buscarPorId($id), 'El usuario no existe.');
 
         $datos = Validator::validar($request->cuerpo(), ['activo' => 'requerido|booleano']);
         if ($id === $this->usuarioId($request) && !$datos['activo']) {

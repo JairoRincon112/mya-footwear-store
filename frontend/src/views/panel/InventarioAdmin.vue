@@ -3,7 +3,7 @@
 import MenuAcciones from '@/components/MenuAcciones.vue'
 import { onMounted, reactive, ref } from 'vue'
 import { useRoute } from 'vue-router'
-import Paginacion from '@/components/Paginacion.vue'
+import PaginacionListado from '@/components/PaginacionListado.vue'
 import { useListadoPanel } from '@/composables/useListadoPanel'
 import pedidoService from '@/services/pedidoService'
 import productoService from '@/services/productoService'
@@ -203,7 +203,7 @@ onMounted(() => {
         </table>
       </div>
 
-      <Paginacion :pagina="filtros.pagina" :paginas="resultado.paginas" :total="resultado.total" etiqueta="variantes" @cambiar="irAPagina" />
+      <PaginacionListado :pagina="filtros.pagina" :paginas="resultado.paginas" :total="resultado.total" etiqueta="variantes" @cambiar="irAPagina" />
     </div>
   </section>
 </template>

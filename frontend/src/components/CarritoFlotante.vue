@@ -20,7 +20,7 @@ onBeforeUnmount(() => document.removeEventListener('keydown', cerrarConEscape))
 
 <template>
   <div class="carro">
-    <button type="button" id="cart-icon" :aria-label="`Ver carrito: ${carrito.cantidadTotal} producto(s)`" @click="carrito.abierto = true">
+    <button id="cart-icon" type="button" :aria-label="`Ver carrito: ${carrito.cantidadTotal} producto(s)`" @click="carrito.abierto = true">
       <i class="fa-solid fa-cart-shopping"></i><span class="texto-carrito">Ver Carrito</span><span id="cart-count" class="contador-carrito">{{ carrito.cantidadTotal }}</span>
     </button>
   </div>
@@ -55,8 +55,8 @@ onBeforeUnmount(() => document.removeEventListener('keydown', cerrarConEscape))
 
       <RouterLink
         v-if="!auth.autenticado && carrito.items.length"
-        :to="{ name: 'login', query: { redirect: $route.fullPath } }"
         id="checkout"
+        :to="{ name: 'login', query: { redirect: $route.fullPath } }"
         class="boton-checkout"
         @click="carrito.abierto = false"
       >
@@ -64,8 +64,8 @@ onBeforeUnmount(() => document.removeEventListener('keydown', cerrarConEscape))
       </RouterLink>
       <RouterLink
         v-else-if="carrito.items.length && auth.rol === 'cliente'"
-        :to="{ name: 'checkout' }"
         id="checkout"
+        :to="{ name: 'checkout' }"
         class="boton-checkout"
         @click="carrito.abierto = false"
       >

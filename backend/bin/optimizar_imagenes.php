@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /**
  * Optimiza las imágenes que ya están en el catálogo (las subidas nuevas se optimizan solas).
  * Uso (desde la carpeta backend):
@@ -11,6 +9,8 @@ declare(strict_types=1);
  * Solo se reemplaza si la versión optimizada pesa al menos un 5 % menos; si no, se deja
  * la original (recomprimir un JPEG que ya venía muy comprimido puede hacerlo crecer).
  */
+
+declare(strict_types=1);
 
 use App\Core\HttpException;
 use App\Core\Imagen;

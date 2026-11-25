@@ -21,7 +21,11 @@ final class ReglasValidacion
     /** Formatos de fecha aceptados: input date, input datetime-local y el de MySQL. */
     private const FORMATOS_FECHA = ['Y-m-d\TH:i', 'Y-m-d H:i:s', 'Y-m-d H:i', 'Y-m-d'];
 
-    /** @var array<string, array{0: string, 1: string, 2: bool}> expresión regular, mensaje y si se pasa a mayúsculas */
+    /**
+     * Expresión regular, mensaje de error y si el valor se pasa a mayúsculas.
+     *
+     * @var array<string, array{0: string, 1: string, 2: bool}>
+     */
     private const FORMATOS = [
         'telefono' => ['/^[0-9+()\s-]{7,20}$/', 'Escribe un teléfono válido (solo números, espacios, + y -).', false],
         'codigo' => ['/^[A-Za-z0-9_-]{3,30}$/', 'El código solo admite letras, números, guiones (3 a 30 caracteres).', true],

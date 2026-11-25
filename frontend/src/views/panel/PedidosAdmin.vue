@@ -4,7 +4,7 @@ import MenuAcciones from '@/components/MenuAcciones.vue'
 import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import EstadoPedido from '@/components/EstadoPedido.vue'
-import Paginacion from '@/components/Paginacion.vue'
+import PaginacionListado from '@/components/PaginacionListado.vue'
 import { useListadoPanel } from '@/composables/useListadoPanel'
 import pedidoService from '@/services/pedidoService'
 import { ESTADOS_PEDIDO, formatearFecha, formatearPrecio } from '@/utils/formato'
@@ -100,7 +100,7 @@ onMounted(cargar)
         </table>
       </div>
 
-      <Paginacion :pagina="filtros.pagina" :paginas="resultado.paginas" :total="resultado.total" etiqueta="pedidos" @cambiar="irAPagina" />
+      <PaginacionListado :pagina="filtros.pagina" :paginas="resultado.paginas" :total="resultado.total" etiqueta="pedidos" @cambiar="irAPagina" />
     </div>
   </section>
 </template>

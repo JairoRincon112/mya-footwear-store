@@ -1,7 +1,7 @@
 <script setup>
 // Mensajes del formulario de contacto.
 import { onMounted, ref, watch } from 'vue'
-import Paginacion from '@/components/Paginacion.vue'
+import PaginacionListado from '@/components/PaginacionListado.vue'
 import adminService from '@/services/adminService'
 import { formatearFecha } from '@/utils/formato'
 
@@ -87,7 +87,7 @@ onMounted(cargar)
         </li>
       </ul>
 
-      <Paginacion :pagina="pagina" :paginas="resultado.paginas" :total="resultado.total" etiqueta="mensajes" @cambiar="irAPagina" />
+      <PaginacionListado :pagina="pagina" :paginas="resultado.paginas" :total="resultado.total" etiqueta="mensajes" @cambiar="irAPagina" />
     </div>
   </section>
 </template>

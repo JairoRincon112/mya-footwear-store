@@ -50,11 +50,11 @@ const compacto = new Intl.NumberFormat('es-CO', { notation: 'compact', maximumFr
             v-for="(dato, indice) in datos"
             :key="dato.dia"
             class="columna"
+            tabindex="0"
+            :aria-label="`${etiquetaDia(dato.dia)}: ${formatearPrecio(dato.total)}, ${dato.pedidos} pedidos`"
             @mouseenter="activo = indice"
             @focus="activo = indice"
             @blur="activo = null"
-            tabindex="0"
-            :aria-label="`${etiquetaDia(dato.dia)}: ${formatearPrecio(dato.total)}, ${dato.pedidos} pedidos`"
           >
             <div class="barra" :class="{ resaltada: activo === indice }" :style="{ height: `${(dato.total / maximo) * 100}%` }"></div>
             <div v-if="activo === indice" class="tooltip" :class="{ izquierda: indice > datos.length * 0.7 }" role="tooltip">

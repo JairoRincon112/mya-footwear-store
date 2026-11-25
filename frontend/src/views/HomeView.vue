@@ -10,7 +10,7 @@ import imagenPuma from '@/assets/img/home-puma.png'
     <!-- Carrusel principal (reemplaza la franja "HOME" y la portada naranja) -->
     <HeroCarrusel />
 
-    <section class="services container" id="informacion">
+    <section id="informacion" class="services container">
       <div class="service">
         <h3>Servicio Adidas</h3>
         <p>
@@ -39,7 +39,7 @@ import imagenPuma from '@/assets/img/home-puma.png'
       </div>
     </section>
 
-    <section class="camisas" id="adidas">
+    <section id="adidas" class="camisas">
       <div class="camisas-content">
         <img :src="imagenAdidas" alt="Adidas Adi2000">
       </div>
@@ -56,7 +56,7 @@ import imagenPuma from '@/assets/img/home-puma.png'
       </div>
     </section>
 
-    <section class="shorts" id="nike">
+    <section id="nike" class="shorts">
       <div class="short-texto">
         <h2>NIKE</h2>
         <p>
@@ -69,7 +69,7 @@ import imagenPuma from '@/assets/img/home-puma.png'
       </div>
     </section>
 
-    <section class="zapatos" id="puma">
+    <section id="puma" class="zapatos">
       <div class="zapato-content">
         <img :src="imagenPuma" alt="Puma x Rocket League">
       </div>
@@ -87,7 +87,7 @@ import imagenPuma from '@/assets/img/home-puma.png'
 
     <section class="nosotros">
       <div class="nosotros-content">
-        <div class="text-1" id="mision">
+        <div id="mision" class="text-1">
           <h2>MISION</h2>
           <p>
             En MyA FOOTWEAR STORE, nuestra misión es ofrecer a nuestros clientes las últimas tendencias en moda,
@@ -97,7 +97,7 @@ import imagenPuma from '@/assets/img/home-puma.png'
             en cada ocasión.
           </p>
         </div>
-        <div class="text-1" id="vision">
+        <div id="vision" class="text-1">
           <h2>VISION</h2>
           <p>
             Nuestra visión es convertirnos en la tienda de moda líder, reconocida por nuestra capacidad para anticipar

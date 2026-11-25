@@ -1,11 +1,11 @@
 <?php
 
-declare(strict_types=1);
-
 /**
  * Rutas de la API: método + URL -> controlador, con sus middlewares.
  * Toda la API cuelga de /api y responde JSON.
  */
+
+declare(strict_types=1);
 
 use App\Controllers\AuthController;
 use App\Controllers\CatalogoController;

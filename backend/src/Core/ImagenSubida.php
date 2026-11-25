@@ -59,7 +59,8 @@ final class ImagenSubida
         }
 
         // Se revisa el contenido real del archivo para evitar subir scripts disfrazados de imagen.
-        return Imagen::tipoReal($archivo['tmp_name']) ?? throw self::error('Solo se permiten imágenes JPG, PNG o WEBP.');
+        return Imagen::tipoReal($archivo['tmp_name'])
+            ?? throw self::error('Solo se permiten imágenes JPG, PNG o WEBP.');
     }
 
     private static function asegurarCarpeta(string $carpeta): void

@@ -4,7 +4,7 @@
 import MenuAcciones from '@/components/MenuAcciones.vue'
 import { onMounted, reactive, ref } from 'vue'
 import EstadoDevolucion from '@/components/EstadoDevolucion.vue'
-import Paginacion from '@/components/Paginacion.vue'
+import PaginacionListado from '@/components/PaginacionListado.vue'
 import { useListadoPanel } from '@/composables/useListadoPanel'
 import devolucionService from '@/services/devolucionService'
 import { ESTADOS_DEVOLUCION, TIPOS_DEVOLUCION, formatearFecha } from '@/utils/formato'
@@ -139,7 +139,7 @@ onMounted(cargar)
         </li>
       </ul>
 
-      <Paginacion :pagina="filtros.pagina" :paginas="resultado.paginas" :total="resultado.total" etiqueta="devoluciones" @cambiar="irAPagina" />
+      <PaginacionListado :pagina="filtros.pagina" :paginas="resultado.paginas" :total="resultado.total" etiqueta="devoluciones" @cambiar="irAPagina" />
     </div>
   </section>
 </template>

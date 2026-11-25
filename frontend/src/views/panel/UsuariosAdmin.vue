@@ -2,7 +2,7 @@
 // Administración de usuarios (solo admin): crear, editar, activar y desactivar.
 import MenuAcciones from '@/components/MenuAcciones.vue'
 import { computed, onMounted, reactive, ref } from 'vue'
-import Paginacion from '@/components/Paginacion.vue'
+import PaginacionListado from '@/components/PaginacionListado.vue'
 import { useListadoPanel } from '@/composables/useListadoPanel'
 import adminService from '@/services/adminService'
 import { useAuthStore } from '@/stores/auth'
@@ -201,7 +201,7 @@ onMounted(cargar)
         </table>
       </div>
 
-      <Paginacion :pagina="filtros.pagina" :paginas="resultado.paginas" :total="resultado.total" etiqueta="usuarios" @cambiar="irAPagina" />
+      <PaginacionListado :pagina="filtros.pagina" :paginas="resultado.paginas" :total="resultado.total" etiqueta="usuarios" @cambiar="irAPagina" />
     </div>
   </section>
 </template>

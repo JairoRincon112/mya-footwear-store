@@ -2,7 +2,7 @@
 // Historial de pedidos del cliente.
 import { onMounted, ref } from 'vue'
 import EstadoPedido from '@/components/EstadoPedido.vue'
-import Paginacion from '@/components/Paginacion.vue'
+import PaginacionListado from '@/components/PaginacionListado.vue'
 import pedidoService from '@/services/pedidoService'
 import { formatearFecha, formatearPrecio } from '@/utils/formato'
 
@@ -51,7 +51,7 @@ onMounted(() => cargar())
           </RouterLink>
         </li>
       </ul>
-      <Paginacion :pagina="resultado.pagina" :paginas="resultado.paginas" :total="resultado.total" etiqueta="pedidos" @cambiar="cargar" />
+      <PaginacionListado :pagina="resultado.pagina" :paginas="resultado.paginas" :total="resultado.total" etiqueta="pedidos" @cambiar="cargar" />
     </template>
   </main>
 </template>

@@ -1,0 +1,1 @@
+import{n as e}from"./api-DUQqrW-R.js";import{t}from"./filtros-Bku_p3bF.js";var n={async solicitar(t,n){return e.post(`/pedidos/${t}/devoluciones`,n)},async listar(n={}){return(await e.get(`/devoluciones`,{params:t(n)})).data},async cambiarEstado(t,n,r=null){return e.patch(`/devoluciones/${t}/estado`,{estado:n,respuesta:r||null})}};export{n as t};

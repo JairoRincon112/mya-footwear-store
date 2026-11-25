@@ -438,6 +438,25 @@ Si ya tenías la base creada con una versión anterior y no quieres perder datos
 ```powershell
 cmd /c "C:\xampp\mysql\bin\mysql.exe -u root < database\migraciones\002_ofertas_cupones_recuperacion.sql"
 cmd /c "C:\xampp\mysql\bin\mysql.exe -u root < database\migraciones\003_pagos_wompi.sql"
+cmd /c "C:\xampp\mysql\bin\mysql.exe -u root < database\migraciones\004_devoluciones.sql"
+```
+
+## Calidad del código y pruebas automatizadas
+
+La evaluación de calidad del proyecto está documentada en la carpeta [`docs/`](docs/): análisis estático, métricas, refactorización, pruebas y plan de mantenimiento.
+
+| Documento | Contenido |
+|---|---|
+| [EVALUACION_SOFTWARE.md](docs/EVALUACION_SOFTWARE.md) | Herramientas, configuración, comandos y problemas encontrados |
+| [METRICAS_SOFTWARE.md](docs/METRICAS_SOFTWARE.md) | Métricas antes y después, comparación y vista polimétrica |
+| [REFACTORIZACION.md](docs/REFACTORIZACION.md) | Las mejoras hechas al código, con el antes y el después |
+| [PRUEBAS_SOFTWARE.md](docs/PRUEBAS_SOFTWARE.md) | Pruebas automatizadas (PHPUnit y Vitest) y sus resultados |
+| [MANTENIMIENTO.md](docs/MANTENIMIENTO.md) | Deuda técnica pendiente y actividades de mantenimiento |
+
+```powershell
+cd backend;  composer install; vendor/bin/phpunit    # pruebas del backend (con XAMPP encendido)
+cd frontend; npm install; npm test                    # pruebas del frontend
+node herramientas/calidad/analizar.mjs despues        # análisis completo (desde la raíz)
 ```
 
 ## Restaurar los datos de prueba

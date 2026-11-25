@@ -3,7 +3,9 @@
 import { flushPromises, mount } from '@vue/test-utils'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { defineComponent } from 'vue'
+import { useAjusteStock } from '@/composables/useAjusteStock'
 import { ESPERA_BUSQUEDA_MS, useListadoPanel } from '@/composables/useListadoPanel'
+import productoService from '@/services/productoService'
 import { limpiarFiltros } from '@/utils/filtros'
 import { validarAjusteStock } from '@/utils/inventario'
 
@@ -23,6 +25,43 @@ describe('validarAjusteStock', () => {
       datos: { tipo: 'ajuste', cantidad: -3, motivo: 'Par dañado' },
     })
     expect(validarAjusteStock({ tipo: 'entrada', cantidad: 4, motivo: '' }).datos.motivo).toBeNull()
+  })
+})
+
+vi.mock('@/services/productoService', () => ({ default: { ajustarStock: vi.fn() } }))
+
+describe('useAjusteStock', () => {
+  function preparar() {
+    const acciones = { alGuardar: vi.fn(), alFallar: vi.fn() }
+    const formulario = useAjusteStock(acciones)
+    formulario.abrirAjuste({ id: 9 })
+    return { ...formulario, ...acciones }
+  }
+
+  it('envía el ajuste válido, cierra el formulario y avisa a la vista', async () => {
+    productoService.ajustarStock.mockResolvedValue({ data: { stock: 12 } })
+    const { ajuste, guardarAjuste, alGuardar } = preparar()
+    Object.assign(ajuste, { cantidad: '2', motivo: ' Llegó pedido ' })
+
+    await guardarAjuste()
+
+    expect(productoService.ajustarStock).toHaveBeenCalledWith(9, { tipo: 'entrada', cantidad: 2, motivo: 'Llegó pedido' })
+    expect(ajuste.varianteId).toBeNull()
+    expect(alGuardar).toHaveBeenCalledWith({ data: { stock: 12 } })
+  })
+
+  it('los errores por campo de la API quedan en el formulario; los demás van al aviso', async () => {
+    const { ajuste, erroresAjuste, guardarAjuste, alFallar } = preparar()
+
+    productoService.ajustarStock.mockRejectedValueOnce({ errores: { cantidad: 'No hay tantas unidades.' }, message: 'Revisa los datos' })
+    await guardarAjuste()
+    expect(erroresAjuste.value).toEqual({ cantidad: 'No hay tantas unidades.' })
+    expect(alFallar).not.toHaveBeenCalled()
+
+    productoService.ajustarStock.mockRejectedValueOnce(new Error('Sin conexión'))
+    await guardarAjuste()
+    expect(alFallar).toHaveBeenCalledWith('Sin conexión')
+    expect(ajuste.varianteId).toBe(9)
   })
 })
 

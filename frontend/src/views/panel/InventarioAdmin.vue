@@ -1,15 +1,14 @@
 <script setup>
 // Inventario: stock de todas las variantes, alerta de bajo stock, ajustes e historial.
 import MenuAcciones from '@/components/MenuAcciones.vue'
-import { onMounted, reactive, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import PaginacionListado from '@/components/PaginacionListado.vue'
+import { useAjusteStock } from '@/composables/useAjusteStock'
 import { useListadoPanel } from '@/composables/useListadoPanel'
 import pedidoService from '@/services/pedidoService'
-import productoService from '@/services/productoService'
 import { useCatalogoStore } from '@/stores/catalogo'
 import { formatearFecha } from '@/utils/formato'
-import { validarAjusteStock } from '@/utils/inventario'
 
 const route = useRoute()
 const catalogo = useCatalogoStore()
@@ -21,32 +20,22 @@ const { filtros, resultado, cargando, error, cargar, irAPagina } = useListadoPan
 )
 const aviso = ref({ tipo: '', texto: '' })
 
-const ajuste = reactive({ varianteId: null, tipo: 'entrada', cantidad: 1, motivo: '' })
-const erroresAjuste = ref({})
 const historial = ref(null) // { variante, movimientos }
+
+const { ajuste, erroresAjuste, abrirAjuste: abrirFormularioAjuste, guardarAjuste } = useAjusteStock({
+  alGuardar: (respuesta) => {
+    aviso.value = { tipo: 'exito', texto: `${respuesta.data.sku}: stock actualizado a ${respuesta.data.stock}.` }
+    cargar()
+  },
+  alFallar: (mensaje) => { aviso.value = { tipo: 'error', texto: mensaje } },
+})
 
 const TIPOS = { entrada: 'Entrada', venta: 'Venta', ajuste: 'Ajuste', devolucion: 'Devolución' }
 
+/** El formulario de ajuste y el historial no se muestran a la vez. */
 function abrirAjuste(variante) {
   historial.value = null
-  Object.assign(ajuste, { varianteId: variante.id, tipo: 'entrada', cantidad: 1, motivo: '' })
-  erroresAjuste.value = {}
-}
-
-async function guardarAjuste() {
-  const { errores, datos } = validarAjusteStock(ajuste)
-  erroresAjuste.value = errores
-  if (Object.keys(errores).length) return
-
-  try {
-    const respuesta = await productoService.ajustarStock(ajuste.varianteId, datos)
-    aviso.value = { tipo: 'exito', texto: `${respuesta.data.sku}: stock actualizado a ${respuesta.data.stock}.` }
-    ajuste.varianteId = null
-    cargar()
-  } catch (e) {
-    erroresAjuste.value = e.errores
-    if (!Object.keys(e.errores).length) aviso.value = { tipo: 'error', texto: e.message }
-  }
+  abrirFormularioAjuste(variante)
 }
 
 async function verHistorial(variante) {

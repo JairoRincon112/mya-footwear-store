@@ -9,7 +9,7 @@ import { urlImagen } from '@/services/api'
 import { useAuthStore } from '@/stores/auth'
 import { useCatalogoStore } from '@/stores/catalogo'
 import { formatearPrecio } from '@/utils/formato'
-import { validarAjusteStock } from '@/utils/inventario'
+import { useAjusteStock } from '@/composables/useAjusteStock'
 
 const props = defineProps({
   id: { type: String, default: null },
@@ -51,8 +51,13 @@ const nuevaVariante = reactive({ color_id: '', talla_ids: [], stock: 10 })
 const erroresVariante = ref({})
 const creandoVariantes = ref(false)
 const avisoVariantes = ref({ tipo: '', texto: '' })
-const ajuste = reactive({ varianteId: null, tipo: 'entrada', cantidad: 1, motivo: '' })
-const erroresAjuste = ref({})
+const { ajuste, erroresAjuste, abrirAjuste, guardarAjuste } = useAjusteStock({
+  alGuardar: async (respuesta) => {
+    avisoVariantes.value = { tipo: 'exito', texto: `${respuesta.mensaje} Nuevo stock: ${respuesta.data.stock}.` }
+    await refrescar()
+  },
+  alFallar: (mensaje) => { avisoVariantes.value = { tipo: 'error', texto: mensaje } },
+})
 
 /** Variantes ordenadas por color y talla. */
 const variantes = computed(() => producto.value?.variantes ?? [])
@@ -249,27 +254,6 @@ async function alternarVariante(variante) {
     await refrescar()
   } catch (e) {
     avisoVariantes.value = { tipo: 'error', texto: e.message }
-  }
-}
-
-function abrirAjuste(variante) {
-  Object.assign(ajuste, { varianteId: variante.id, tipo: 'entrada', cantidad: 1, motivo: '' })
-  erroresAjuste.value = {}
-}
-
-async function guardarAjuste() {
-  const { errores, datos } = validarAjusteStock(ajuste)
-  erroresAjuste.value = errores
-  if (Object.keys(errores).length) return
-
-  try {
-    const respuesta = await productoService.ajustarStock(ajuste.varianteId, datos)
-    avisoVariantes.value = { tipo: 'exito', texto: `${respuesta.mensaje} Nuevo stock: ${respuesta.data.stock}.` }
-    ajuste.varianteId = null
-    await refrescar()
-  } catch (e) {
-    erroresAjuste.value = e.errores
-    if (!Object.keys(e.errores).length) avisoVariantes.value = { tipo: 'error', texto: e.message }
   }
 }
 </script>

@@ -2,52 +2,25 @@
 // Devoluciones para el personal: filtros en semáforo por estado, tipo de devolución
 // y acciones según el estado (aprobar, rechazar con motivo, marcar como recibida).
 import MenuAcciones from '@/components/MenuAcciones.vue'
-import { onMounted, reactive, ref, watch } from 'vue'
+import { onMounted, reactive, ref } from 'vue'
 import EstadoDevolucion from '@/components/EstadoDevolucion.vue'
 import Paginacion from '@/components/Paginacion.vue'
+import { useListadoPanel } from '@/composables/useListadoPanel'
 import devolucionService from '@/services/devolucionService'
 import { ESTADOS_DEVOLUCION, TIPOS_DEVOLUCION, formatearFecha } from '@/utils/formato'
 
-const filtros = reactive({ estado: '', tipo: '', q: '', pagina: 1 })
-const resultado = ref({ items: [], total: 0, paginas: 0, por_revisar: 0 })
-const cargando = ref(true)
-const error = ref('')
+const { filtros, resultado, cargando, error, cargar, irAPagina } = useListadoPanel(
+  (f) => devolucionService.listar(f),
+  { estado: '', tipo: '' },
+  { por_revisar: 0 },
+)
 const aviso = ref({ tipo: '', texto: '' })
 const gestion = reactive({ id: null, estado: '', respuesta: '', error: '', enviando: false })
-let temporizador = null
 
 const ACCIONES = {
   aprobada: { texto: 'Aprobar', icono: 'fa-thumbs-up', clase: '' },
   rechazada: { texto: 'Rechazar', icono: 'fa-ban', clase: 'boton-secundario' },
   recibida: { texto: 'Marcar como recibida', icono: 'fa-box-open', clase: '' },
-}
-
-async function cargar() {
-  cargando.value = true
-  error.value = ''
-  try {
-    resultado.value = await devolucionService.listar(filtros)
-  } catch (e) {
-    error.value = e.message
-  } finally {
-    cargando.value = false
-  }
-}
-
-function reiniciarYCargar() {
-  filtros.pagina = 1
-  cargar()
-}
-
-watch(() => [filtros.estado, filtros.tipo], reiniciarYCargar)
-watch(() => filtros.q, () => {
-  clearTimeout(temporizador)
-  temporizador = setTimeout(reiniciarYCargar, 350)
-})
-
-function irAPagina(pagina) {
-  filtros.pagina = pagina
-  cargar()
 }
 
 function abrirGestion(devolucion, estado) {

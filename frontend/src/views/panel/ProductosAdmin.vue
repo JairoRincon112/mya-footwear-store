@@ -1,54 +1,26 @@
 <script setup>
 // Listado de productos del panel con filtros y paginación.
 import MenuAcciones from '@/components/MenuAcciones.vue'
-import { onMounted, reactive, ref, watch } from 'vue'
+import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { useListadoPanel } from '@/composables/useListadoPanel'
 import productoService from '@/services/productoService'
 import { urlImagen } from '@/services/api'
 import { useAuthStore } from '@/stores/auth'
 import { useCatalogoStore } from '@/stores/catalogo'
 import { formatearPrecio } from '@/utils/formato'
 
+const PRODUCTOS_POR_PAGINA = 15
+
 const router = useRouter()
 const auth = useAuthStore()
 const catalogo = useCatalogoStore()
 
-const filtros = reactive({ q: '', marca: '', estado: 'todos', pagina: 1 })
-const resultado = ref({ items: [], total: 0, paginas: 0 })
-const cargando = ref(true)
-const error = ref('')
+const { filtros, resultado, cargando, error, cargar, irAPagina } = useListadoPanel(
+  (f) => productoService.listar({ ...f, por_pagina: PRODUCTOS_POR_PAGINA, orden: 'recientes' }),
+  { marca: '', estado: 'todos' },
+)
 const aviso = ref('')
-
-let temporizador = null
-
-async function cargar() {
-  cargando.value = true
-  error.value = ''
-  try {
-    resultado.value = await productoService.listar({ ...filtros, por_pagina: 15, orden: 'recientes' })
-  } catch (e) {
-    error.value = e.message
-  } finally {
-    cargando.value = false
-  }
-}
-
-watch(() => [filtros.marca, filtros.estado], () => {
-  filtros.pagina = 1
-  cargar()
-})
-watch(() => filtros.q, () => {
-  clearTimeout(temporizador)
-  temporizador = setTimeout(() => {
-    filtros.pagina = 1
-    cargar()
-  }, 350)
-})
-
-function irAPagina(pagina) {
-  filtros.pagina = pagina
-  cargar()
-}
 
 async function desactivar(producto) {
   if (!confirm(`¿Desactivar "${producto.nombre}"? Dejará de verse en la tienda.`)) return

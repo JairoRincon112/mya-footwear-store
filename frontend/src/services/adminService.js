@@ -1,12 +1,12 @@
 // Endpoints del panel: usuarios (admin), mensajes de contacto y reportes.
 import api from './api'
+import { limpiarFiltros } from '@/utils/filtros'
 
-const limpiar = (filtros) => Object.fromEntries(Object.entries(filtros).filter(([, valor]) => valor !== '' && valor != null))
 
 export default {
   // ---- Usuarios (solo admin) ----
   async usuarios(filtros = {}) {
-    return (await api.get('/usuarios', { params: limpiar(filtros) })).data
+    return (await api.get('/usuarios', { params: limpiarFiltros(filtros) })).data
   },
 
   async crearUsuario(datos) {
@@ -23,7 +23,7 @@ export default {
 
   // ---- Mensajes de contacto ----
   async mensajes(filtros = {}) {
-    return (await api.get('/contacto', { params: limpiar(filtros) })).data
+    return (await api.get('/contacto', { params: limpiarFiltros(filtros) })).data
   },
 
   async marcarLeido(id, leido) {

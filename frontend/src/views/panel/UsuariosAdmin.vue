@@ -1,8 +1,9 @@
 <script setup>
 // Administración de usuarios (solo admin): crear, editar, activar y desactivar.
 import MenuAcciones from '@/components/MenuAcciones.vue'
-import { computed, onMounted, reactive, ref, watch } from 'vue'
+import { computed, onMounted, reactive, ref } from 'vue'
 import Paginacion from '@/components/Paginacion.vue'
+import { useListadoPanel } from '@/composables/useListadoPanel'
 import adminService from '@/services/adminService'
 import { useAuthStore } from '@/stores/auth'
 import { REGEX_EMAIL, REGEX_TELEFONO, formatearFecha } from '@/utils/formato'
@@ -10,10 +11,10 @@ import { REGEX_EMAIL, REGEX_TELEFONO, formatearFecha } from '@/utils/formato'
 const auth = useAuthStore()
 const ROLES = { admin: 'Administrador', vendedor: 'Vendedor', cliente: 'Cliente' }
 
-const filtros = reactive({ q: '', rol: '', activo: '', pagina: 1 })
-const resultado = ref({ items: [], total: 0, paginas: 0 })
-const cargando = ref(true)
-const error = ref('')
+const { filtros, resultado, cargando, error, cargar, irAPagina } = useListadoPanel(
+  (f) => adminService.usuarios(f),
+  { rol: '', activo: '' },
+)
 const aviso = ref({ tipo: '', texto: '' })
 
 const VACIO = { nombre: '', email: '', telefono: '', rol: 'vendedor', password: '' }
@@ -21,37 +22,8 @@ const formulario = reactive({ ...VACIO })
 const editandoId = ref(null)
 const errores = ref({})
 const guardando = ref(false)
-let temporizador = null
 
 const editandoMiCuenta = computed(() => editandoId.value === auth.usuario?.id)
-
-async function cargar() {
-  cargando.value = true
-  error.value = ''
-  try {
-    resultado.value = await adminService.usuarios(filtros)
-  } catch (e) {
-    error.value = e.message
-  } finally {
-    cargando.value = false
-  }
-}
-
-function reiniciarYCargar() {
-  filtros.pagina = 1
-  cargar()
-}
-
-watch(() => [filtros.rol, filtros.activo], reiniciarYCargar)
-watch(() => filtros.q, () => {
-  clearTimeout(temporizador)
-  temporizador = setTimeout(reiniciarYCargar, 350)
-})
-
-function irAPagina(pagina) {
-  filtros.pagina = pagina
-  cargar()
-}
 
 function editar(usuario) {
   editandoId.value = usuario.id

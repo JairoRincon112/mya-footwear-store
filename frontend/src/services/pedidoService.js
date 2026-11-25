@@ -1,7 +1,7 @@
 // Endpoints de pedidos e inventario.
 import api from './api'
+import { limpiarFiltros } from '@/utils/filtros'
 
-const limpiar = (filtros) => Object.fromEntries(Object.entries(filtros).filter(([, valor]) => valor !== '' && valor != null))
 
 export default {
   // ---- Cliente ----
@@ -30,7 +30,7 @@ export default {
   // ---- Personal de la tienda ----
   /** filtros: { estado, q, desde, hasta, pagina } */
   async listar(filtros = {}) {
-    return (await api.get('/pedidos', { params: limpiar(filtros) })).data
+    return (await api.get('/pedidos', { params: limpiarFiltros(filtros) })).data
   },
 
   async cambiarEstado(id, estado) {
@@ -39,7 +39,7 @@ export default {
 
   /** filtros: { q, marca, bajo_stock, pagina } */
   async inventario(filtros = {}) {
-    return (await api.get('/inventario', { params: limpiar(filtros) })).data
+    return (await api.get('/inventario', { params: limpiarFiltros(filtros) })).data
   },
 
   async movimientos(varianteId) {

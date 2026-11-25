@@ -1,9 +1,10 @@
 <script setup>
 // Inventario: stock de todas las variantes, alerta de bajo stock, ajustes e historial.
 import MenuAcciones from '@/components/MenuAcciones.vue'
-import { onMounted, reactive, ref, watch } from 'vue'
+import { onMounted, reactive, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import Paginacion from '@/components/Paginacion.vue'
+import { useListadoPanel } from '@/composables/useListadoPanel'
 import pedidoService from '@/services/pedidoService'
 import productoService from '@/services/productoService'
 import { useCatalogoStore } from '@/stores/catalogo'
@@ -12,46 +13,18 @@ import { formatearFecha } from '@/utils/formato'
 const route = useRoute()
 const catalogo = useCatalogoStore()
 
-const filtros = reactive({ q: '', marca: '', bajo_stock: route.query.bajo_stock === '1', pagina: 1 })
-const resultado = ref({ items: [], total: 0, paginas: 0, umbral: 3 })
-const cargando = ref(true)
-const error = ref('')
+const { filtros, resultado, cargando, error, cargar, irAPagina } = useListadoPanel(
+  (f) => pedidoService.inventario({ ...f, bajo_stock: f.bajo_stock ? 1 : '' }),
+  { marca: '', bajo_stock: route.query.bajo_stock === '1' },
+  { umbral: 3 },
+)
 const aviso = ref({ tipo: '', texto: '' })
 
 const ajuste = reactive({ varianteId: null, tipo: 'entrada', cantidad: 1, motivo: '' })
 const erroresAjuste = ref({})
 const historial = ref(null) // { variante, movimientos }
-let temporizador = null
 
 const TIPOS = { entrada: 'Entrada', venta: 'Venta', ajuste: 'Ajuste', devolucion: 'Devolución' }
-
-async function cargar() {
-  cargando.value = true
-  error.value = ''
-  try {
-    resultado.value = await pedidoService.inventario({ ...filtros, bajo_stock: filtros.bajo_stock ? 1 : '' })
-  } catch (e) {
-    error.value = e.message
-  } finally {
-    cargando.value = false
-  }
-}
-
-function reiniciarYCargar() {
-  filtros.pagina = 1
-  cargar()
-}
-
-watch(() => [filtros.marca, filtros.bajo_stock], reiniciarYCargar)
-watch(() => filtros.q, () => {
-  clearTimeout(temporizador)
-  temporizador = setTimeout(reiniciarYCargar, 350)
-})
-
-function irAPagina(pagina) {
-  filtros.pagina = pagina
-  cargar()
-}
 
 function abrirAjuste(variante) {
   historial.value = null

@@ -1,7 +1,7 @@
 // Endpoints de devoluciones.
 import api from './api'
+import { limpiarFiltros } from '@/utils/filtros'
 
-const limpiar = (filtros) => Object.fromEntries(Object.entries(filtros).filter(([, valor]) => valor !== '' && valor != null))
 
 export default {
   // ---- Cliente ----
@@ -12,7 +12,7 @@ export default {
 
   // ---- Personal de la tienda ----
   async listar(filtros = {}) {
-    return (await api.get('/devoluciones', { params: limpiar(filtros) })).data
+    return (await api.get('/devoluciones', { params: limpiarFiltros(filtros) })).data
   },
 
   async cambiarEstado(id, estado, respuesta = null) {

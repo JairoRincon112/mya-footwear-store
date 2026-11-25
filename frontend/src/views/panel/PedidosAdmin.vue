@@ -1,50 +1,22 @@
 <script setup>
 // Listado de pedidos para el personal, con filtros por estado, búsqueda y fechas.
 import MenuAcciones from '@/components/MenuAcciones.vue'
-import { onMounted, reactive, ref, watch } from 'vue'
+import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import EstadoPedido from '@/components/EstadoPedido.vue'
 import Paginacion from '@/components/Paginacion.vue'
+import { useListadoPanel } from '@/composables/useListadoPanel'
 import pedidoService from '@/services/pedidoService'
 import { ESTADOS_PEDIDO, formatearFecha, formatearPrecio } from '@/utils/formato'
 
 const router = useRouter()
-const filtros = reactive({ estado: '', q: '', desde: '', hasta: '', pagina: 1 })
-const resultado = ref({ items: [], total: 0, paginas: 0 })
-const cargando = ref(true)
-const error = ref('')
-let temporizador = null
-
-async function cargar() {
-  cargando.value = true
-  error.value = ''
-  try {
-    resultado.value = await pedidoService.listar(filtros)
-  } catch (e) {
-    error.value = e.message
-  } finally {
-    cargando.value = false
-  }
-}
-
-function reiniciarYCargar() {
-  filtros.pagina = 1
-  cargar()
-}
-
-watch(() => [filtros.estado, filtros.desde, filtros.hasta], reiniciarYCargar)
-watch(() => filtros.q, () => {
-  clearTimeout(temporizador)
-  temporizador = setTimeout(reiniciarYCargar, 350)
-})
+const { filtros, resultado, cargando, error, cargar, irAPagina } = useListadoPanel(
+  (f) => pedidoService.listar(f),
+  { estado: '', desde: '', hasta: '' },
+)
 
 function abrirPedido(pedido) {
   router.push({ name: 'panel-pedido', params: { id: pedido.id } })
-}
-
-function irAPagina(pagina) {
-  filtros.pagina = pagina
-  cargar()
 }
 
 onMounted(cargar)

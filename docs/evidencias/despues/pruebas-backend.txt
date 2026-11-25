@@ -1,0 +1,69 @@
+PHPUnit 11.5.58 by Sebastian Bergmann and contributors.
+
+Runtime:       PHP 8.3.36
+Configuration: C:\Users\Usuario\Desktop\MyA FOOTWEAR STORE\backend\phpunit.xml
+
+...................................................               51 / 51 (100%)
+
+Time: 00:01.973, Memory: 10.00 MB
+
+Cotizacion Cupon (Tests\Integracion\CotizacionCupon)
+ ✔ Sin cupon cotiza sin descuento
+ ✔ Cupon mal escrito es un error de validacion
+ ✔ Carrito vacio es un error
+
+Imagenes Producto (Tests\Integracion\ImagenesProducto)
+ ✔ Sin archivo pide seleccionar una imagen
+ ✔ Rechaza un archivo que no es imagen aunque tenga extension jpg
+ ✔ Rechaza un color que no existe
+ ✔ Producto inexistente responde 404
+ ✔ Un vendedor no puede subir imagenes
+ ✔ Guarda una imagen real y luego se puede eliminar
+
+Registro Usuarios (Tests\Integracion\RegistroUsuarios)
+ ✔ El registro publico crea un cliente y entrega su token
+ ✔ No permite dos cuentas con el mismo correo
+ ✔ Valida los datos de la cuenta igual en el registro y en el panel
+ ✔ El administrador crea un vendedor
+ ✔ El rol debe ser uno de los permitidos
+
+Validator (Tests\Unit\Validator)
+ ✔ Convierte y limpia los valores validos with data set "texto se recorta"
+ ✔ Convierte y limpia los valores validos with data set "email en minúsculas"
+ ✔ Convierte y limpia los valores validos with data set "entero desde texto"
+ ✔ Convierte y limpia los valores validos with data set "numérico a decimal"
+ ✔ Convierte y limpia los valores validos with data set "booleano desde "1""
+ ✔ Convierte y limpia los valores validos with data set "booleano desde "false""
+ ✔ Convierte y limpia los valores validos with data set "lista de enteros sin repetidos"
+ ✔ Convierte y limpia los valores validos with data set "opción de una lista"
+ ✔ Convierte y limpia los valores validos with data set "código en mayúsculas"
+ ✔ Convierte y limpia los valores validos with data set "sku en mayúsculas"
+ ✔ Convierte y limpia los valores validos with data set "teléfono"
+ ✔ Convierte y limpia los valores validos with data set "fecha del formulario"
+ ✔ Convierte y limpia los valores validos with data set "fecha sola"
+ ✔ Convierte y limpia los valores validos with data set "longitud mínima"
+ ✔ Convierte y limpia los valores validos with data set "valor dentro del rango"
+ ✔ Rechaza los valores invalidos con su mensaje with data set "texto que no es texto"
+ ✔ Rechaza los valores invalidos con su mensaje with data set "correo inválido"
+ ✔ Rechaza los valores invalidos con su mensaje with data set "muy corto"
+ ✔ Rechaza los valores invalidos con su mensaje with data set "muy largo"
+ ✔ Rechaza los valores invalidos con su mensaje with data set "entero con decimales"
+ ✔ Rechaza los valores invalidos con su mensaje with data set "booleano no es entero"
+ ✔ Rechaza los valores invalidos con su mensaje with data set "no numérico"
+ ✔ Rechaza los valores invalidos con su mensaje with data set "menor que el mínimo"
+ ✔ Rechaza los valores invalidos con su mensaje with data set "mayor que el máximo"
+ ✔ Rechaza los valores invalidos con su mensaje with data set "opción que no existe"
+ ✔ Rechaza los valores invalidos con su mensaje with data set "booleano inválido"
+ ✔ Rechaza los valores invalidos con su mensaje with data set "lista que no es lista"
+ ✔ Rechaza los valores invalidos con su mensaje with data set "lista con texto"
+ ✔ Rechaza los valores invalidos con su mensaje with data set "teléfono con letras"
+ ✔ Rechaza los valores invalidos con su mensaje with data set "fecha imposible"
+ ✔ Rechaza los valores invalidos con su mensaje with data set "código con espacios"
+ ✔ Rechaza los valores invalidos con su mensaje with data set "sku corto"
+ ✔ Campo requerido vacio es un error
+ ✔ Campo opcional vacio queda en null y el ausente no aparece
+ ✔ Solo devuelve los campos validados
+ ✔ Reune los errores de todos los campos
+ ✔ Una regla desconocida es un error de programacion
+
+OK (51 tests, 116 assertions)

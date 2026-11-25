@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- PHPMD usa PDepend para medir. Sin caché en disco, cada análisis lee el código actual
+     (con el caché por defecto en ~/.pdepend se mezclaban resultados de versiones anteriores). -->
+<symfony:container xmlns:symfony="http://symfony.com/schema/dic/services"
+                   xmlns="http://pdepend.org/schema/dic/pdepend"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <config>
+        <cache>
+            <driver>memory</driver>
+        </cache>
+    </config>
+</symfony:container>

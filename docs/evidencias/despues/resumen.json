@@ -1,0 +1,185 @@
+{
+  "etapa": "despues",
+  "fecha": "2026-11-25T03:53:59.129Z",
+  "commit": "1bf2796",
+  "lineas_codigo": 13327,
+  "archivos": 111,
+  "lenguajes": {
+    "Vuejs Component": {
+      "archivos": 42,
+      "codigo": 8603,
+      "comentarios": 261,
+      "blancos": 1184
+    },
+    "PHP": {
+      "archivos": 50,
+      "codigo": 3764,
+      "comentarios": 751,
+      "blancos": 718
+    },
+    "JavaScript": {
+      "archivos": 18,
+      "codigo": 650,
+      "comentarios": 113,
+      "blancos": 131
+    },
+    "CSS": {
+      "archivos": 1,
+      "codigo": 310,
+      "comentarios": 21,
+      "blancos": 60
+    }
+  },
+  "complejidad": {
+    "php": {
+      "funciones": 253,
+      "total": 627,
+      "promedio": 2.48,
+      "maxima": 12,
+      "mayores_a_10": 2,
+      "top": [
+        {
+          "archivo": "Models\\Pedido.php",
+          "metodo": "cotizar",
+          "valor": 12
+        },
+        {
+          "archivo": "Models\\Cupon.php",
+          "metodo": "motivoInvalido",
+          "valor": 11
+        },
+        {
+          "archivo": "Controllers\\ProductoController.php",
+          "metodo": "validarProducto",
+          "valor": 10
+        },
+        {
+          "archivo": "Middleware\\AuthMiddleware.php",
+          "metodo": "handle",
+          "valor": 10
+        },
+        {
+          "archivo": "Models\\Pago.php",
+          "metodo": "aplicarTransaccion",
+          "valor": 10
+        },
+        {
+          "archivo": "Config\\Config.php",
+          "metodo": "cargar",
+          "valor": 9
+        },
+        {
+          "archivo": "Core\\Imagen.php",
+          "metodo": "optimizar",
+          "valor": 9
+        },
+        {
+          "archivo": "Core\\Wompi.php",
+          "metodo": "consultarTransaccion",
+          "valor": 9
+        }
+      ]
+    },
+    "javascript": {
+      "funciones": 394,
+      "total": 882,
+      "promedio": 2.24,
+      "maxima": 15,
+      "mayores_a_10": 3,
+      "top": [
+        {
+          "archivo": "views\\panel\\CuponesAdmin.vue",
+          "metodo": "validar",
+          "valor": 15
+        },
+        {
+          "archivo": "views\\panel\\ProductoEditor.vue",
+          "metodo": "validarFormulario",
+          "valor": 15
+        },
+        {
+          "archivo": "views\\panel\\ProductoEditor.vue",
+          "metodo": "guardar",
+          "valor": 11
+        },
+        {
+          "archivo": "views\\CheckoutView.vue",
+          "metodo": "confirmar",
+          "valor": 10
+        },
+        {
+          "archivo": "views\\ContactoView.vue",
+          "metodo": "enviar",
+          "valor": 10
+        },
+        {
+          "archivo": "views\\PagoResultadoView.vue",
+          "metodo": "verificar",
+          "valor": 10
+        },
+        {
+          "archivo": "views\\panel\\UsuariosAdmin.vue",
+          "metodo": "validar",
+          "valor": 10
+        },
+        {
+          "archivo": "components\\BuscadorCatalogo.vue",
+          "metodo": "teclaCampo",
+          "valor": 9
+        }
+      ]
+    }
+  },
+  "duplicidad": {
+    "clones": 21,
+    "lineas_duplicadas": 185,
+    "lineas_analizadas": 16340,
+    "porcentaje": 1.13
+  },
+  "problemas": {
+    "calidad": 20,
+    "diseno": 18,
+    "estandares": 72,
+    "detalle": {
+      "phpstan": 0,
+      "phpmd": 31,
+      "phpcs_errores": 0,
+      "phpcs_advertencias": 70,
+      "eslint_errores": 0,
+      "eslint_advertencias": 9
+    }
+  },
+  "vulnerabilidades": {
+    "composer": 0,
+    "npm_produccion": 0,
+    "npm_desarrollo": 5,
+    "ocultar_errores_php": 6
+  },
+  "deuda_tecnica": {
+    "minutos": 1105,
+    "horas": 18.4,
+    "modelo_minutos": {
+      "phpstan": 15,
+      "complejidad": 30,
+      "acoplamiento": 60,
+      "otraPhpmd": 5,
+      "lineaLarga": 2,
+      "otraPhpcs": 5,
+      "eslintDiseno": 30,
+      "eslintArchivoLargo": 60,
+      "eslintOtra": 5,
+      "clon": 10
+    }
+  },
+  "pruebas": {
+    "backend": {
+      "ejecutadas": 51,
+      "aserciones": 116,
+      "fallidas": 0
+    },
+    "frontend": {
+      "aprobadas": 24,
+      "fallidas": 0
+    }
+  }
+}

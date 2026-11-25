@@ -1,0 +1,5 @@
+
+ [OK] No errors                                                                                                        
+
+
+Note: Using configuration file C:\Users\Usuario\Desktop\MyA FOOTWEAR STORE\backend\phpstan.neon.

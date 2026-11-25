@@ -1,0 +1,24 @@
+
+C:\Users\Usuario\Desktop\MyA FOOTWEAR STORE\frontend\src\components\BuscadorCatalogo.vue
+  11:36  warning  Prop "talla" should define at least its type  vue/require-prop-types
+  12:36  warning  Prop "color" should define at least its type  vue/require-prop-types
+
+C:\Users\Usuario\Desktop\MyA FOOTWEAR STORE\frontend\src\components\HeroCarrusel.vue
+  572:1  warning  File has too many lines (649). Maximum allowed is 500  max-lines
+
+C:\Users\Usuario\Desktop\MyA FOOTWEAR STORE\frontend\src\views\ContactoView.vue
+  584:1  warning  File has too many lines (743). Maximum allowed is 500  max-lines
+
+C:\Users\Usuario\Desktop\MyA FOOTWEAR STORE\frontend\src\views\LoginView.vue
+  574:1  warning  File has too many lines (666). Maximum allowed is 500  max-lines
+
+C:\Users\Usuario\Desktop\MyA FOOTWEAR STORE\frontend\src\views\panel\CuponesAdmin.vue
+  74:1  warning  Function 'validar' has a complexity of 15. Maximum allowed is 10  complexity
+
+C:\Users\Usuario\Desktop\MyA FOOTWEAR STORE\frontend\src\views\panel\ProductoEditor.vue
+  107:1  warning  Function 'validarFormulario' has a complexity of 15. Maximum allowed is 10  complexity
+  126:1  warning  Async function 'guardar' has a complexity of 11. Maximum allowed is 10      complexity
+  561:1  warning  File has too many lines (605). Maximum allowed is 500                       max-lines
+
+✖ 9 problems (0 errors, 9 warnings)
+

@@ -1,0 +1,2 @@
+JSON report saved to C:\Users\Usuario\Desktop\MyA FOOTWEAR STORE\docs\evidencias\despues\jscpd\jscpd-report.json
+Duplications detection: Found 21 exact clones with 185(1.13%) duplicated lines in 191 (4 formats) files.

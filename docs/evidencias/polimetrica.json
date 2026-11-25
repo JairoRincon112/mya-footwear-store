@@ -1,0 +1,150 @@
+{
+  "antes": [
+    {
+      "nombre": "Validator",
+      "existe": true,
+      "lineas": 115,
+      "metodos": 2,
+      "complejidad_maxima": 41,
+      "complejidad_total": 53
+    },
+    {
+      "nombre": "ReglasValidacion",
+      "existe": false,
+      "lineas": 0,
+      "metodos": 0,
+      "complejidad_maxima": 0,
+      "complejidad_total": 0
+    },
+    {
+      "nombre": "ProductoController",
+      "existe": true,
+      "lineas": 192,
+      "metodos": 10,
+      "complejidad_maxima": 15,
+      "complejidad_total": 47
+    },
+    {
+      "nombre": "ImagenSubida",
+      "existe": false,
+      "lineas": 0,
+      "metodos": 0,
+      "complejidad_maxima": 0,
+      "complejidad_total": 0
+    },
+    {
+      "nombre": "UsuarioController",
+      "existe": true,
+      "lineas": 84,
+      "metodos": 4,
+      "complejidad_maxima": 5,
+      "complejidad_total": 16
+    },
+    {
+      "nombre": "AuthController",
+      "existe": true,
+      "lineas": 150,
+      "metodos": 8,
+      "complejidad_maxima": 7,
+      "complejidad_total": 21
+    },
+    {
+      "nombre": "PedidosAdmin.vue",
+      "existe": true,
+      "lineas": 136,
+      "metodos": 7,
+      "complejidad_maxima": 2,
+      "complejidad_total": 8
+    },
+    {
+      "nombre": "InventarioAdmin.vue",
+      "existe": true,
+      "lineas": 253,
+      "metodos": 11,
+      "complejidad_maxima": 11,
+      "complejidad_total": 26
+    },
+    {
+      "nombre": "useListadoPanel.js",
+      "existe": false,
+      "lineas": 0,
+      "metodos": 0,
+      "complejidad_maxima": 0,
+      "complejidad_total": 0
+    }
+  ],
+  "despues": [
+    {
+      "nombre": "Validator",
+      "existe": true,
+      "lineas": 44,
+      "metodos": 2,
+      "complejidad_maxima": 8,
+      "complejidad_total": 14
+    },
+    {
+      "nombre": "ReglasValidacion",
+      "existe": true,
+      "lineas": 120,
+      "metodos": 15,
+      "complejidad_maxima": 5,
+      "complejidad_total": 36
+    },
+    {
+      "nombre": "ProductoController",
+      "existe": true,
+      "lineas": 171,
+      "metodos": 11,
+      "complejidad_maxima": 10,
+      "complejidad_total": 35
+    },
+    {
+      "nombre": "ImagenSubida",
+      "existe": true,
+      "lineas": 46,
+      "metodos": 4,
+      "complejidad_maxima": 5,
+      "complejidad_total": 11
+    },
+    {
+      "nombre": "UsuarioController",
+      "existe": true,
+      "lineas": 67,
+      "metodos": 5,
+      "complejidad_maxima": 4,
+      "complejidad_total": 13
+    },
+    {
+      "nombre": "AuthController",
+      "existe": true,
+      "lineas": 138,
+      "metodos": 8,
+      "complejidad_maxima": 7,
+      "complejidad_total": 19
+    },
+    {
+      "nombre": "PedidosAdmin.vue",
+      "existe": true,
+      "lineas": 112,
+      "metodos": 2,
+      "complejidad_maxima": 1,
+      "complejidad_total": 2
+    },
+    {
+      "nombre": "InventarioAdmin.vue",
+      "existe": true,
+      "lineas": 227,
+      "metodos": 6,
+      "complejidad_maxima": 4,
+      "complejidad_total": 13
+    },
+    {
+      "nombre": "useListadoPanel.js",
+      "existe": true,
+      "lineas": 36,
+      "metodos": 10,
+      "complejidad_maxima": 3,
+      "complejidad_total": 13
+    }
+  ]
+}

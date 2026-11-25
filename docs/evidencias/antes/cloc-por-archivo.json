@@ -1,0 +1,543 @@
+{"header" : {
+  "cloc_url"           : "github.com/AlDanial/cloc",
+  "cloc_version"       : "1.96",
+  "elapsed_seconds"    : 2.35124897956848,
+  "n_files"            : 106,
+  "n_lines"            : 16503,
+  "files_per_second"   : 45.0824225427006,
+  "lines_per_second"   : 7018.82282285084},
+"src/views/ContactoView.vue" :{
+  "blank": 115,
+  "comment": 35,
+  "code": 720,
+  "language": "Vuejs Component"},
+"src/views/LoginView.vue" :{
+  "blank": 94,
+  "comment": 23,
+  "code": 652,
+  "language": "Vuejs Component"},
+"src/components/HeroCarrusel.vue" :{
+  "blank": 77,
+  "comment": 30,
+  "code": 634,
+  "language": "Vuejs Component"},
+"src/views/panel/ProductoEditor.vue" :{
+  "blank": 67,
+  "comment": 17,
+  "code": 608,
+  "language": "Vuejs Component"},
+"src/components/BuscadorCatalogo.vue" :{
+  "blank": 51,
+  "comment": 19,
+  "code": 395,
+  "language": "Vuejs Component"},
+"src/views/ProductoView.vue" :{
+  "blank": 61,
+  "comment": 6,
+  "code": 389,
+  "language": "Vuejs Component"},
+"../backend/src/Models/Pedido.php" :{
+  "blank": 41,
+  "comment": 50,
+  "code": 320,
+  "language": "PHP"},
+"src/views/HomeView.vue" :{
+  "blank": 40,
+  "comment": 8,
+  "code": 320,
+  "language": "Vuejs Component"},
+"src/views/CheckoutView.vue" :{
+  "blank": 47,
+  "comment": 8,
+  "code": 316,
+  "language": "Vuejs Component"},
+"src/assets/css/base.css" :{
+  "blank": 60,
+  "comment": 21,
+  "code": 310,
+  "language": "CSS"},
+"src/views/panel/DevolucionesAdmin.vue" :{
+  "blank": 33,
+  "comment": 3,
+  "code": 259,
+  "language": "Vuejs Component"},
+"src/views/panel/CuponesAdmin.vue" :{
+  "blank": 25,
+  "comment": 4,
+  "code": 258,
+  "language": "Vuejs Component"},
+"src/components/CarritoFlotante.vue" :{
+  "blank": 38,
+  "comment": 6,
+  "code": 255,
+  "language": "Vuejs Component"},
+"src/views/panel/InventarioAdmin.vue" :{
+  "blank": 30,
+  "comment": 2,
+  "code": 253,
+  "language": "Vuejs Component"},
+"src/views/panel/PanelLayout.vue" :{
+  "blank": 43,
+  "comment": 18,
+  "code": 250,
+  "language": "Vuejs Component"},
+"src/components/DevolucionesPedido.vue" :{
+  "blank": 37,
+  "comment": 2,
+  "code": 244,
+  "language": "Vuejs Component"},
+"../backend/src/Models/Variante.php" :{
+  "blank": 38,
+  "comment": 51,
+  "code": 239,
+  "language": "PHP"},
+"src/views/CatalogoView.vue" :{
+  "blank": 37,
+  "comment": 11,
+  "code": 233,
+  "language": "Vuejs Component"},
+"src/views/panel/UsuariosAdmin.vue" :{
+  "blank": 28,
+  "comment": 1,
+  "code": 233,
+  "language": "Vuejs Component"},
+"../backend/src/Models/Producto.php" :{
+  "blank": 31,
+  "comment": 33,
+  "code": 221,
+  "language": "PHP"},
+"../backend/src/Models/Devolucion.php" :{
+  "blank": 22,
+  "comment": 30,
+  "code": 204,
+  "language": "PHP"},
+"src/components/GraficaVentas.vue" :{
+  "blank": 29,
+  "comment": 7,
+  "code": 199,
+  "language": "Vuejs Component"},
+"../backend/src/Controllers/ProductoController.php" :{
+  "blank": 40,
+  "comment": 24,
+  "code": 192,
+  "language": "PHP"},
+"src/views/panel/ProductosAdmin.vue" :{
+  "blank": 20,
+  "comment": 1,
+  "code": 172,
+  "language": "Vuejs Component"},
+"src/components/MenuAcciones.vue" :{
+  "blank": 21,
+  "comment": 5,
+  "code": 166,
+  "language": "Vuejs Component"},
+"src/components/ProductoCard.vue" :{
+  "blank": 23,
+  "comment": 5,
+  "code": 153,
+  "language": "Vuejs Component"},
+"../backend/src/Controllers/AuthController.php" :{
+  "blank": 32,
+  "comment": 20,
+  "code": 150,
+  "language": "PHP"},
+"src/views/panel/ReportesAdmin.vue" :{
+  "blank": 23,
+  "comment": 1,
+  "code": 148,
+  "language": "Vuejs Component"},
+"../backend/src/Controllers/PedidoController.php" :{
+  "blank": 27,
+  "comment": 32,
+  "code": 147,
+  "language": "PHP"},
+"src/views/MiCuentaView.vue" :{
+  "blank": 17,
+  "comment": 1,
+  "code": 145,
+  "language": "Vuejs Component"},
+"src/components/layout/AppFooter.vue" :{
+  "blank": 19,
+  "comment": 10,
+  "code": 144,
+  "language": "Vuejs Component"},
+"src/views/PagoResultadoView.vue" :{
+  "blank": 22,
+  "comment": 4,
+  "code": 143,
+  "language": "Vuejs Component"},
+"src/views/panel/PedidoAdmin.vue" :{
+  "blank": 18,
+  "comment": 2,
+  "code": 140,
+  "language": "Vuejs Component"},
+"src/views/panel/PedidosAdmin.vue" :{
+  "blank": 17,
+  "comment": 1,
+  "code": 136,
+  "language": "Vuejs Component"},
+"../backend/src/Models/Cupon.php" :{
+  "blank": 19,
+  "comment": 17,
+  "code": 133,
+  "language": "PHP"},
+"../backend/src/Models/Usuario.php" :{
+  "blank": 21,
+  "comment": 23,
+  "code": 128,
+  "language": "PHP"},
+"src/components/BotonPagoWompi.vue" :{
+  "blank": 15,
+  "comment": 2,
+  "code": 127,
+  "language": "Vuejs Component"},
+"src/views/MiPedidoView.vue" :{
+  "blank": 21,
+  "comment": 3,
+  "code": 127,
+  "language": "Vuejs Component"},
+"src/components/DetallePedido.vue" :{
+  "blank": 20,
+  "comment": 1,
+  "code": 125,
+  "language": "Vuejs Component"},
+"src/views/panel/MensajesAdmin.vue" :{
+  "blank": 19,
+  "comment": 2,
+  "code": 123,
+  "language": "Vuejs Component"},
+"../backend/src/Core/Validator.php" :{
+  "blank": 28,
+  "comment": 23,
+  "code": 115,
+  "language": "PHP"},
+"src/views/panel/PanelInicio.vue" :{
+  "blank": 15,
+  "comment": 1,
+  "code": 113,
+  "language": "Vuejs Component"},
+"src/router/index.js" :{
+  "blank": 10,
+  "comment": 6,
+  "code": 111,
+  "language": "JavaScript"},
+"../backend/src/Controllers/VarianteController.php" :{
+  "blank": 22,
+  "comment": 16,
+  "code": 103,
+  "language": "PHP"},
+"src/views/MisPedidosView.vue" :{
+  "blank": 17,
+  "comment": 1,
+  "code": 100,
+  "language": "Vuejs Component"},
+"../backend/src/Core/Wompi.php" :{
+  "blank": 18,
+  "comment": 29,
+  "code": 95,
+  "language": "PHP"},
+"../backend/src/Models/Reporte.php" :{
+  "blank": 10,
+  "comment": 5,
+  "code": 91,
+  "language": "PHP"},
+"../backend/src/Core/Imagen.php" :{
+  "blank": 15,
+  "comment": 16,
+  "code": 88,
+  "language": "PHP"},
+"src/views/RestablecerView.vue" :{
+  "blank": 12,
+  "comment": 1,
+  "code": 87,
+  "language": "Vuejs Component"},
+"../backend/src/Controllers/UsuarioController.php" :{
+  "blank": 17,
+  "comment": 9,
+  "code": 84,
+  "language": "PHP"},
+"../backend/src/Core/Request.php" :{
+  "blank": 19,
+  "comment": 23,
+  "code": 84,
+  "language": "PHP"},
+"../backend/src/Models/Pago.php" :{
+  "blank": 11,
+  "comment": 23,
+  "code": 82,
+  "language": "PHP"},
+"../backend/src/Controllers/CuponController.php" :{
+  "blank": 12,
+  "comment": 10,
+  "code": 81,
+  "language": "PHP"},
+"../backend/src/Controllers/PagoController.php" :{
+  "blank": 15,
+  "comment": 19,
+  "code": 79,
+  "language": "PHP"},
+"src/views/RecuperarView.vue" :{
+  "blank": 11,
+  "comment": 1,
+  "code": 73,
+  "language": "Vuejs Component"},
+"../backend/src/Config/routes.php" :{
+  "blank": 19,
+  "comment": 15,
+  "code": 71,
+  "language": "PHP"},
+"../backend/src/Controllers/DevolucionController.php" :{
+  "blank": 13,
+  "comment": 7,
+  "code": 71,
+  "language": "PHP"},
+"src/components/layout/AppHeader.vue" :{
+  "blank": 8,
+  "comment": 7,
+  "code": 65,
+  "language": "Vuejs Component"},
+"../backend/src/Core/Router.php" :{
+  "blank": 17,
+  "comment": 12,
+  "code": 64,
+  "language": "PHP"},
+"../backend/src/Core/Jwt.php" :{
+  "blank": 16,
+  "comment": 11,
+  "code": 63,
+  "language": "PHP"},
+"src/stores/carrito.js" :{
+  "blank": 13,
+  "comment": 11,
+  "code": 58,
+  "language": "JavaScript"},
+"../backend/src/Middleware/AuthMiddleware.php" :{
+  "blank": 14,
+  "comment": 13,
+  "code": 56,
+  "language": "PHP"},
+"src/utils/formato.js" :{
+  "blank": 9,
+  "comment": 9,
+  "code": 54,
+  "language": "JavaScript"},
+"src/stores/auth.js" :{
+  "blank": 12,
+  "comment": 4,
+  "code": 52,
+  "language": "JavaScript"},
+"../backend/src/Config/Config.php" :{
+  "blank": 15,
+  "comment": 14,
+  "code": 50,
+  "language": "PHP"},
+"../backend/src/Controllers/ContactoController.php" :{
+  "blank": 12,
+  "comment": 6,
+  "code": 50,
+  "language": "PHP"},
+"src/services/api.js" :{
+  "blank": 12,
+  "comment": 7,
+  "code": 50,
+  "language": "JavaScript"},
+"../backend/bin/optimizar_imagenes.php" :{
+  "blank": 12,
+  "comment": 10,
+  "code": 49,
+  "language": "PHP"},
+"src/components/EstadoPedido.vue" :{
+  "blank": 10,
+  "comment": 3,
+  "code": 49,
+  "language": "Vuejs Component"},
+"src/components/PrecioProducto.vue" :{
+  "blank": 7,
+  "comment": 2,
+  "code": 47,
+  "language": "Vuejs Component"},
+"../backend/src/Models/RecuperacionPassword.php" :{
+  "blank": 9,
+  "comment": 11,
+  "code": 46,
+  "language": "PHP"},
+"src/services/productoService.js" :{
+  "blank": 13,
+  "comment": 6,
+  "code": 46,
+  "language": "JavaScript"},
+"../backend/src/Models/MensajeContacto.php" :{
+  "blank": 9,
+  "comment": 5,
+  "code": 45,
+  "language": "PHP"},
+"src/services/pagoService.js" :{
+  "blank": 5,
+  "comment": 8,
+  "code": 45,
+  "language": "JavaScript"},
+"../backend/src/Core/Database.php" :{
+  "blank": 11,
+  "comment": 17,
+  "code": 44,
+  "language": "PHP"},
+"../backend/src/Core/HttpException.php" :{
+  "blank": 12,
+  "comment": 7,
+  "code": 43,
+  "language": "PHP"},
+"../backend/src/Models/Model.php" :{
+  "blank": 9,
+  "comment": 13,
+  "code": 42,
+  "language": "PHP"},
+"src/components/LogoMya.vue" :{
+  "blank": 5,
+  "comment": 4,
+  "code": 41,
+  "language": "Vuejs Component"},
+"../backend/src/Core/Correo.php" :{
+  "blank": 11,
+  "comment": 11,
+  "code": 40,
+  "language": "PHP"},
+"../backend/src/Models/ProductoImagen.php" :{
+  "blank": 6,
+  "comment": 6,
+  "code": 40,
+  "language": "PHP"},
+"src/services/adminService.js" :{
+  "blank": 12,
+  "comment": 5,
+  "code": 37,
+  "language": "JavaScript"},
+"../backend/src/Controllers/InventarioController.php" :{
+  "blank": 9,
+  "comment": 6,
+  "code": 36,
+  "language": "PHP"},
+"../backend/src/Models/Talla.php" :{
+  "blank": 6,
+  "comment": 9,
+  "code": 34,
+  "language": "PHP"},
+"../backend/src/Core/Response.php" :{
+  "blank": 6,
+  "comment": 6,
+  "code": 32,
+  "language": "PHP"},
+"src/components/EstadoDevolucion.vue" :{
+  "blank": 5,
+  "comment": 1,
+  "code": 31,
+  "language": "Vuejs Component"},
+"src/services/pedidoService.js" :{
+  "blank": 10,
+  "comment": 7,
+  "code": 31,
+  "language": "JavaScript"},
+"../backend/src/Controllers/CatalogoController.php" :{
+  "blank": 7,
+  "comment": 7,
+  "code": 29,
+  "language": "PHP"},
+"src/services/web3formsService.js" :{
+  "blank": 5,
+  "comment": 15,
+  "code": 28,
+  "language": "JavaScript"},
+"src/components/Paginacion.vue" :{
+  "blank": 2,
+  "comment": 1,
+  "code": 27,
+  "language": "Vuejs Component"},
+"../backend/src/Models/Marca.php" :{
+  "blank": 5,
+  "comment": 4,
+  "code": 26,
+  "language": "PHP"},
+"src/services/authService.js" :{
+  "blank": 7,
+  "comment": 3,
+  "code": 24,
+  "language": "JavaScript"},
+"src/stores/catalogo.js" :{
+  "blank": 4,
+  "comment": 1,
+  "code": 24,
+  "language": "JavaScript"},
+"../backend/src/Middleware/CorsMiddleware.php" :{
+  "blank": 6,
+  "comment": 5,
+  "code": 22,
+  "language": "PHP"},
+"../backend/src/Controllers/Controller.php" :{
+  "blank": 5,
+  "comment": 7,
+  "code": 20,
+  "language": "PHP"},
+"../backend/src/Descuentos/EstrategiasDescuento.php" :{
+  "blank": 6,
+  "comment": 7,
+  "code": 20,
+  "language": "PHP"},
+"../backend/src/Descuentos/DescuentoPorcentaje.php" :{
+  "blank": 6,
+  "comment": 1,
+  "code": 19,
+  "language": "PHP"},
+"src/main.js" :{
+  "blank": 3,
+  "comment": 2,
+  "code": 19,
+  "language": "JavaScript"},
+"../backend/src/Descuentos/DescuentoValorFijo.php" :{
+  "blank": 5,
+  "comment": 1,
+  "code": 18,
+  "language": "PHP"},
+"../backend/src/Models/Color.php" :{
+  "blank": 4,
+  "comment": 5,
+  "code": 17,
+  "language": "PHP"},
+"src/views/NoEncontradoView.vue" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 17,
+  "language": "Vuejs Component"},
+"../backend/src/Core/Texto.php" :{
+  "blank": 4,
+  "comment": 7,
+  "code": 16,
+  "language": "PHP"},
+"src/App.vue" :{
+  "blank": 3,
+  "comment": 1,
+  "code": 15,
+  "language": "Vuejs Component"},
+"../backend/src/Controllers/ReporteController.php" :{
+  "blank": 4,
+  "comment": 4,
+  "code": 13,
+  "language": "PHP"},
+"src/services/devolucionService.js" :{
+  "blank": 4,
+  "comment": 4,
+  "code": 13,
+  "language": "JavaScript"},
+"../backend/src/Descuentos/EstrategiaDescuento.php" :{
+  "blank": 5,
+  "comment": 7,
+  "code": 9,
+  "language": "PHP"},
+"src/services/contactoService.js" :{
+  "blank": 1,
+  "comment": 1,
+  "code": 6,
+  "language": "JavaScript"},
+"SUM": {
+  "blank": 2084,
+  "comment": 1058,
+  "code": 13361,
+  "nFiles": 106} }

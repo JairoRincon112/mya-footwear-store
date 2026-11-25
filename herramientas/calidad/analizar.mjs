@@ -41,7 +41,9 @@ function ejecutar(archivo, [programa, ...argumentos], cwd) {
   const resultado = spawnSync(citar(programa), argumentos.map(citar), {
     cwd, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024, shell: conConsola,
   })
-  const texto = (resultado.stdout || '') + (resultado.stderr ? `\n${resultado.stderr}` : '')
+  // Los .json guardan solo la salida estándar para que sigan siendo JSON válido.
+  const conAvisos = !archivo.endsWith('.json') && resultado.stderr
+  const texto = (resultado.stdout || '') + (conAvisos ? `\n${resultado.stderr}` : '')
   writeFileSync(join(SALIDA, archivo), texto.replace(/\x1b\[[0-9;]*m/g, ''))
   console.log(`· ${archivo} (código ${resultado.status})`)
   return resultado.stdout || ''
@@ -56,6 +58,7 @@ const json = (texto) => {
 // 1. Tamaño: líneas de código y archivos (cloc)
 const cloc = json(ejecutar('cloc.json', [binNode('cloc'), '--json', '--quiet', '../backend/src', '../backend/bin', 'src'], FRONTEND))
 ejecutar('cloc.txt', [binNode('cloc'), '--quiet', '../backend/src', '../backend/bin', 'src'], FRONTEND)
+ejecutar('cloc-por-archivo.json', [binNode('cloc'), '--by-file', '--json', '--quiet', '../backend/src', '../backend/bin', 'src'], FRONTEND)
 
 // 2. Complejidad ciclomática por método/función
 const complejidadPhp = json(ejecutar('complejidad-php.json', [...binPhp('phpmd'), 'src,bin', 'json', 'phpmd-complejidad.xml'], BACKEND))

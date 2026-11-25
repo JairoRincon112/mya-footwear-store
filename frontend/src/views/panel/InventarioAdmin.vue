@@ -9,6 +9,7 @@ import pedidoService from '@/services/pedidoService'
 import productoService from '@/services/productoService'
 import { useCatalogoStore } from '@/stores/catalogo'
 import { formatearFecha } from '@/utils/formato'
+import { validarAjusteStock } from '@/utils/inventario'
 
 const route = useRoute()
 const catalogo = useCatalogoStore()
@@ -33,16 +34,12 @@ function abrirAjuste(variante) {
 }
 
 async function guardarAjuste() {
-  const errores = {}
-  const cantidad = Number(ajuste.cantidad)
-  if (!Number.isInteger(cantidad) || cantidad === 0) errores.cantidad = 'Cantidad entera distinta de 0.'
-  else if (ajuste.tipo !== 'ajuste' && cantidad < 0) errores.cantidad = 'Para descontar usa "Ajuste".'
-  if (ajuste.tipo === 'ajuste' && !ajuste.motivo.trim()) errores.motivo = 'Explica el motivo.'
+  const { errores, datos } = validarAjusteStock(ajuste)
   erroresAjuste.value = errores
   if (Object.keys(errores).length) return
 
   try {
-    const respuesta = await productoService.ajustarStock(ajuste.varianteId, { tipo: ajuste.tipo, cantidad, motivo: ajuste.motivo.trim() || null })
+    const respuesta = await productoService.ajustarStock(ajuste.varianteId, datos)
     aviso.value = { tipo: 'exito', texto: `${respuesta.data.sku}: stock actualizado a ${respuesta.data.stock}.` }
     ajuste.varianteId = null
     cargar()

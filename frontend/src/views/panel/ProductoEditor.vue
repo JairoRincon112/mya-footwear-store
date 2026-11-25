@@ -9,6 +9,7 @@ import { urlImagen } from '@/services/api'
 import { useAuthStore } from '@/stores/auth'
 import { useCatalogoStore } from '@/stores/catalogo'
 import { formatearPrecio } from '@/utils/formato'
+import { validarAjusteStock } from '@/utils/inventario'
 
 const props = defineProps({
   id: { type: String, default: null },
@@ -257,20 +258,12 @@ function abrirAjuste(variante) {
 }
 
 async function guardarAjuste() {
-  const errores = {}
-  const cantidad = Number(ajuste.cantidad)
-  if (!Number.isInteger(cantidad) || cantidad === 0) errores.cantidad = 'Escribe una cantidad entera distinta de 0.'
-  else if (ajuste.tipo !== 'ajuste' && cantidad < 0) errores.cantidad = 'Para descontar unidades usa el tipo "Ajuste".'
-  if (ajuste.tipo === 'ajuste' && !ajuste.motivo.trim()) errores.motivo = 'Explica el motivo del ajuste.'
+  const { errores, datos } = validarAjusteStock(ajuste)
   erroresAjuste.value = errores
   if (Object.keys(errores).length) return
 
   try {
-    const respuesta = await productoService.ajustarStock(ajuste.varianteId, {
-      tipo: ajuste.tipo,
-      cantidad,
-      motivo: ajuste.motivo.trim() || null,
-    })
+    const respuesta = await productoService.ajustarStock(ajuste.varianteId, datos)
     avisoVariantes.value = { tipo: 'exito', texto: `${respuesta.mensaje} Nuevo stock: ${respuesta.data.stock}.` }
     ajuste.varianteId = null
     await refrescar()

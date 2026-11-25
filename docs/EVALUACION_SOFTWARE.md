@@ -17,6 +17,13 @@ Evaluación estática del código fuente de la tienda MyA FOOTWEAR STORE: API RE
 6. **Refactorización.** Cada mejora va en su propio commit (ver [REFACTORIZACION.md](REFACTORIZACION.md)) y las pruebas se ejecutaron después de cada una.
 7. **Medición posterior («después»).** Se repitió el mismo script, con la misma configuración, sobre el commit `4382a5a`. Las salidas quedaron en [`docs/evidencias/despues/`](evidencias/despues/) y la comparación está en [METRICAS_SOFTWARE.md](METRICAS_SOFTWARE.md).
 
+**Mismas condiciones en las dos mediciones.** Las herramientas, sus versiones (fijadas en `composer.lock` y `package-lock.json`), los archivos de configuración, el alcance y el equipo fueron los mismos. Entre las dos mediciones solo se agregaron dos cosas:
+
+- **`backend/pdepend.xml`:** desactiva el caché en disco de PDepend, el motor de PHPMD. Con el caché activo, PHPMD mezclaba la complejidad de versiones anteriores del código. Para confirmar que la medición inicial no estaba afectada, se repitió sobre el código original con el caché desactivado y dio exactamente los mismos valores: 230 métodos, complejidad total 643, máxima 41 y 40 hallazgos de PHPMD.
+- **`cloc-por-archivo.json`:** el conteo de líneas por archivo para la vista polimétrica. El de «antes» se generó con el mismo cloc sobre una copia del commit `ef4486a`.
+
+Ninguno de los dos cambios altera las reglas ni los umbrales de medición.
+
 ## 2. Herramientas utilizadas
 
 | Herramienta | Versión | Tecnología | Qué mide en el proyecto |

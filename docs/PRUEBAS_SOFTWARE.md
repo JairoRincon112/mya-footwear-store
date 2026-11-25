@@ -95,9 +95,22 @@ node herramientas/calidad/analizar.mjs despues
 | 5. `useListadoPanel` y `limpiarFiltros` | F1, F2, F4, F5 |
 | 6. `validarAjusteStock` y `useAjusteStock` | F3, F5 |
 
+### 4.4 Aspectos verificados
+
+| Aspecto | Pruebas |
+|---|---|
+| Funcionamiento de las funcionalidades | B4, B5, B6, F1, F2 |
+| Cumplimiento de las reglas de negocio | B3, B5 (el registro público solo crea clientes; un correo por cuenta), B6, F2 (el rechazo exige motivo), F3 |
+| Validación de información | B1, B2, B4, F3, F5 |
+| Almacenamiento y recuperación de datos | B4 (la imagen se guarda en disco y en la base, y se elimina), B5 (la cuenta creada se consulta con sus datos y su rol) |
+| Manejo de errores | B2, B4 (404 y 403), B6, F1 (la API falla), F5 |
+| Integraciones externas | **No corresponde a los componentes intervenidos.** La única integración externa del proyecto es la pasarela de pagos Wompi, y ninguna refactorización tocó ese módulo (`Wompi.php`, `PagoController`). Las pruebas de integración sí ejercitan la integración entre el frontend, la API, el servidor web y la base de datos. Las pruebas de Wompi quedan propuestas en [MANTENIMIENTO.md](MANTENIMIENTO.md) (actividad M2) |
+
 ## 5. Resultados obtenidos
 
-### 5.1 Antes de refactorizar (commit `e5faddc`, código original)
+### 5.1 Antes de refactorizar (código original del commit `ef4486a`, con las pruebas agregadas en `a2b6648`)
+
+Las pruebas se escribieron sin tocar el código de la aplicación: el commit `a2b6648` solo agrega las herramientas y las pruebas. La primera ejecución quedó guardada en la evidencia inicial (commit `e5faddc`).
 
 | Suite | Ejecutadas | Aprobadas | Fallidas |
 |---|---|---|---|

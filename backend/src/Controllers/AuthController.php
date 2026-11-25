@@ -69,19 +69,10 @@ final class AuthController extends Controller
     /** POST /api/auth/registro — el registro público solo crea clientes. */
     public function registro(Request $request): void
     {
-        $datos = Validator::validar($request->cuerpo(), [
-            'nombre' => 'requerido|texto|min:2|max:120',
-            'email' => 'requerido|email|max:150',
-            'password' => 'requerido|texto|min:8|max:72',
-            'telefono' => 'telefono',
-        ]);
+        $datos = Validator::validar($request->cuerpo(), Usuario::REGLAS_CUENTA);
 
         $usuarios = new Usuario();
-        if ($usuarios->existeEmail($datos['email'])) {
-            throw HttpException::validacion(['email' => 'Ya existe una cuenta con este correo.']);
-        }
-
-        $id = $usuarios->crear($datos['nombre'], $datos['email'], $datos['password'], 'cliente', $datos['telefono'] ?? null);
+        $id = $usuarios->crear($datos, 'cliente');
 
         Response::creado($this->sesion($usuarios->buscarPorId($id)), 'Tu cuenta fue creada.');
     }
@@ -95,17 +86,14 @@ final class AuthController extends Controller
     /** PUT /api/auth/perfil — el usuario edita su nombre, correo y teléfono. */
     public function actualizarPerfil(Request $request): void
     {
-        $datos = Validator::validar($request->cuerpo(), [
-            'nombre' => 'requerido|texto|min:2|max:120',
-            'email' => 'requerido|email|max:150',
-            'telefono' => 'telefono',
-        ]);
+        // Las mismas reglas de la cuenta, sin la contraseña (se cambia en su propia pantalla).
+        $reglas = Usuario::REGLAS_CUENTA;
+        unset($reglas['password']);
+        $datos = Validator::validar($request->cuerpo(), $reglas);
 
         $id = $this->usuarioId($request);
         $usuarios = new Usuario();
-        if ($usuarios->existeEmail($datos['email'], $id)) {
-            throw HttpException::validacion(['email' => 'Ya existe una cuenta con este correo.']);
-        }
+        $usuarios->asegurarEmailDisponible($datos['email'], $id);
 
         $usuarios->actualizarPerfil($id, $datos['nombre'], $datos['email'], $datos['telefono'] ?? null);
         Response::ok($usuarios->buscarPorId($id), 'Tus datos fueron actualizados.');
@@ -116,7 +104,7 @@ final class AuthController extends Controller
     {
         $datos = Validator::validar($request->cuerpo(), [
             'password_actual' => 'requerido|texto|max:72',
-            'password_nueva' => 'requerido|texto|min:8|max:72',
+            'password_nueva' => 'requerido|' . Usuario::REGLA_PASSWORD,
         ]);
 
         $id = $this->usuarioId($request);
@@ -170,7 +158,7 @@ final class AuthController extends Controller
     {
         $datos = Validator::validar($request->cuerpo(), [
             'token' => 'requerido|texto|max:128',
-            'password' => 'requerido|texto|min:8|max:72',
+            'password' => 'requerido|' . Usuario::REGLA_PASSWORD,
         ]);
 
         $recuperaciones = new RecuperacionPassword();

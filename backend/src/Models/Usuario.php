@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use App\Core\HttpException;
+
 /**
  * Modelo de la tabla usuarios (administradores, vendedores y clientes).
  * La contraseña nunca se guarda en texto plano: se usa password_hash() (bcrypt).
@@ -11,6 +13,20 @@ namespace App\Models;
 final class Usuario extends Model
 {
     public const ROLES = ['admin', 'vendedor', 'cliente'];
+
+    /** Formato de una contraseña nueva (bcrypt solo usa los primeros 72 bytes). */
+    public const REGLA_PASSWORD = 'texto|min:8|max:72';
+
+    /**
+     * Reglas de los datos de una cuenta. Las usan el registro público, el perfil del
+     * cliente y el panel de usuarios, para que las tres pantallas validen lo mismo.
+     */
+    public const REGLAS_CUENTA = [
+        'nombre' => 'requerido|texto|min:2|max:120',
+        'email' => 'requerido|email|max:150',
+        'password' => 'requerido|' . self::REGLA_PASSWORD,
+        'telefono' => 'telefono',
+    ];
 
     /** Columnas que se pueden devolver al frontend (nunca el hash). */
     private const COLUMNAS_PUBLICAS = 'id, nombre, email, telefono, rol, activo, creado_en';
@@ -49,7 +65,7 @@ final class Usuario extends Model
         return $usuario ? self::normalizar($usuario) : null;
     }
 
-    public function existeEmail(string $email, ?int $exceptoId = null): bool
+    private function existeEmail(string $email, ?int $exceptoId = null): bool
     {
         return $this->obtenerUno(
             'SELECT 1 FROM usuarios WHERE email = :email AND id <> :excepto',
@@ -137,20 +153,35 @@ final class Usuario extends Model
         $this->ejecutar('UPDATE usuarios SET activo = :activo WHERE id = :id', ['activo' => $activo ? 1 : 0, 'id' => $id]);
     }
 
-    public function crear(string $nombre, string $email, string $password, string $rol, ?string $telefono = null): int
+    /**
+     * Crea una cuenta con datos ya validados con REGLAS_CUENTA.
+     *
+     * @param array{nombre: string, email: string, password: string, telefono?: ?string} $datos
+     */
+    public function crear(array $datos, string $rol): int
     {
+        $this->asegurarEmailDisponible($datos['email']);
+
         $this->ejecutar(
             'INSERT INTO usuarios (nombre, email, password_hash, rol, telefono)
              VALUES (:nombre, :email, :hash, :rol, :telefono)',
             [
-                'nombre' => $nombre,
-                'email' => $email,
-                'hash' => password_hash($password, PASSWORD_DEFAULT),
+                'nombre' => $datos['nombre'],
+                'email' => $datos['email'],
+                'hash' => password_hash($datos['password'], PASSWORD_DEFAULT),
                 'rol' => $rol,
-                'telefono' => $telefono,
+                'telefono' => $datos['telefono'] ?? null,
             ]
         );
         return (int) $this->db->lastInsertId();
+    }
+
+    /** Un correo solo puede pertenecer a una cuenta (al editar se excluye la propia). */
+    public function asegurarEmailDisponible(string $email, ?int $exceptoId = null): void
+    {
+        if ($this->existeEmail($email, $exceptoId)) {
+            throw HttpException::validacion(['email' => 'Ya existe una cuenta con este correo.']);
+        }
     }
 
     /** Actualiza el hash si PHP recomienda un algoritmo o costo más nuevo. */

@@ -36,20 +36,10 @@ final class UsuarioController extends Controller
     /** POST /api/usuarios */
     public function crear(Request $request): void
     {
-        $datos = Validator::validar($request->cuerpo(), [
-            'nombre' => 'requerido|texto|min:2|max:120',
-            'email' => 'requerido|email|max:150',
-            'password' => 'requerido|texto|min:8|max:72',
-            'rol' => 'requerido|en:' . implode(',', Usuario::ROLES),
-            'telefono' => 'telefono',
-        ]);
+        $datos = Validator::validar($request->cuerpo(), Usuario::REGLAS_CUENTA + self::reglaRol());
 
         $usuarios = new Usuario();
-        if ($usuarios->existeEmail($datos['email'])) {
-            throw HttpException::validacion(['email' => 'Ya existe una cuenta con este correo.']);
-        }
-
-        $id = $usuarios->crear($datos['nombre'], $datos['email'], $datos['password'], $datos['rol'], $datos['telefono'] ?? null);
+        $id = $usuarios->crear($datos, $datos['rol']);
         Response::creado($usuarios->buscarPorId($id), 'Usuario creado.');
     }
 
@@ -63,21 +53,15 @@ final class UsuarioController extends Controller
             throw HttpException::noEncontrado('El usuario no existe.');
         }
 
-        $datos = Validator::validar($request->cuerpo(), [
-            'nombre' => 'requerido|texto|min:2|max:120',
-            'email' => 'requerido|email|max:150',
-            'password' => 'texto|min:8|max:72',
-            'rol' => 'requerido|en:' . implode(',', Usuario::ROLES),
-            'telefono' => 'telefono',
-        ]);
+        // Al editar, la contraseña es opcional: solo se envía si se quiere cambiar.
+        $reglas = array_replace(Usuario::REGLAS_CUENTA, ['password' => Usuario::REGLA_PASSWORD]) + self::reglaRol();
+        $datos = Validator::validar($request->cuerpo(), $reglas);
 
         // Evita que el administrador se quite a sí mismo el acceso al panel.
         if ($id === $this->usuarioId($request) && $datos['rol'] !== 'admin') {
             throw HttpException::validacion(['rol' => 'No puedes quitarte el rol de administrador.']);
         }
-        if ($usuarios->existeEmail($datos['email'], $id)) {
-            throw HttpException::validacion(['email' => 'Ya existe una cuenta con este correo.']);
-        }
+        $usuarios->asegurarEmailDisponible($datos['email'], $id);
 
         $usuarios->actualizar($id, [
             'nombre' => $datos['nombre'],
@@ -106,5 +90,11 @@ final class UsuarioController extends Controller
 
         $usuarios->cambiarActivo($id, $datos['activo']);
         Response::ok($usuarios->buscarPorId($id), $datos['activo'] ? 'Usuario activado.' : 'Usuario desactivado. Ya no podrá iniciar sesión.');
+    }
+
+    /** @return array{rol: string} */
+    private static function reglaRol(): array
+    {
+        return ['rol' => 'requerido|en:' . implode(',', Usuario::ROLES)];
     }
 }

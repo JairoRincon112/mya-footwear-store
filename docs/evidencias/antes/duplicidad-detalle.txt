@@ -1,0 +1,111 @@
+Clone found (markup):
+ - src\views\panel\ProductosAdmin.vue [76:19 - 81:87] (5 lines, 61 tokens)
+   src\views\panel\UsuariosAdmin.vue [166:13 - 171:87]
+
+Clone found (markup):
+ - src\views\panel\ProductosAdmin.vue [83:182 - 89:84] (6 lines, 84 tokens)
+   src\views\panel\UsuariosAdmin.vue [173:158 - 179:80]
+
+Clone found (markup):
+ - src\views\panel\PedidosAdmin.vue [56:22 - 61:89] (5 lines, 63 tokens)
+   src\views\panel\UsuariosAdmin.vue [166:13 - 81:93]
+
+Clone found (markup):
+ - src\views\panel\PedidosAdmin.vue [73:9 - 79:101] (6 lines, 62 tokens)
+   src\views\panel\UsuariosAdmin.vue [173:217 - 179:80]
+
+Clone found (markup):
+ - src\views\panel\PedidosAdmin.vue [87:53 - 93:9] (6 lines, 73 tokens)
+   src\views\panel\UsuariosAdmin.vue [186:19 - 193:11]
+
+Clone found (markup):
+ - src\views\panel\InventarioAdmin.vue [110:243 - 116:79] (6 lines, 62 tokens)
+   src\views\panel\UsuariosAdmin.vue [173:217 - 179:80]
+
+Clone found (markup):
+ - src\views\panel\InventarioAdmin.vue [116:79 - 127:27] (11 lines, 107 tokens)
+   src\views\panel\ProductosAdmin.vue [89:84 - 100:21]
+
+Clone found (javascript):
+ - src\views\panel\InventarioAdmin.vue [58:3 - 65:105] (7 lines, 111 tokens)
+   src\views\panel\ProductoEditor.vue [255:3 - 262:117]
+
+Clone found (markup):
+ - src\views\panel\DevolucionesAdmin.vue [81:122 - 87:67] (6 lines, 105 tokens)
+   src\views\panel\PedidosAdmin.vue [56:18 - 62:67]
+
+Clone found (markup):
+ - src\views\panel\DevolucionesAdmin.vue [90:53 - 104:106] (14 lines, 122 tokens)
+   src\views\panel\PedidosAdmin.vue [65:49 - 179:80]
+
+Clone found (javascript):
+ - src\views\panel\DevolucionesAdmin.vue [29:46 - 42:42] (13 lines, 90 tokens)
+   src\views\panel\PedidosAdmin.vue [22:42 - 35:43]
+
+Clone found (markup):
+ - src\views\panel\CuponesAdmin.vue [193:98 - 200:9] (7 lines, 73 tokens)
+   src\views\panel\UsuariosAdmin.vue [163:105 - 170:11]
+
+Clone found (css):
+ - src\views\RecuperarView.vue [56:1 - 76:18] (20 lines, 143 tokens)
+   src\views\RestablecerView.vue [74:1 - 94:8]
+
+Clone found (css):
+ - src\views\MiPedidoView.vue [129:16 - 140:12] (11 lines, 83 tokens)
+   src\views\panel\PedidoAdmin.vue [132:17 - 143:20]
+
+Clone found (markup):
+ - src\views\MiPedidoView.vue [57:87 - 63:42] (6 lines, 88 tokens)
+   src\views\panel\PedidoAdmin.vue [62:10 - 68:48]
+
+Clone found (javascript):
+ - src\views\MiPedidoView.vue [46:73 - 52:2] (6 lines, 85 tokens)
+   src\views\panel\PedidoAdmin.vue [44:80 - 49:12]
+
+Clone found (css):
+ - src\views\ContactoView.vue [688:14 - 701:8] (13 lines, 113 tokens)
+   src\views\LoginView.vue [673:12 - 686:8]
+
+Clone found (css):
+ - src\views\CheckoutView.vue [231:56 - 247:11] (16 lines, 93 tokens)
+   src\views\MiCuentaView.vue [138:61 - 154:16]
+
+Clone found (markup):
+ - src\components\HeroCarrusel.vue [161:29 - 167:35] (6 lines, 82 tokens)
+   src\components\layout\AppFooter.vue [27:14 - 33:33]
+
+Clone found (css):
+ - src\components\BotonPagoWompi.vue [101:14 - 113:7] (12 lines, 106 tokens)
+   src\views\LoginView.vue [674:14 - 686:8]
+
+Clone found (php):
+ - ..\backend\src\Models\Producto.php [154:41 - 160:11] (6 lines, 133 tokens)
+   ..\backend\src\Models\Variante.php [39:59 - 45:11]
+
+Clone found (php):
+ - ..\backend\src\Controllers\VarianteController.php [106:33 - 115:19] (9 lines, 92 tokens)
+   ..\backend\src\Controllers\VarianteController.php [80:31 - 89:18]
+
+Clone found (php):
+ - ..\backend\src\Controllers\AuthController.php [75:57 - 84:96] (9 lines, 97 tokens)
+   ..\backend\src\Controllers\UsuarioController.php [43:68 - 52:93]
+
+┌────────────┬────────────────┬─────────────┬──────────────┬──────────────┬──────────────────┬───────────────────┐
+│ Format     │ Files analyzed │ Total lines │ Total tokens │ Clones found │ Duplicated lines │ Duplicated tokens │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ css        │ 41             │ 5714        │ 35555        │ 5            │ 72 (1.26%)       │ 538 (1.51%)       │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ markup     │ 42             │ 2283        │ 28502        │ 12           │ 84 (3.68%)       │ 982 (3.45%)       │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ javascript │ 56             │ 3174        │ 34780        │ 3            │ 26 (0.82%)       │ 286 (0.82%)       │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ php        │ 48             │ 5109        │ 43124        │ 3            │ 24 (0.47%)       │ 322 (0.75%)       │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ Total:     │ 187            │ 16280       │ 141961       │ 23           │ 206 (1.27%)      │ 2128 (1.5%)       │
+└────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
+Found 23 clones.
+time: 1.474s
+
+💡 Auto-refactor with AI: npx skills add kucherenko/jscpd
+🎩 New: Gangsta Agents — discipline your AI coding → gangsta.page
+💖 Support jscpd project → https://opencollective.com/jscpd

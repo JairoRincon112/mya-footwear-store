@@ -1,0 +1,3222 @@
+{
+    "version": "@package_version@",
+    "package": "phpmd",
+    "timestamp": "2026-11-25T04:38:10+01:00",
+    "files": [
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Config\\Config.php",
+            "violations": [
+                {
+                    "beginLine": 23,
+                    "endLine": 51,
+                    "package": "App\\Config",
+                    "function": null,
+                    "class": "Config",
+                    "method": "cargar",
+                    "description": "The method cargar() has a Cyclomatic Complexity of 9. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 53,
+                    "endLine": 61,
+                    "package": "App\\Config",
+                    "function": null,
+                    "class": "Config",
+                    "method": "get",
+                    "description": "The method get() has a Cyclomatic Complexity of 3. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 63,
+                    "endLine": 67,
+                    "package": "App\\Config",
+                    "function": null,
+                    "class": "Config",
+                    "method": "entero",
+                    "description": "The method entero() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 69,
+                    "endLine": 72,
+                    "package": "App\\Config",
+                    "function": null,
+                    "class": "Config",
+                    "method": "booleano",
+                    "description": "The method booleano() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 75,
+                    "endLine": 78,
+                    "package": "App\\Config",
+                    "function": null,
+                    "class": "Config",
+                    "method": "lista",
+                    "description": "The method lista() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Controllers\\AuthController.php",
+            "violations": [
+                {
+                    "beginLine": 27,
+                    "endLine": 67,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "AuthController",
+                    "method": "login",
+                    "description": "The method login() has a Cyclomatic Complexity of 7. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 70,
+                    "endLine": 87,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "AuthController",
+                    "method": "registro",
+                    "description": "The method registro() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 90,
+                    "endLine": 93,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "AuthController",
+                    "method": "yo",
+                    "description": "The method yo() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 96,
+                    "endLine": 112,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "AuthController",
+                    "method": "actualizarPerfil",
+                    "description": "The method actualizarPerfil() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 115,
+                    "endLine": 134,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "AuthController",
+                    "method": "cambiarPassword",
+                    "description": "The method cambiarPassword() has a Cyclomatic Complexity of 3. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 140,
+                    "endLine": 166,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "AuthController",
+                    "method": "solicitarRecuperacion",
+                    "description": "The method solicitarRecuperacion() has a Cyclomatic Complexity of 3. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 169,
+                    "endLine": 191,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "AuthController",
+                    "method": "restablecerPassword",
+                    "description": "The method restablecerPassword() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 194,
+                    "endLine": 201,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "AuthController",
+                    "method": "sesion",
+                    "description": "The method sesion() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Controllers\\CatalogoController.php",
+            "violations": [
+                {
+                    "beginLine": 20,
+                    "endLine": 23,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "CatalogoController",
+                    "method": "marcas",
+                    "description": "The method marcas() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 26,
+                    "endLine": 29,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "CatalogoController",
+                    "method": "tallas",
+                    "description": "The method tallas() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 32,
+                    "endLine": 35,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "CatalogoController",
+                    "method": "colores",
+                    "description": "The method colores() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 38,
+                    "endLine": 42,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "CatalogoController",
+                    "method": "salud",
+                    "description": "The method salud() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Controllers\\ContactoController.php",
+            "violations": [
+                {
+                    "beginLine": 19,
+                    "endLine": 36,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "ContactoController",
+                    "method": "crear",
+                    "description": "The method crear() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 39,
+                    "endLine": 52,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "ContactoController",
+                    "method": "index",
+                    "description": "The method index() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 55,
+                    "endLine": 67,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "ContactoController",
+                    "method": "marcarLeido",
+                    "description": "The method marcarLeido() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Controllers\\Controller.php",
+            "violations": [
+                {
+                    "beginLine": 18,
+                    "endLine": 25,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "Controller",
+                    "method": "idDeRuta",
+                    "description": "The method idDeRuta() has a Cyclomatic Complexity of 3. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 28,
+                    "endLine": 31,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "Controller",
+                    "method": "usuarioId",
+                    "description": "The method usuarioId() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Controllers\\CuponController.php",
+            "violations": [
+                {
+                    "beginLine": 21,
+                    "endLine": 24,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "CuponController",
+                    "method": "index",
+                    "description": "The method index() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 27,
+                    "endLine": 33,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "CuponController",
+                    "method": "crear",
+                    "description": "The method crear() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 36,
+                    "endLine": 46,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "CuponController",
+                    "method": "actualizar",
+                    "description": "The method actualizar() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 49,
+                    "endLine": 60,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "CuponController",
+                    "method": "cambiarActivo",
+                    "description": "The method cambiarActivo() has a Cyclomatic Complexity of 3. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 63,
+                    "endLine": 102,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "CuponController",
+                    "method": "validar",
+                    "description": "The method validar() has a Cyclomatic Complexity of 6. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Controllers\\DevolucionController.php",
+            "violations": [
+                {
+                    "beginLine": 26,
+                    "endLine": 50,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "DevolucionController",
+                    "method": "solicitar",
+                    "description": "The method solicitar() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 53,
+                    "endLine": 71,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "DevolucionController",
+                    "method": "index",
+                    "description": "The method index() has a Cyclomatic Complexity of 4. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 74,
+                    "endLine": 90,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "DevolucionController",
+                    "method": "cambiarEstado",
+                    "description": "The method cambiarEstado() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Controllers\\InventarioController.php",
+            "violations": [
+                {
+                    "beginLine": 21,
+                    "endLine": 38,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "InventarioController",
+                    "method": "index",
+                    "description": "The method index() has a Cyclomatic Complexity of 3. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 41,
+                    "endLine": 50,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "InventarioController",
+                    "method": "movimientos",
+                    "description": "The method movimientos() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Controllers\\PagoController.php",
+            "violations": [
+                {
+                    "beginLine": 27,
+                    "endLine": 62,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "PagoController",
+                    "method": "iniciar",
+                    "description": "The method iniciar() has a Cyclomatic Complexity of 6. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 65,
+                    "endLine": 82,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "PagoController",
+                    "method": "verificar",
+                    "description": "The method verificar() has a Cyclomatic Complexity of 5. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 88,
+                    "endLine": 101,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "PagoController",
+                    "method": "eventos",
+                    "description": "The method eventos() has a Cyclomatic Complexity of 4. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 103,
+                    "endLine": 112,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "PagoController",
+                    "method": "mensaje",
+                    "description": "The method mensaje() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Controllers\\PedidoController.php",
+            "violations": [
+                {
+                    "beginLine": 26,
+                    "endLine": 63,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "PedidoController",
+                    "method": "crear",
+                    "description": "The method crear() has a Cyclomatic Complexity of 6. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 70,
+                    "endLine": 91,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "PedidoController",
+                    "method": "cotizar",
+                    "description": "The method cotizar() has a Cyclomatic Complexity of 4. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 98,
+                    "endLine": 110,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "PedidoController",
+                    "method": "cantidades",
+                    "description": "The method cantidades() has a Cyclomatic Complexity of 3. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 112,
+                    "endLine": 118,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "PedidoController",
+                    "method": "codigoCupon",
+                    "description": "The method codigoCupon() has a Cyclomatic Complexity of 4. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 121,
+                    "endLine": 126,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "PedidoController",
+                    "method": "mios",
+                    "description": "The method mios() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 129,
+                    "endLine": 142,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "PedidoController",
+                    "method": "index",
+                    "description": "The method index() has a Cyclomatic Complexity of 3. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 145,
+                    "endLine": 156,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "PedidoController",
+                    "method": "mostrar",
+                    "description": "The method mostrar() has a Cyclomatic Complexity of 4. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 159,
+                    "endLine": 173,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "PedidoController",
+                    "method": "cambiarEstado",
+                    "description": "The method cambiarEstado() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 176,
+                    "endLine": 182,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "PedidoController",
+                    "method": "cancelarPropio",
+                    "description": "The method cancelarPropio() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 185,
+                    "endLine": 190,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "PedidoController",
+                    "method": "paginacion",
+                    "description": "The method paginacion() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 192,
+                    "endLine": 195,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "PedidoController",
+                    "method": "conPaginas",
+                    "description": "The method conPaginas() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 198,
+                    "endLine": 205,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "PedidoController",
+                    "method": "fecha",
+                    "description": "The method fecha() has a Cyclomatic Complexity of 4. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Controllers\\ProductoController.php",
+            "violations": [
+                {
+                    "beginLine": 33,
+                    "endLine": 36,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "ProductoController",
+                    "method": "carpetaPublica",
+                    "description": "The method carpetaPublica() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 42,
+                    "endLine": 71,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "ProductoController",
+                    "method": "index",
+                    "description": "The method index() has a Cyclomatic Complexity of 7. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 74,
+                    "endLine": 87,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "ProductoController",
+                    "method": "mostrar",
+                    "description": "The method mostrar() has a Cyclomatic Complexity of 3. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 90,
+                    "endLine": 99,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "ProductoController",
+                    "method": "crear",
+                    "description": "The method crear() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 102,
+                    "endLine": 115,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "ProductoController",
+                    "method": "actualizar",
+                    "description": "The method actualizar() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 118,
+                    "endLine": 128,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "ProductoController",
+                    "method": "eliminar",
+                    "description": "The method eliminar() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 131,
+                    "endLine": 181,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "ProductoController",
+                    "method": "subirImagen",
+                    "description": "The method subirImagen() has a Cyclomatic Complexity of 15. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 184,
+                    "endLine": 203,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "ProductoController",
+                    "method": "eliminarImagen",
+                    "description": "The method eliminarImagen() has a Cyclomatic Complexity of 4. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 206,
+                    "endLine": 244,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "ProductoController",
+                    "method": "validarProducto",
+                    "description": "The method validarProducto() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 247,
+                    "endLine": 255,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "ProductoController",
+                    "method": "slugUnico",
+                    "description": "The method slugUnico() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Controllers\\ReporteController.php",
+            "violations": [
+                {
+                    "beginLine": 17,
+                    "endLine": 20,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "ReporteController",
+                    "method": "resumen",
+                    "description": "The method resumen() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Controllers\\UsuarioController.php",
+            "violations": [
+                {
+                    "beginLine": 20,
+                    "endLine": 34,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "UsuarioController",
+                    "method": "index",
+                    "description": "The method index() has a Cyclomatic Complexity of 4. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 37,
+                    "endLine": 54,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "UsuarioController",
+                    "method": "crear",
+                    "description": "The method crear() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 57,
+                    "endLine": 91,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "UsuarioController",
+                    "method": "actualizar",
+                    "description": "The method actualizar() has a Cyclomatic Complexity of 5. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 94,
+                    "endLine": 109,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "UsuarioController",
+                    "method": "cambiarActivo",
+                    "description": "The method cambiarActivo() has a Cyclomatic Complexity of 5. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Controllers\\VarianteController.php",
+            "violations": [
+                {
+                    "beginLine": 29,
+                    "endLine": 77,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "VarianteController",
+                    "method": "crear",
+                    "description": "The method crear() has a Cyclomatic Complexity of 7. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 80,
+                    "endLine": 99,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "VarianteController",
+                    "method": "actualizar",
+                    "description": "The method actualizar() has a Cyclomatic Complexity of 3. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 106,
+                    "endLine": 129,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "VarianteController",
+                    "method": "ajustarStock",
+                    "description": "The method ajustarStock() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 132,
+                    "endLine": 140,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "VarianteController",
+                    "method": "generarSku",
+                    "description": "The method generarSku() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Core\\Correo.php",
+            "violations": [
+                {
+                    "beginLine": 20,
+                    "endLine": 47,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Correo",
+                    "method": "enviar",
+                    "description": "The method enviar() has a Cyclomatic Complexity of 4. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 50,
+                    "endLine": 61,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Correo",
+                    "method": "guardarEnArchivo",
+                    "description": "The method guardarEnArchivo() has a Cyclomatic Complexity of 4. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Core\\Database.php",
+            "violations": [
+                {
+                    "beginLine": 22,
+                    "endLine": 43,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Database",
+                    "method": "conexion",
+                    "description": "The method conexion() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 53,
+                    "endLine": 71,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Database",
+                    "method": "transaccion",
+                    "description": "The method transaccion() has a Cyclomatic Complexity of 3. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Core\\HttpException.php",
+            "violations": [
+                {
+                    "beginLine": 16,
+                    "endLine": 19,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "HttpException",
+                    "method": "__construct",
+                    "description": "The method __construct() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 21,
+                    "endLine": 24,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "HttpException",
+                    "method": "estado",
+                    "description": "The method estado() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 27,
+                    "endLine": 30,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "HttpException",
+                    "method": "errores",
+                    "description": "The method errores() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 32,
+                    "endLine": 35,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "HttpException",
+                    "method": "solicitudInvalida",
+                    "description": "The method solicitudInvalida() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 37,
+                    "endLine": 40,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "HttpException",
+                    "method": "noAutenticado",
+                    "description": "The method noAutenticado() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 42,
+                    "endLine": 45,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "HttpException",
+                    "method": "prohibido",
+                    "description": "The method prohibido() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 47,
+                    "endLine": 50,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "HttpException",
+                    "method": "noEncontrado",
+                    "description": "The method noEncontrado() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 52,
+                    "endLine": 55,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "HttpException",
+                    "method": "conflicto",
+                    "description": "The method conflicto() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 58,
+                    "endLine": 61,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "HttpException",
+                    "method": "validacion",
+                    "description": "The method validacion() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Core\\Imagen.php",
+            "violations": [
+                {
+                    "beginLine": 27,
+                    "endLine": 91,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Imagen",
+                    "method": "optimizar",
+                    "description": "The method optimizar() has a Cyclomatic Complexity of 9. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 94,
+                    "endLine": 98,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Imagen",
+                    "method": "tipoReal",
+                    "description": "The method tipoReal() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 101,
+                    "endLine": 118,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Imagen",
+                    "method": "corregirOrientacion",
+                    "description": "The method corregirOrientacion() has a Cyclomatic Complexity of 4. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Core\\Jwt.php",
+            "violations": [
+                {
+                    "beginLine": 20,
+                    "endLine": 33,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Jwt",
+                    "method": "generar",
+                    "description": "The method generar() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 36,
+                    "endLine": 65,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Jwt",
+                    "method": "verificar",
+                    "description": "The method verificar() has a Cyclomatic Complexity of 7. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 67,
+                    "endLine": 70,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Jwt",
+                    "method": "duracion",
+                    "description": "The method duracion() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 72,
+                    "endLine": 79,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Jwt",
+                    "method": "firmar",
+                    "description": "The method firmar() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 81,
+                    "endLine": 84,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Jwt",
+                    "method": "base64Url",
+                    "description": "The method base64Url() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 86,
+                    "endLine": 89,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Jwt",
+                    "method": "desdeBase64Url",
+                    "description": "The method desdeBase64Url() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Core\\Request.php",
+            "violations": [
+                {
+                    "beginLine": 27,
+                    "endLine": 34,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Request",
+                    "method": "__construct",
+                    "description": "The method __construct() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 36,
+                    "endLine": 60,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Request",
+                    "method": "desdeGlobales",
+                    "description": "The method desdeGlobales() has a Cyclomatic Complexity of 6. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 63,
+                    "endLine": 66,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Request",
+                    "method": "parametro",
+                    "description": "The method parametro() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 69,
+                    "endLine": 73,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Request",
+                    "method": "query",
+                    "description": "The method query() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 80,
+                    "endLine": 99,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Request",
+                    "method": "cuerpo",
+                    "description": "The method cuerpo() has a Cyclomatic Complexity of 6. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 102,
+                    "endLine": 106,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Request",
+                    "method": "archivo",
+                    "description": "The method archivo() has a Cyclomatic Complexity of 3. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 108,
+                    "endLine": 111,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Request",
+                    "method": "cabecera",
+                    "description": "The method cabecera() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 114,
+                    "endLine": 120,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Request",
+                    "method": "tokenBearer",
+                    "description": "The method tokenBearer() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 122,
+                    "endLine": 125,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Request",
+                    "method": "esPersonal",
+                    "description": "The method esPersonal() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Core\\Response.php",
+            "violations": [
+                {
+                    "beginLine": 14,
+                    "endLine": 19,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Response",
+                    "method": "json",
+                    "description": "The method json() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 21,
+                    "endLine": 28,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Response",
+                    "method": "ok",
+                    "description": "The method ok() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 30,
+                    "endLine": 33,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Response",
+                    "method": "creado",
+                    "description": "The method creado() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 36,
+                    "endLine": 43,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Response",
+                    "method": "error",
+                    "description": "The method error() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Core\\Router.php",
+            "violations": [
+                {
+                    "beginLine": 21,
+                    "endLine": 24,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Router",
+                    "method": "get",
+                    "description": "The method get() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 26,
+                    "endLine": 29,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Router",
+                    "method": "post",
+                    "description": "The method post() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 31,
+                    "endLine": 34,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Router",
+                    "method": "put",
+                    "description": "The method put() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 36,
+                    "endLine": 39,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Router",
+                    "method": "patch",
+                    "description": "The method patch() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 41,
+                    "endLine": 44,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Router",
+                    "method": "delete",
+                    "description": "The method delete() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 46,
+                    "endLine": 57,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Router",
+                    "method": "agregar",
+                    "description": "The method agregar() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 59,
+                    "endLine": 92,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Router",
+                    "method": "despachar",
+                    "description": "The method despachar() has a Cyclomatic Complexity of 6. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Core\\Texto.php",
+            "violations": [
+                {
+                    "beginLine": 16,
+                    "endLine": 26,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Texto",
+                    "method": "slug",
+                    "description": "The method slug() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Core\\Validator.php",
+            "violations": [
+                {
+                    "beginLine": 32,
+                    "endLine": 75,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Validator",
+                    "method": "validar",
+                    "description": "The method validar() has a Cyclomatic Complexity of 12. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 78,
+                    "endLine": 165,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Validator",
+                    "method": "aplicarRegla",
+                    "description": "The method aplicarRegla() has a Cyclomatic Complexity of 41. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Core\\Wompi.php",
+            "violations": [
+                {
+                    "beginLine": 34,
+                    "endLine": 39,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Wompi",
+                    "method": "configurado",
+                    "description": "The method configurado() has a Cyclomatic Complexity of 3. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 41,
+                    "endLine": 44,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Wompi",
+                    "method": "esProduccion",
+                    "description": "The method esProduccion() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 46,
+                    "endLine": 49,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Wompi",
+                    "method": "llavePublica",
+                    "description": "The method llavePublica() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 55,
+                    "endLine": 58,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Wompi",
+                    "method": "firmaIntegridad",
+                    "description": "The method firmaIntegridad() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 65,
+                    "endLine": 102,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Wompi",
+                    "method": "consultarTransaccion",
+                    "description": "The method consultarTransaccion() has a Cyclomatic Complexity of 9. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 105,
+                    "endLine": 108,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Wompi",
+                    "method": "registrar",
+                    "description": "The method registrar() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 115,
+                    "endLine": 141,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Wompi",
+                    "method": "eventoValido",
+                    "description": "The method eventoValido() has a Cyclomatic Complexity of 9. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Descuentos\\DescuentoPorcentaje.php",
+            "violations": [
+                {
+                    "beginLine": 12,
+                    "endLine": 15,
+                    "package": "App\\Descuentos",
+                    "function": null,
+                    "class": "DescuentoPorcentaje",
+                    "method": "calcular",
+                    "description": "The method calcular() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 17,
+                    "endLine": 20,
+                    "package": "App\\Descuentos",
+                    "function": null,
+                    "class": "DescuentoPorcentaje",
+                    "method": "validarValor",
+                    "description": "The method validarValor() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 22,
+                    "endLine": 25,
+                    "package": "App\\Descuentos",
+                    "function": null,
+                    "class": "DescuentoPorcentaje",
+                    "method": "describir",
+                    "description": "The method describir() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Descuentos\\DescuentoValorFijo.php",
+            "violations": [
+                {
+                    "beginLine": 10,
+                    "endLine": 13,
+                    "package": "App\\Descuentos",
+                    "function": null,
+                    "class": "DescuentoValorFijo",
+                    "method": "calcular",
+                    "description": "The method calcular() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 15,
+                    "endLine": 18,
+                    "package": "App\\Descuentos",
+                    "function": null,
+                    "class": "DescuentoValorFijo",
+                    "method": "validarValor",
+                    "description": "The method validarValor() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 20,
+                    "endLine": 23,
+                    "package": "App\\Descuentos",
+                    "function": null,
+                    "class": "DescuentoValorFijo",
+                    "method": "describir",
+                    "description": "The method describir() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Descuentos\\EstrategiasDescuento.php",
+            "violations": [
+                {
+                    "beginLine": 22,
+                    "endLine": 26,
+                    "package": "App\\Descuentos",
+                    "function": null,
+                    "class": "EstrategiasDescuento",
+                    "method": "para",
+                    "description": "The method para() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 29,
+                    "endLine": 32,
+                    "package": "App\\Descuentos",
+                    "function": null,
+                    "class": "EstrategiasDescuento",
+                    "method": "tipos",
+                    "description": "The method tipos() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Middleware\\AuthMiddleware.php",
+            "violations": [
+                {
+                    "beginLine": 26,
+                    "endLine": 30,
+                    "package": "App\\Middleware",
+                    "function": null,
+                    "class": "AuthMiddleware",
+                    "method": "__construct",
+                    "description": "The method __construct() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 32,
+                    "endLine": 35,
+                    "package": "App\\Middleware",
+                    "function": null,
+                    "class": "AuthMiddleware",
+                    "method": "roles",
+                    "description": "The method roles() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 37,
+                    "endLine": 40,
+                    "package": "App\\Middleware",
+                    "function": null,
+                    "class": "AuthMiddleware",
+                    "method": "autenticado",
+                    "description": "The method autenticado() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 42,
+                    "endLine": 45,
+                    "package": "App\\Middleware",
+                    "function": null,
+                    "class": "AuthMiddleware",
+                    "method": "opcional",
+                    "description": "The method opcional() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 47,
+                    "endLine": 82,
+                    "package": "App\\Middleware",
+                    "function": null,
+                    "class": "AuthMiddleware",
+                    "method": "handle",
+                    "description": "The method handle() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Middleware\\CorsMiddleware.php",
+            "violations": [
+                {
+                    "beginLine": 15,
+                    "endLine": 32,
+                    "package": "App\\Middleware",
+                    "function": null,
+                    "class": "CorsMiddleware",
+                    "method": "aplicar",
+                    "description": "The method aplicar() has a Cyclomatic Complexity of 4. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Models\\Color.php",
+            "violations": [
+                {
+                    "beginLine": 13,
+                    "endLine": 19,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Color",
+                    "method": "todos",
+                    "description": "The method todos() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 22,
+                    "endLine": 25,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Color",
+                    "method": "buscarPorId",
+                    "description": "The method buscarPorId() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Models\\Cupon.php",
+            "violations": [
+                {
+                    "beginLine": 18,
+                    "endLine": 25,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Cupon",
+                    "method": "buscarPorCodigo",
+                    "description": "The method buscarPorCodigo() has a Cyclomatic Complexity of 3. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 28,
+                    "endLine": 32,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Cupon",
+                    "method": "buscarPorId",
+                    "description": "The method buscarPorId() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 38,
+                    "endLine": 61,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Cupon",
+                    "method": "motivoInvalido",
+                    "description": "The method motivoInvalido() has a Cyclomatic Complexity of 11. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 63,
+                    "endLine": 69,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Cupon",
+                    "method": "calcularDescuento",
+                    "description": "The method calcularDescuento() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 71,
+                    "endLine": 77,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Cupon",
+                    "method": "yaLoUso",
+                    "description": "The method yaLoUso() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 79,
+                    "endLine": 82,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Cupon",
+                    "method": "sumarUso",
+                    "description": "The method sumarUso() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 85,
+                    "endLine": 88,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Cupon",
+                    "method": "restarUso",
+                    "description": "The method restarUso() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 91,
+                    "endLine": 99,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Cupon",
+                    "method": "todos",
+                    "description": "The method todos() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 101,
+                    "endLine": 107,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Cupon",
+                    "method": "codigoDisponible",
+                    "description": "The method codigoDisponible() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 110,
+                    "endLine": 118,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Cupon",
+                    "method": "crear",
+                    "description": "The method crear() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 121,
+                    "endLine": 130,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Cupon",
+                    "method": "actualizar",
+                    "description": "The method actualizar() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 132,
+                    "endLine": 135,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Cupon",
+                    "method": "cambiarActivo",
+                    "description": "The method cambiarActivo() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 137,
+                    "endLine": 151,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Cupon",
+                    "method": "parametros",
+                    "description": "The method parametros() has a Cyclomatic Complexity of 3. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 153,
+                    "endLine": 168,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Cupon",
+                    "method": "normalizar",
+                    "description": "The method normalizar() has a Cyclomatic Complexity of 3. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Models\\Devolucion.php",
+            "violations": [
+                {
+                    "beginLine": 40,
+                    "endLine": 88,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Devolucion",
+                    "method": "solicitar",
+                    "description": "The method solicitar() has a Cyclomatic Complexity of 9. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 94,
+                    "endLine": 135,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Devolucion",
+                    "method": "cambiarEstado",
+                    "description": "The method cambiarEstado() has a Cyclomatic Complexity of 6. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 141,
+                    "endLine": 184,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Devolucion",
+                    "method": "listar",
+                    "description": "The method listar() has a Cyclomatic Complexity of 6. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 187,
+                    "endLine": 193,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Devolucion",
+                    "method": "dePedido",
+                    "description": "The method dePedido() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 196,
+                    "endLine": 200,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Devolucion",
+                    "method": "buscar",
+                    "description": "The method buscar() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 203,
+                    "endLine": 208,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Devolucion",
+                    "method": "contarPorRevisar",
+                    "description": "The method contarPorRevisar() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 211,
+                    "endLine": 218,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Devolucion",
+                    "method": "cantidadEnDevolucion",
+                    "description": "The method cantidadEnDevolucion() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 220,
+                    "endLine": 225,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Devolucion",
+                    "method": "columnas",
+                    "description": "The method columnas() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 227,
+                    "endLine": 233,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Devolucion",
+                    "method": "desde",
+                    "description": "The method desde() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 236,
+                    "endLine": 255,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Devolucion",
+                    "method": "formatear",
+                    "description": "The method formatear() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Models\\Marca.php",
+            "violations": [
+                {
+                    "beginLine": 13,
+                    "endLine": 29,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Marca",
+                    "method": "todas",
+                    "description": "The method todas() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 31,
+                    "endLine": 34,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Marca",
+                    "method": "existe",
+                    "description": "The method existe() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Models\\MensajeContacto.php",
+            "violations": [
+                {
+                    "beginLine": 13,
+                    "endLine": 21,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "MensajeContacto",
+                    "method": "crear",
+                    "description": "The method crear() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 24,
+                    "endLine": 43,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "MensajeContacto",
+                    "method": "listar",
+                    "description": "The method listar() has a Cyclomatic Complexity of 4. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 45,
+                    "endLine": 48,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "MensajeContacto",
+                    "method": "contarNoLeidos",
+                    "description": "The method contarNoLeidos() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 50,
+                    "endLine": 53,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "MensajeContacto",
+                    "method": "existe",
+                    "description": "The method existe() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 55,
+                    "endLine": 58,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "MensajeContacto",
+                    "method": "marcarLeido",
+                    "description": "The method marcarLeido() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Models\\Model.php",
+            "violations": [
+                {
+                    "beginLine": 19,
+                    "endLine": 22,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Model",
+                    "method": "__construct",
+                    "description": "The method __construct() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 30,
+                    "endLine": 44,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Model",
+                    "method": "ejecutar",
+                    "description": "The method ejecutar() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 47,
+                    "endLine": 51,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Model",
+                    "method": "obtenerUno",
+                    "description": "The method obtenerUno() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 54,
+                    "endLine": 57,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Model",
+                    "method": "obtenerTodos",
+                    "description": "The method obtenerTodos() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 60,
+                    "endLine": 63,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Model",
+                    "method": "formatearTalla",
+                    "description": "The method formatearTalla() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Models\\Pago.php",
+            "violations": [
+                {
+                    "beginLine": 20,
+                    "endLine": 28,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Pago",
+                    "method": "crear",
+                    "description": "The method crear() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 31,
+                    "endLine": 40,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Pago",
+                    "method": "buscarPorReferencia",
+                    "description": "The method buscarPorReferencia() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 43,
+                    "endLine": 51,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Pago",
+                    "method": "ultimoDePedido",
+                    "description": "The method ultimoDePedido() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 64,
+                    "endLine": 115,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Pago",
+                    "method": "aplicarTransaccion",
+                    "description": "The method aplicarTransaccion() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Models\\Pedido.php",
+            "violations": [
+                {
+                    "beginLine": 47,
+                    "endLine": 127,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Pedido",
+                    "method": "cotizar",
+                    "description": "The method cotizar() has a Cyclomatic Complexity of 12. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 133,
+                    "endLine": 193,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Pedido",
+                    "method": "crear",
+                    "description": "The method crear() has a Cyclomatic Complexity of 5. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 199,
+                    "endLine": 261,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Pedido",
+                    "method": "listar",
+                    "description": "The method listar() has a Cyclomatic Complexity of 8. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 264,
+                    "endLine": 323,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Pedido",
+                    "method": "buscar",
+                    "description": "The method buscar() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 329,
+                    "endLine": 360,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Pedido",
+                    "method": "cambiarEstado",
+                    "description": "The method cambiarEstado() has a Cyclomatic Complexity of 6. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 362,
+                    "endLine": 373,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Pedido",
+                    "method": "devolverStock",
+                    "description": "The method devolverStock() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 379,
+                    "endLine": 392,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Pedido",
+                    "method": "cancelarPorCliente",
+                    "description": "The method cancelarPorCliente() has a Cyclomatic Complexity of 4. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 400,
+                    "endLine": 410,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Pedido",
+                    "method": "validarCantidades",
+                    "description": "The method validarCantidades() has a Cyclomatic Complexity of 3. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Models\\Producto.php",
+            "violations": [
+                {
+                    "beginLine": 43,
+                    "endLine": 113,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Producto",
+                    "method": "listar",
+                    "description": "The method listar() has a Cyclomatic Complexity of 9. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 120,
+                    "endLine": 200,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Producto",
+                    "method": "buscar",
+                    "description": "The method buscar() has a Cyclomatic Complexity of 9. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 202,
+                    "endLine": 205,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Producto",
+                    "method": "existe",
+                    "description": "The method existe() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 208,
+                    "endLine": 212,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Producto",
+                    "method": "buscarBasico",
+                    "description": "The method buscarBasico() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 214,
+                    "endLine": 220,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Producto",
+                    "method": "slugDisponible",
+                    "description": "The method slugDisponible() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 223,
+                    "endLine": 231,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Producto",
+                    "method": "crear",
+                    "description": "The method crear() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 234,
+                    "endLine": 244,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Producto",
+                    "method": "actualizar",
+                    "description": "The method actualizar() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 247,
+                    "endLine": 250,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Producto",
+                    "method": "cambiarEstado",
+                    "description": "The method cambiarEstado() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 252,
+                    "endLine": 266,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Producto",
+                    "method": "parametrosEscritura",
+                    "description": "The method parametrosEscritura() has a Cyclomatic Complexity of 3. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 268,
+                    "endLine": 284,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Producto",
+                    "method": "normalizarResumen",
+                    "description": "The method normalizarResumen() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Models\\ProductoImagen.php",
+            "violations": [
+                {
+                    "beginLine": 13,
+                    "endLine": 27,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "ProductoImagen",
+                    "method": "crear",
+                    "description": "The method crear() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 30,
+                    "endLine": 46,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "ProductoImagen",
+                    "method": "buscarPorId",
+                    "description": "The method buscarPorId() has a Cyclomatic Complexity of 3. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 48,
+                    "endLine": 51,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "ProductoImagen",
+                    "method": "eliminar",
+                    "description": "The method eliminar() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Models\\RecuperacionPassword.php",
+            "violations": [
+                {
+                    "beginLine": 19,
+                    "endLine": 35,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "RecuperacionPassword",
+                    "method": "crear",
+                    "description": "The method crear() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 38,
+                    "endLine": 45,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "RecuperacionPassword",
+                    "method": "solicitudesRecientes",
+                    "description": "The method solicitudesRecientes() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 48,
+                    "endLine": 56,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "RecuperacionPassword",
+                    "method": "usuarioDelToken",
+                    "description": "The method usuarioDelToken() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 59,
+                    "endLine": 65,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "RecuperacionPassword",
+                    "method": "invalidarTodos",
+                    "description": "The method invalidarTodos() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Models\\Reporte.php",
+            "violations": [
+                {
+                    "beginLine": 13,
+                    "endLine": 105,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Reporte",
+                    "method": "resumen",
+                    "description": "The method resumen() has a Cyclomatic Complexity of 5. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Models\\Talla.php",
+            "violations": [
+                {
+                    "beginLine": 13,
+                    "endLine": 19,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Talla",
+                    "method": "todas",
+                    "description": "The method todas() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 25,
+                    "endLine": 48,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Talla",
+                    "method": "buscarVarias",
+                    "description": "The method buscarVarias() has a Cyclomatic Complexity of 4. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Models\\Usuario.php",
+            "violations": [
+                {
+                    "beginLine": 19,
+                    "endLine": 26,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Usuario",
+                    "method": "buscarPorId",
+                    "description": "The method buscarPorId() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 33,
+                    "endLine": 40,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Usuario",
+                    "method": "buscarParaLogin",
+                    "description": "The method buscarParaLogin() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 43,
+                    "endLine": 50,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Usuario",
+                    "method": "buscarPorEmailActivo",
+                    "description": "The method buscarPorEmailActivo() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 52,
+                    "endLine": 58,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Usuario",
+                    "method": "existeEmail",
+                    "description": "The method existeEmail() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 66,
+                    "endLine": 105,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Usuario",
+                    "method": "listar",
+                    "description": "The method listar() has a Cyclomatic Complexity of 6. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 108,
+                    "endLine": 117,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Usuario",
+                    "method": "actualizar",
+                    "description": "The method actualizar() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 120,
+                    "endLine": 126,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Usuario",
+                    "method": "actualizarPerfil",
+                    "description": "The method actualizarPerfil() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 129,
+                    "endLine": 133,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Usuario",
+                    "method": "hashDe",
+                    "description": "The method hashDe() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 135,
+                    "endLine": 138,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Usuario",
+                    "method": "cambiarActivo",
+                    "description": "The method cambiarActivo() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 140,
+                    "endLine": 154,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Usuario",
+                    "method": "crear",
+                    "description": "The method crear() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 157,
+                    "endLine": 163,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Usuario",
+                    "method": "actualizarHash",
+                    "description": "The method actualizarHash() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 166,
+                    "endLine": 171,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Usuario",
+                    "method": "normalizar",
+                    "description": "The method normalizar() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Models\\Variante.php",
+            "violations": [
+                {
+                    "beginLine": 20,
+                    "endLine": 46,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Variante",
+                    "method": "buscarPorId",
+                    "description": "The method buscarPorId() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 48,
+                    "endLine": 54,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Variante",
+                    "method": "existeCombinacion",
+                    "description": "The method existeCombinacion() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 56,
+                    "endLine": 62,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Variante",
+                    "method": "skuDisponible",
+                    "description": "The method skuDisponible() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 68,
+                    "endLine": 82,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Variante",
+                    "method": "crear",
+                    "description": "The method crear() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 84,
+                    "endLine": 90,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Variante",
+                    "method": "actualizar",
+                    "description": "The method actualizar() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 100,
+                    "endLine": 119,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Variante",
+                    "method": "ajustarStock",
+                    "description": "The method ajustarStock() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 128,
+                    "endLine": 144,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Variante",
+                    "method": "descontarPorVenta",
+                    "description": "The method descontarPorVenta() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 151,
+                    "endLine": 160,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Variante",
+                    "method": "devolverPorCancelacion",
+                    "description": "The method devolverPorCancelacion() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 166,
+                    "endLine": 175,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Variante",
+                    "method": "reingresarPorDevolucion",
+                    "description": "The method reingresarPorDevolucion() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 181,
+                    "endLine": 195,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Variante",
+                    "method": "validarMovimientoManual",
+                    "description": "The method validarMovimientoManual() has a Cyclomatic Complexity of 7. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 201,
+                    "endLine": 209,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Variante",
+                    "method": "stockBloqueado",
+                    "description": "The method stockBloqueado() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 211,
+                    "endLine": 214,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Variante",
+                    "method": "guardarStock",
+                    "description": "The method guardarStock() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 217,
+                    "endLine": 239,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Variante",
+                    "method": "registrarMovimiento",
+                    "description": "The method registrarMovimiento() has a Cyclomatic Complexity of 1. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 247,
+                    "endLine": 303,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Variante",
+                    "method": "listarInventario",
+                    "description": "The method listarInventario() has a Cyclomatic Complexity of 6. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 306,
+                    "endLine": 327,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Variante",
+                    "method": "movimientos",
+                    "description": "The method movimientos() has a Cyclomatic Complexity of 2. The configured cyclomatic complexity threshold is 1.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        }
+    ]
+}

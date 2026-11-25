@@ -1,0 +1,13 @@
+
+PHP CODE SNIFFER VIOLATION SOURCE SUMMARY
+----------------------------------------------------------------------
+SOURCE                                                           COUNT
+----------------------------------------------------------------------
+Generic.Files.LineLength.TooLong                                 70
+PSR12.Files.FileHeader.IncorrectOrder                            2
+----------------------------------------------------------------------
+A TOTAL OF 72 SNIFF VIOLATIONS WERE FOUND IN 2 SOURCES
+----------------------------------------------------------------------
+
+Time: 967ms; Memory: 12MB
+

@@ -1,0 +1,185 @@
+{
+  "etapa": "antes",
+  "fecha": "2026-11-25T03:38:57.803Z",
+  "commit": "ef4486a",
+  "lineas_codigo": 13361,
+  "archivos": 106,
+  "lenguajes": {
+    "Vuejs Component": {
+      "archivos": 42,
+      "codigo": 8732,
+      "comentarios": 261,
+      "blancos": 1203
+    },
+    "PHP": {
+      "archivos": 48,
+      "codigo": 3721,
+      "comentarios": 687,
+      "blancos": 701
+    },
+    "JavaScript": {
+      "archivos": 15,
+      "codigo": 598,
+      "comentarios": 89,
+      "blancos": 120
+    },
+    "CSS": {
+      "archivos": 1,
+      "codigo": 310,
+      "comentarios": 21,
+      "blancos": 60
+    }
+  },
+  "complejidad": {
+    "php": {
+      "funciones": 230,
+      "total": 643,
+      "promedio": 2.8,
+      "maxima": 41,
+      "mayores_a_10": 5,
+      "top": [
+        {
+          "archivo": "Core\\Validator.php",
+          "metodo": "aplicarRegla",
+          "valor": 41
+        },
+        {
+          "archivo": "Controllers\\ProductoController.php",
+          "metodo": "subirImagen",
+          "valor": 15
+        },
+        {
+          "archivo": "Core\\Validator.php",
+          "metodo": "validar",
+          "valor": 12
+        },
+        {
+          "archivo": "Models\\Pedido.php",
+          "metodo": "cotizar",
+          "valor": 12
+        },
+        {
+          "archivo": "Models\\Cupon.php",
+          "metodo": "motivoInvalido",
+          "valor": 11
+        },
+        {
+          "archivo": "Controllers\\ProductoController.php",
+          "metodo": "validarProducto",
+          "valor": 10
+        },
+        {
+          "archivo": "Middleware\\AuthMiddleware.php",
+          "metodo": "handle",
+          "valor": 10
+        },
+        {
+          "archivo": "Models\\Pago.php",
+          "metodo": "aplicarTransaccion",
+          "valor": 10
+        }
+      ]
+    },
+    "javascript": {
+      "funciones": 413,
+      "total": 911,
+      "promedio": 2.21,
+      "maxima": 15,
+      "mayores_a_10": 5,
+      "top": [
+        {
+          "archivo": "views\\panel\\CuponesAdmin.vue",
+          "metodo": "validar",
+          "valor": 15
+        },
+        {
+          "archivo": "views\\panel\\ProductoEditor.vue",
+          "metodo": "validarFormulario",
+          "valor": 15
+        },
+        {
+          "archivo": "views\\panel\\InventarioAdmin.vue",
+          "metodo": "guardarAjuste",
+          "valor": 11
+        },
+        {
+          "archivo": "views\\panel\\ProductoEditor.vue",
+          "metodo": "guardar",
+          "valor": 11
+        },
+        {
+          "archivo": "views\\panel\\ProductoEditor.vue",
+          "metodo": "guardarAjuste",
+          "valor": 11
+        },
+        {
+          "archivo": "views\\CheckoutView.vue",
+          "metodo": "confirmar",
+          "valor": 10
+        },
+        {
+          "archivo": "views\\ContactoView.vue",
+          "metodo": "enviar",
+          "valor": 10
+        },
+        {
+          "archivo": "views\\PagoResultadoView.vue",
+          "metodo": "verificar",
+          "valor": 10
+        }
+      ]
+    }
+  },
+  "duplicidad": {
+    "clones": 23,
+    "lineas_duplicadas": 206,
+    "lineas_analizadas": 16280,
+    "porcentaje": 1.27
+  },
+  "problemas": {
+    "calidad": 25,
+    "diseno": 26,
+    "estandares": 86,
+    "detalle": {
+      "phpstan": 2,
+      "phpmd": 40,
+      "phpcs_errores": 2,
+      "phpcs_advertencias": 70,
+      "eslint_errores": 1,
+      "eslint_advertencias": 22
+    }
+  },
+  "vulnerabilidades": {
+    "composer": 0,
+    "npm_produccion": 0,
+    "npm_desarrollo": 5,
+    "ocultar_errores_php": 6
+  },
+  "deuda_tecnica": {
+    "minutos": 1510,
+    "horas": 25.2,
+    "modelo_minutos": {
+      "phpstan": 15,
+      "complejidad": 30,
+      "acoplamiento": 60,
+      "otraPhpmd": 5,
+      "lineaLarga": 2,
+      "otraPhpcs": 5,
+      "eslintDiseno": 30,
+      "eslintArchivoLargo": 60,
+      "eslintOtra": 5,
+      "clon": 10
+    }
+  },
+  "pruebas": {
+    "backend": {
+      "ejecutadas": 51,
+      "aserciones": 116,
+      "fallidas": 0
+    },
+    "frontend": {
+      "aprobadas": 14,
+      "fallidas": 0
+    }
+  }
+}

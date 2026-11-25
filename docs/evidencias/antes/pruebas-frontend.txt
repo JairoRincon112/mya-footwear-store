@@ -1,0 +1,23 @@
+
+ RUN  v5.1.1 C:/Users/Usuario/Desktop/MyA FOOTWEAR STORE/frontend
+
+ ✓ tests/servicios.test.js > filtros enviados a la API > pedidos: quita los filtros vacíos y conserva los que tienen valor 4ms
+ ✓ tests/servicios.test.js > filtros enviados a la API > devoluciones e inventario usan la misma limpieza 1ms
+ ✓ tests/servicios.test.js > filtros enviados a la API > usuarios: el 0 de "inactivos" sí se envía 1ms
+ ✓ tests/PedidosAdmin.test.js > PedidosAdmin > carga la primera página al abrir y muestra los pedidos 60ms
+ ✓ tests/PedidosAdmin.test.js > PedidosAdmin > el semáforo filtra por estado y vuelve a la página 1 30ms
+ ✓ tests/DevolucionesAdmin.test.js > DevolucionesAdmin > muestra las devoluciones con su tipo y el contador por revisar 70ms
+ ✓ tests/InventarioAdmin.test.js > InventarioAdmin · ajuste de stock > marca el bajo stock de la variante 77ms
+ ✓ tests/PedidosAdmin.test.js > PedidosAdmin > la búsqueda espera a que se deje de escribir antes de consultar 19ms
+ ✓ tests/PedidosAdmin.test.js > PedidosAdmin > muestra el error si la API falla 13ms
+ ✓ tests/DevolucionesAdmin.test.js > DevolucionesAdmin > filtra por estado con el semáforo y por tipo con la lista 45ms
+ ✓ tests/DevolucionesAdmin.test.js > DevolucionesAdmin > no deja rechazar sin explicar el motivo al cliente 39ms
+ ✓ tests/InventarioAdmin.test.js > InventarioAdmin · ajuste de stock > rechaza cantidad cero o con decimales 45ms
+ ✓ tests/InventarioAdmin.test.js > InventarioAdmin · ajuste de stock > una entrada no puede ser negativa y un ajuste necesita motivo 31ms
+ ✓ tests/InventarioAdmin.test.js > InventarioAdmin · ajuste de stock > envía el ajuste válido y muestra el stock nuevo 20ms
+
+ Test Files  4 passed (4)
+      Tests  14 passed (14)
+   Start at  22:38:55
+   Duration  2.47s (environment 81%, import 11%, tests 6%, transform 2%, worker 1%)
+

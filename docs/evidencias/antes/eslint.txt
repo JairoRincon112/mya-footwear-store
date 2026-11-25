@@ -1,0 +1,49 @@
+
+C:\Users\Usuario\Desktop\MyA FOOTWEAR STORE\frontend\src\components\BuscadorCatalogo.vue
+  11:36  warning  Prop "talla" should define at least its type  vue/require-prop-types
+  12:36  warning  Prop "color" should define at least its type  vue/require-prop-types
+
+C:\Users\Usuario\Desktop\MyA FOOTWEAR STORE\frontend\src\components\CarritoFlotante.vue
+  23:27  warning  Attribute "id" should go before "type"  vue/attributes-order
+  59:9   warning  Attribute "id" should go before ":to"   vue/attributes-order
+  68:9   warning  Attribute "id" should go before ":to"   vue/attributes-order
+
+C:\Users\Usuario\Desktop\MyA FOOTWEAR STORE\frontend\src\components\GraficaVentas.vue
+  56:13  warning  Attribute "tabindex" should go before "@blur"     vue/attributes-order
+  57:13  warning  Attribute ":aria-label" should go before "@blur"  vue/attributes-order
+
+C:\Users\Usuario\Desktop\MyA FOOTWEAR STORE\frontend\src\components\HeroCarrusel.vue
+  572:1  warning  File has too many lines (649). Maximum allowed is 500  max-lines
+
+C:\Users\Usuario\Desktop\MyA FOOTWEAR STORE\frontend\src\components\Paginacion.vue
+  1:1  error  Component name "Paginacion" should always be multi-word  vue/multi-word-component-names
+
+C:\Users\Usuario\Desktop\MyA FOOTWEAR STORE\frontend\src\views\ContactoView.vue
+  584:1  warning  File has too many lines (743). Maximum allowed is 500  max-lines
+
+C:\Users\Usuario\Desktop\MyA FOOTWEAR STORE\frontend\src\views\HomeView.vue
+   13:41  warning  Attribute "id" should go before "class"  vue/attributes-order
+   42:30  warning  Attribute "id" should go before "class"  vue/attributes-order
+   59:29  warning  Attribute "id" should go before "class"  vue/attributes-order
+   72:30  warning  Attribute "id" should go before "class"  vue/attributes-order
+   90:29  warning  Attribute "id" should go before "class"  vue/attributes-order
+  100:29  warning  Attribute "id" should go before "class"  vue/attributes-order
+
+C:\Users\Usuario\Desktop\MyA FOOTWEAR STORE\frontend\src\views\LoginView.vue
+  574:1  warning  File has too many lines (666). Maximum allowed is 500  max-lines
+
+C:\Users\Usuario\Desktop\MyA FOOTWEAR STORE\frontend\src\views\panel\CuponesAdmin.vue
+  74:1  warning  Function 'validar' has a complexity of 15. Maximum allowed is 10  complexity
+
+C:\Users\Usuario\Desktop\MyA FOOTWEAR STORE\frontend\src\views\panel\InventarioAdmin.vue
+  62:1  warning  Async function 'guardarAjuste' has a complexity of 11. Maximum allowed is 10  complexity
+
+C:\Users\Usuario\Desktop\MyA FOOTWEAR STORE\frontend\src\views\panel\ProductoEditor.vue
+  106:1  warning  Function 'validarFormulario' has a complexity of 15. Maximum allowed is 10    complexity
+  125:1  warning  Async function 'guardar' has a complexity of 11. Maximum allowed is 10        complexity
+  259:1  warning  Async function 'guardarAjuste' has a complexity of 11. Maximum allowed is 10  complexity
+  560:1  warning  File has too many lines (612). Maximum allowed is 500                         max-lines
+
+✖ 23 problems (1 error, 22 warnings)
+  0 errors and 11 warnings potentially fixable with the `--fix` option.
+

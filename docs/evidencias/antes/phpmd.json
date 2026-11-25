@@ -1,0 +1,602 @@
+{
+    "version": "@package_version@",
+    "package": "phpmd",
+    "timestamp": "2026-11-25T04:38:24+01:00",
+    "files": [
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Controllers\\AuthController.php",
+            "violations": [
+                {
+                    "beginLine": 90,
+                    "endLine": 93,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "AuthController",
+                    "method": "yo",
+                    "description": "Avoid using short method names like AuthController::yo(). The configured minimum method name length is 3.",
+                    "rule": "ShortMethodName",
+                    "ruleSet": "Naming Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/naming.html#shortmethodname",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Controllers\\CatalogoController.php",
+            "violations": [
+                {
+                    "beginLine": 20,
+                    "endLine": 20,
+                    "package": null,
+                    "function": null,
+                    "class": null,
+                    "method": null,
+                    "description": "Avoid unused parameters such as \u0027$request\u0027.",
+                    "rule": "UnusedFormalParameter",
+                    "ruleSet": "Unused Code Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/unusedcode.html#unusedformalparameter",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 26,
+                    "endLine": 26,
+                    "package": null,
+                    "function": null,
+                    "class": null,
+                    "method": null,
+                    "description": "Avoid unused parameters such as \u0027$request\u0027.",
+                    "rule": "UnusedFormalParameter",
+                    "ruleSet": "Unused Code Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/unusedcode.html#unusedformalparameter",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 32,
+                    "endLine": 32,
+                    "package": null,
+                    "function": null,
+                    "class": null,
+                    "method": null,
+                    "description": "Avoid unused parameters such as \u0027$request\u0027.",
+                    "rule": "UnusedFormalParameter",
+                    "ruleSet": "Unused Code Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/unusedcode.html#unusedformalparameter",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 38,
+                    "endLine": 38,
+                    "package": null,
+                    "function": null,
+                    "class": null,
+                    "method": null,
+                    "description": "Avoid unused parameters such as \u0027$request\u0027.",
+                    "rule": "UnusedFormalParameter",
+                    "ruleSet": "Unused Code Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/unusedcode.html#unusedformalparameter",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Controllers\\CuponController.php",
+            "violations": [
+                {
+                    "beginLine": 21,
+                    "endLine": 21,
+                    "package": null,
+                    "function": null,
+                    "class": null,
+                    "method": null,
+                    "description": "Avoid unused parameters such as \u0027$request\u0027.",
+                    "rule": "UnusedFormalParameter",
+                    "ruleSet": "Unused Code Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/unusedcode.html#unusedformalparameter",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Controllers\\ProductoController.php",
+            "violations": [
+                {
+                    "beginLine": 24,
+                    "endLine": 256,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "ProductoController",
+                    "method": null,
+                    "description": "The class ProductoController has a coupling between objects value of 14. Consider to reduce the number of dependencies under 13.",
+                    "rule": "CouplingBetweenObjects",
+                    "ruleSet": "Design Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/design.html#couplingbetweenobjects",
+                    "priority": 2
+                },
+                {
+                    "beginLine": 131,
+                    "endLine": 181,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "ProductoController",
+                    "method": "subirImagen",
+                    "description": "The method subirImagen() has a Cyclomatic Complexity of 15. The configured cyclomatic complexity threshold is 10.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 131,
+                    "endLine": 181,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "ProductoController",
+                    "method": "subirImagen",
+                    "description": "The method subirImagen() has an NPath complexity of 2592. The configured NPath complexity threshold is 200.",
+                    "rule": "NPathComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#npathcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 169,
+                    "endLine": 169,
+                    "package": null,
+                    "function": null,
+                    "class": null,
+                    "method": null,
+                    "description": "Missing class import via use statement (line \u0027169\u0027, column \u002723\u0027).",
+                    "rule": "MissingImport",
+                    "ruleSet": "Clean Code Rules",
+                    "externalInfoUrl": "http:\/\/phpmd.org\/rules\/cleancode.html#MissingImport",
+                    "priority": 1
+                },
+                {
+                    "beginLine": 206,
+                    "endLine": 244,
+                    "package": "App\\Controllers",
+                    "function": null,
+                    "class": "ProductoController",
+                    "method": "validarProducto",
+                    "description": "The method validarProducto() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Controllers\\ReporteController.php",
+            "violations": [
+                {
+                    "beginLine": 17,
+                    "endLine": 17,
+                    "package": null,
+                    "function": null,
+                    "class": null,
+                    "method": null,
+                    "description": "Avoid unused parameters such as \u0027$request\u0027.",
+                    "rule": "UnusedFormalParameter",
+                    "ruleSet": "Unused Code Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/unusedcode.html#unusedformalparameter",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Core\\Imagen.php",
+            "violations": [
+                {
+                    "beginLine": 27,
+                    "endLine": 91,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Imagen",
+                    "method": "optimizar",
+                    "description": "Remove error control operator \u0027@\u0027 on line 33.",
+                    "rule": "ErrorControlOperator",
+                    "ruleSet": "Clean Code Rules",
+                    "externalInfoUrl": "http:\/\/phpmd.org\/rules\/cleancode.html#errorcontroloperator",
+                    "priority": 1
+                },
+                {
+                    "beginLine": 27,
+                    "endLine": 91,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Imagen",
+                    "method": "optimizar",
+                    "description": "Remove error control operator \u0027@\u0027 on line 43.",
+                    "rule": "ErrorControlOperator",
+                    "ruleSet": "Clean Code Rules",
+                    "externalInfoUrl": "http:\/\/phpmd.org\/rules\/cleancode.html#errorcontroloperator",
+                    "priority": 1
+                },
+                {
+                    "beginLine": 27,
+                    "endLine": 91,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Imagen",
+                    "method": "optimizar",
+                    "description": "Remove error control operator \u0027@\u0027 on line 44.",
+                    "rule": "ErrorControlOperator",
+                    "ruleSet": "Clean Code Rules",
+                    "externalInfoUrl": "http:\/\/phpmd.org\/rules\/cleancode.html#errorcontroloperator",
+                    "priority": 1
+                },
+                {
+                    "beginLine": 27,
+                    "endLine": 91,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Imagen",
+                    "method": "optimizar",
+                    "description": "Remove error control operator \u0027@\u0027 on line 45.",
+                    "rule": "ErrorControlOperator",
+                    "ruleSet": "Clean Code Rules",
+                    "externalInfoUrl": "http:\/\/phpmd.org\/rules\/cleancode.html#errorcontroloperator",
+                    "priority": 1
+                },
+                {
+                    "beginLine": 27,
+                    "endLine": 91,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Imagen",
+                    "method": "optimizar",
+                    "description": "Remove error control operator \u0027@\u0027 on line 86.",
+                    "rule": "ErrorControlOperator",
+                    "ruleSet": "Clean Code Rules",
+                    "externalInfoUrl": "http:\/\/phpmd.org\/rules\/cleancode.html#errorcontroloperator",
+                    "priority": 1
+                },
+                {
+                    "beginLine": 71,
+                    "endLine": 74,
+                    "package": null,
+                    "function": null,
+                    "class": null,
+                    "method": null,
+                    "description": "The method optimizar uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.",
+                    "rule": "ElseExpression",
+                    "ruleSet": "Clean Code Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/cleancode.html#elseexpression",
+                    "priority": 1
+                },
+                {
+                    "beginLine": 96,
+                    "endLine": 96,
+                    "package": null,
+                    "function": null,
+                    "class": null,
+                    "method": null,
+                    "description": "Missing class import via use statement (line \u002796\u0027, column \u002722\u0027).",
+                    "rule": "MissingImport",
+                    "ruleSet": "Clean Code Rules",
+                    "externalInfoUrl": "http:\/\/phpmd.org\/rules\/cleancode.html#MissingImport",
+                    "priority": 1
+                },
+                {
+                    "beginLine": 101,
+                    "endLine": 118,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Imagen",
+                    "method": "corregirOrientacion",
+                    "description": "Remove error control operator \u0027@\u0027 on line 106.",
+                    "rule": "ErrorControlOperator",
+                    "ruleSet": "Clean Code Rules",
+                    "externalInfoUrl": "http:\/\/phpmd.org\/rules\/cleancode.html#errorcontroloperator",
+                    "priority": 1
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Core\\Response.php",
+            "violations": [
+                {
+                    "beginLine": 21,
+                    "endLine": 28,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Response",
+                    "method": "ok",
+                    "description": "Avoid using short method names like Response::ok(). The configured minimum method name length is 3.",
+                    "rule": "ShortMethodName",
+                    "ruleSet": "Naming Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/naming.html#shortmethodname",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Core\\Validator.php",
+            "violations": [
+                {
+                    "beginLine": 25,
+                    "endLine": 166,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Validator",
+                    "method": null,
+                    "description": "The class Validator has an overall complexity of 53 which is very high. The configured complexity threshold is 50.",
+                    "rule": "ExcessiveClassComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#excessiveclasscomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 32,
+                    "endLine": 75,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Validator",
+                    "method": "validar",
+                    "description": "The method validar() has a Cyclomatic Complexity of 12. The configured cyclomatic complexity threshold is 10.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 65,
+                    "endLine": 67,
+                    "package": null,
+                    "function": null,
+                    "class": null,
+                    "method": null,
+                    "description": "The method validar uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.",
+                    "rule": "ElseExpression",
+                    "ruleSet": "Clean Code Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/cleancode.html#elseexpression",
+                    "priority": 1
+                },
+                {
+                    "beginLine": 78,
+                    "endLine": 165,
+                    "package": "App\\Core",
+                    "function": null,
+                    "class": "Validator",
+                    "method": "aplicarRegla",
+                    "description": "The method aplicarRegla() has a Cyclomatic Complexity of 41. The configured cyclomatic complexity threshold is 10.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Middleware\\AuthMiddleware.php",
+            "violations": [
+                {
+                    "beginLine": 47,
+                    "endLine": 82,
+                    "package": "App\\Middleware",
+                    "function": null,
+                    "class": "AuthMiddleware",
+                    "method": "handle",
+                    "description": "The method handle() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Middleware\\CorsMiddleware.php",
+            "violations": [
+                {
+                    "beginLine": 30,
+                    "endLine": 30,
+                    "package": null,
+                    "function": null,
+                    "class": null,
+                    "method": null,
+                    "description": "The method aplicar() contains an exit expression.",
+                    "rule": "ExitExpression",
+                    "ruleSet": "Design Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/design.html#exitexpression",
+                    "priority": 1
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Models\\Cupon.php",
+            "violations": [
+                {
+                    "beginLine": 15,
+                    "endLine": 169,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Cupon",
+                    "method": null,
+                    "description": "The class Cupon has 11 public methods. Consider refactoring Cupon to keep number of public methods under 10.",
+                    "rule": "TooManyPublicMethods",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#toomanypublicmethods",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 18,
+                    "endLine": 18,
+                    "package": null,
+                    "function": null,
+                    "class": null,
+                    "method": null,
+                    "description": "The method buscarPorCodigo has a boolean flag argument $bloquear, which is a certain sign of a Single Responsibility Principle violation.",
+                    "rule": "BooleanArgumentFlag",
+                    "ruleSet": "Clean Code Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/cleancode.html#booleanargumentflag",
+                    "priority": 1
+                },
+                {
+                    "beginLine": 38,
+                    "endLine": 61,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Cupon",
+                    "method": "motivoInvalido",
+                    "description": "The method motivoInvalido() has a Cyclomatic Complexity of 11. The configured cyclomatic complexity threshold is 10.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 38,
+                    "endLine": 61,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Cupon",
+                    "method": "motivoInvalido",
+                    "description": "The method motivoInvalido() has an NPath complexity of 324. The configured NPath complexity threshold is 200.",
+                    "rule": "NPathComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#npathcomplexity",
+                    "priority": 3
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Models\\Devolucion.php",
+            "violations": [
+                {
+                    "beginLine": 159,
+                    "endLine": 164,
+                    "package": null,
+                    "function": null,
+                    "class": null,
+                    "method": null,
+                    "description": "The method listar uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.",
+                    "rule": "ElseExpression",
+                    "ruleSet": "Clean Code Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/cleancode.html#elseexpression",
+                    "priority": 1
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Models\\Pago.php",
+            "violations": [
+                {
+                    "beginLine": 64,
+                    "endLine": 115,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Pago",
+                    "method": "aplicarTransaccion",
+                    "description": "The method aplicarTransaccion() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 97,
+                    "endLine": 99,
+                    "package": null,
+                    "function": null,
+                    "class": null,
+                    "method": null,
+                    "description": "The method aplicarTransaccion uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.",
+                    "rule": "ElseExpression",
+                    "ruleSet": "Clean Code Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/cleancode.html#elseexpression",
+                    "priority": 1
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Models\\Pedido.php",
+            "violations": [
+                {
+                    "beginLine": 47,
+                    "endLine": 127,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Pedido",
+                    "method": "cotizar",
+                    "description": "The method cotizar() has a Cyclomatic Complexity of 12. The configured cyclomatic complexity threshold is 10.",
+                    "rule": "CyclomaticComplexity",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority": 3
+                },
+                {
+                    "beginLine": 47,
+                    "endLine": 47,
+                    "package": null,
+                    "function": null,
+                    "class": null,
+                    "method": null,
+                    "description": "The method cotizar has a boolean flag argument $bloquear, which is a certain sign of a Single Responsibility Principle violation.",
+                    "rule": "BooleanArgumentFlag",
+                    "ruleSet": "Clean Code Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/cleancode.html#booleanargumentflag",
+                    "priority": 1
+                },
+                {
+                    "beginLine": 102,
+                    "endLine": 109,
+                    "package": null,
+                    "function": null,
+                    "class": null,
+                    "method": null,
+                    "description": "The method cotizar uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.",
+                    "rule": "ElseExpression",
+                    "ruleSet": "Clean Code Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/cleancode.html#elseexpression",
+                    "priority": 1
+                },
+                {
+                    "beginLine": 106,
+                    "endLine": 108,
+                    "package": null,
+                    "function": null,
+                    "class": null,
+                    "method": null,
+                    "description": "The method cotizar uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.",
+                    "rule": "ElseExpression",
+                    "ruleSet": "Clean Code Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/cleancode.html#elseexpression",
+                    "priority": 1
+                },
+                {
+                    "beginLine": 218,
+                    "endLine": 222,
+                    "package": null,
+                    "function": null,
+                    "class": null,
+                    "method": null,
+                    "description": "The method listar uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.",
+                    "rule": "ElseExpression",
+                    "ruleSet": "Clean Code Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/cleancode.html#elseexpression",
+                    "priority": 1
+                }
+            ]
+        },
+        {
+            "file": "C:\\Users\\Usuario\\Desktop\\MyA FOOTWEAR STORE\\backend\\src\\Models\\Variante.php",
+            "violations": [
+                {
+                    "beginLine": 14,
+                    "endLine": 328,
+                    "package": "App\\Models",
+                    "function": null,
+                    "class": "Variante",
+                    "method": null,
+                    "description": "The class Variante has 11 public methods. Consider refactoring Variante to keep number of public methods under 10.",
+                    "rule": "TooManyPublicMethods",
+                    "ruleSet": "Code Size Rules",
+                    "externalInfoUrl": "https:\/\/phpmd.org\/rules\/codesize.html#toomanypublicmethods",
+                    "priority": 3
+                }
+            ]
+        }
+    ]
+}

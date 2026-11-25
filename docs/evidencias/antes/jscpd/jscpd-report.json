@@ -1,0 +1,3157 @@
+{
+  "statistics": {
+    "detectionDate": "2026-11-25T03:38:14.300Z",
+    "formats": {
+      "css": {
+        "sources": {
+          "src/views/panel/UsuariosAdmin.vue": {
+            "lines": 24,
+            "tokens": 141,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/ReportesAdmin.vue": {
+            "lines": 104,
+            "tokens": 714,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/ProductosAdmin.vue": {
+            "lines": 27,
+            "tokens": 152,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/ProductoEditor.vue": {
+            "lines": 263,
+            "tokens": 1049,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/PedidosAdmin.vue": {
+            "lines": 17,
+            "tokens": 95,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/PedidoAdmin.vue": {
+            "lines": 44,
+            "tokens": 275,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 11,
+            "duplicatedTokens": 83,
+            "percentage": 25,
+            "percentageTokens": 30.18,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/PanelLayout.vue": {
+            "lines": 269,
+            "tokens": 1543,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/PanelInicio.vue": {
+            "lines": 44,
+            "tokens": 234,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/MensajesAdmin.vue": {
+            "lines": 48,
+            "tokens": 261,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/InventarioAdmin.vue": {
+            "lines": 43,
+            "tokens": 214,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/DevolucionesAdmin.vue": {
+            "lines": 120,
+            "tokens": 732,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/CuponesAdmin.vue": {
+            "lines": 30,
+            "tokens": 142,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/layout/AppFooter.vue": {
+            "lines": 117,
+            "tokens": 731,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/assets/css/base.css": {
+            "lines": 391,
+            "tokens": 2098,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/RestablecerView.vue": {
+            "lines": 26,
+            "tokens": 176,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 20,
+            "duplicatedTokens": 143,
+            "percentage": 76.92,
+            "percentageTokens": 81.25,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/RecuperarView.vue": {
+            "lines": 29,
+            "tokens": 187,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 20,
+            "duplicatedTokens": 143,
+            "percentage": 68.97,
+            "percentageTokens": 76.47,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/ProductoView.vue": {
+            "lines": 291,
+            "tokens": 1595,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/PagoResultadoView.vue": {
+            "lines": 90,
+            "tokens": 621,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/NoEncontradoView.vue": {
+            "lines": 8,
+            "tokens": 65,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/MisPedidosView.vue": {
+            "lines": 58,
+            "tokens": 350,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/MiPedidoView.vue": {
+            "lines": 62,
+            "tokens": 432,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 11,
+            "duplicatedTokens": 83,
+            "percentage": 17.74,
+            "percentageTokens": 19.21,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/MiCuentaView.vue": {
+            "lines": 34,
+            "tokens": 216,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 16,
+            "duplicatedTokens": 93,
+            "percentage": 47.06,
+            "percentageTokens": 43.06,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/LoginView.vue": {
+            "lines": 454,
+            "tokens": 2956,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 25,
+            "duplicatedTokens": 219,
+            "percentage": 5.51,
+            "percentageTokens": 7.41,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/HomeView.vue": {
+            "lines": 253,
+            "tokens": 1575,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/ContactoView.vue": {
+            "lines": 593,
+            "tokens": 3736,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 13,
+            "duplicatedTokens": 113,
+            "percentage": 2.19,
+            "percentageTokens": 3.02,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/CheckoutView.vue": {
+            "lines": 156,
+            "tokens": 875,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 16,
+            "duplicatedTokens": 93,
+            "percentage": 10.26,
+            "percentageTokens": 10.63,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/CatalogoView.vue": {
+            "lines": 156,
+            "tokens": 948,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/ProductoCard.vue": {
+            "lines": 150,
+            "tokens": 855,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/PrecioProducto.vue": {
+            "lines": 27,
+            "tokens": 151,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/Paginacion.vue": {
+            "lines": 9,
+            "tokens": 56,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/MenuAcciones.vue": {
+            "lines": 99,
+            "tokens": 580,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/LogoMya.vue": {
+            "lines": 5,
+            "tokens": 25,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/HeroCarrusel.vue": {
+            "lines": 574,
+            "tokens": 4678,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/GraficaVentas.vue": {
+            "lines": 191,
+            "tokens": 1361,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/EstadoPedido.vue": {
+            "lines": 41,
+            "tokens": 193,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/EstadoDevolucion.vue": {
+            "lines": 16,
+            "tokens": 152,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/DevolucionesPedido.vue": {
+            "lines": 142,
+            "tokens": 785,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/DetallePedido.vue": {
+            "lines": 86,
+            "tokens": 457,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/CarritoFlotante.vue": {
+            "lines": 217,
+            "tokens": 1259,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/BuscadorCatalogo.vue": {
+            "lines": 321,
+            "tokens": 2318,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/BotonPagoWompi.vue": {
+            "lines": 85,
+            "tokens": 572,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 12,
+            "duplicatedTokens": 106,
+            "percentage": 14.12,
+            "percentageTokens": 18.53,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 5714,
+          "tokens": 35555,
+          "sources": 41,
+          "clones": 5,
+          "duplicatedLines": 72,
+          "duplicatedTokens": 538,
+          "percentage": 1.26,
+          "percentageTokens": 1.51,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "markup": {
+        "sources": {
+          "src/views/panel/UsuariosAdmin.vue": {
+            "lines": 111,
+            "tokens": 1586,
+            "sources": 1,
+            "clones": 7,
+            "duplicatedLines": 41,
+            "duplicatedTokens": 478,
+            "percentage": 36.94,
+            "percentageTokens": 30.14,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/ReportesAdmin.vue": {
+            "lines": 64,
+            "tokens": 843,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/ProductosAdmin.vue": {
+            "lines": 64,
+            "tokens": 986,
+            "sources": 1,
+            "clones": 3,
+            "duplicatedLines": 22,
+            "duplicatedTokens": 252,
+            "percentage": 34.38,
+            "percentageTokens": 25.56,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/ProductoEditor.vue": {
+            "lines": 152,
+            "tokens": 2087,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/PedidosAdmin.vue": {
+            "lines": 80,
+            "tokens": 907,
+            "sources": 1,
+            "clones": 5,
+            "duplicatedLines": 37,
+            "duplicatedTokens": 425,
+            "percentage": 46.25,
+            "percentageTokens": 46.86,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/PedidoAdmin.vue": {
+            "lines": 42,
+            "tokens": 515,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 6,
+            "duplicatedTokens": 88,
+            "percentage": 14.29,
+            "percentageTokens": 17.09,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/PanelLayout.vue": {
+            "lines": 11,
+            "tokens": 170,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/PanelInicio.vue": {
+            "lines": 58,
+            "tokens": 860,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/MensajesAdmin.vue": {
+            "lines": 24,
+            "tokens": 510,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/InventarioAdmin.vue": {
+            "lines": 122,
+            "tokens": 696,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 17,
+            "duplicatedTokens": 169,
+            "percentage": 13.93,
+            "percentageTokens": 24.28,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/DevolucionesAdmin.vue": {
+            "lines": 93,
+            "tokens": 1268,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 20,
+            "duplicatedTokens": 227,
+            "percentage": 21.51,
+            "percentageTokens": 17.9,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/CuponesAdmin.vue": {
+            "lines": 100,
+            "tokens": 1396,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 7,
+            "duplicatedTokens": 73,
+            "percentage": 7,
+            "percentageTokens": 5.23,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/layout/AppHeader.vue": {
+            "lines": 25,
+            "tokens": 328,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/layout/AppFooter.vue": {
+            "lines": 45,
+            "tokens": 680,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 6,
+            "duplicatedTokens": 82,
+            "percentage": 13.33,
+            "percentageTokens": 12.06,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/RestablecerView.vue": {
+            "lines": 12,
+            "tokens": 172,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/RecuperarView.vue": {
+            "lines": 7,
+            "tokens": 102,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/ProductoView.vue": {
+            "lines": 102,
+            "tokens": 982,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/PagoResultadoView.vue": {
+            "lines": 6,
+            "tokens": 154,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/NoEncontradoView.vue": {
+            "lines": 5,
+            "tokens": 76,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/MisPedidosView.vue": {
+            "lines": 26,
+            "tokens": 376,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/MiPedidoView.vue": {
+            "lines": 24,
+            "tokens": 381,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 6,
+            "duplicatedTokens": 88,
+            "percentage": 25,
+            "percentageTokens": 23.1,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/MiCuentaView.vue": {
+            "lines": 52,
+            "tokens": 877,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/LoginView.vue": {
+            "lines": 143,
+            "tokens": 1351,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/HomeView.vue": {
+            "lines": 103,
+            "tokens": 1515,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/ContactoView.vue": {
+            "lines": 114,
+            "tokens": 1024,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/CheckoutView.vue": {
+            "lines": 84,
+            "tokens": 1365,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/CatalogoView.vue": {
+            "lines": 48,
+            "tokens": 540,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/ProductoCard.vue": {
+            "lines": 15,
+            "tokens": 207,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/PrecioProducto.vue": {
+            "lines": 5,
+            "tokens": 96,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/Paginacion.vue": {
+            "lines": 3,
+            "tokens": 94,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/MenuAcciones.vue": {
+            "lines": 38,
+            "tokens": 261,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/LogoMya.vue": {
+            "lines": 31,
+            "tokens": 380,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/HeroCarrusel.vue": {
+            "lines": 116,
+            "tokens": 1335,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 6,
+            "duplicatedTokens": 82,
+            "percentage": 5.17,
+            "percentageTokens": 6.14,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/GraficaVentas.vue": {
+            "lines": 59,
+            "tokens": 758,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/EstadoPedido.vue": {
+            "lines": 4,
+            "tokens": 52,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/EstadoDevolucion.vue": {
+            "lines": 4,
+            "tokens": 52,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/DevolucionesPedido.vue": {
+            "lines": 67,
+            "tokens": 1030,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/DetallePedido.vue": {
+            "lines": 39,
+            "tokens": 441,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/CarritoFlotante.vue": {
+            "lines": 57,
+            "tokens": 722,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/BuscadorCatalogo.vue": {
+            "lines": 113,
+            "tokens": 1104,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/BotonPagoWompi.vue": {
+            "lines": 11,
+            "tokens": 190,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/App.vue": {
+            "lines": 4,
+            "tokens": 33,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 2283,
+          "tokens": 28502,
+          "sources": 42,
+          "clones": 12,
+          "duplicatedLines": 84,
+          "duplicatedTokens": 982,
+          "percentage": 3.68,
+          "percentageTokens": 3.45,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "javascript": {
+        "sources": {
+          "src/views/panel/UsuariosAdmin.vue": {
+            "lines": 119,
+            "tokens": 1374,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/ReportesAdmin.vue": {
+            "lines": 20,
+            "tokens": 230,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/ProductosAdmin.vue": {
+            "lines": 66,
+            "tokens": 614,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/ProductoEditor.vue": {
+            "lines": 280,
+            "tokens": 3312,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 7,
+            "duplicatedTokens": 111,
+            "percentage": 2.5,
+            "percentageTokens": 3.35,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/PedidosAdmin.vue": {
+            "lines": 49,
+            "tokens": 458,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 13,
+            "duplicatedTokens": 90,
+            "percentage": 26.53,
+            "percentageTokens": 19.65,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/PedidoAdmin.vue": {
+            "lines": 51,
+            "tokens": 502,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 6,
+            "duplicatedTokens": 85,
+            "percentage": 11.76,
+            "percentageTokens": 16.93,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/PanelLayout.vue": {
+            "lines": 15,
+            "tokens": 209,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/PanelInicio.vue": {
+            "lines": 17,
+            "tokens": 140,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/MensajesAdmin.vue": {
+            "lines": 45,
+            "tokens": 398,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/InventarioAdmin.vue": {
+            "lines": 97,
+            "tokens": 1123,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 7,
+            "duplicatedTokens": 111,
+            "percentage": 7.22,
+            "percentageTokens": 9.88,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/DevolucionesAdmin.vue": {
+            "lines": 74,
+            "tokens": 814,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 13,
+            "duplicatedTokens": 90,
+            "percentage": 17.57,
+            "percentageTokens": 11.06,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/panel/CuponesAdmin.vue": {
+            "lines": 131,
+            "tokens": 1604,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/layout/AppHeader.vue": {
+            "lines": 46,
+            "tokens": 458,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/layout/AppFooter.vue": {
+            "lines": 3,
+            "tokens": 18,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/RestablecerView.vue": {
+            "lines": 33,
+            "tokens": 395,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/RecuperarView.vue": {
+            "lines": 26,
+            "tokens": 233,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/ProductoView.vue": {
+            "lines": 91,
+            "tokens": 1103,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/PagoResultadoView.vue": {
+            "lines": 55,
+            "tokens": 651,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/MisPedidosView.vue": {
+            "lines": 24,
+            "tokens": 225,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/MiPedidoView.vue": {
+            "lines": 51,
+            "tokens": 595,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 6,
+            "duplicatedTokens": 85,
+            "percentage": 11.76,
+            "percentageTokens": 14.29,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/MiCuentaView.vue": {
+            "lines": 69,
+            "tokens": 879,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/LoginView.vue": {
+            "lines": 158,
+            "tokens": 1707,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/HomeView.vue": {
+            "lines": 4,
+            "tokens": 24,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/ContactoView.vue": {
+            "lines": 127,
+            "tokens": 1314,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/CheckoutView.vue": {
+            "lines": 123,
+            "tokens": 1461,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/views/CatalogoView.vue": {
+            "lines": 69,
+            "tokens": 697,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/utils/formato.js": {
+            "lines": 72,
+            "tokens": 836,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/stores/catalogo.js": {
+            "lines": 29,
+            "tokens": 299,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/stores/carrito.js": {
+            "lines": 82,
+            "tokens": 843,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/stores/auth.js": {
+            "lines": 68,
+            "tokens": 643,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/services/web3formsService.js": {
+            "lines": 48,
+            "tokens": 351,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/services/productoService.js": {
+            "lines": 65,
+            "tokens": 611,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/services/pedidoService.js": {
+            "lines": 48,
+            "tokens": 468,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/services/pagoService.js": {
+            "lines": 58,
+            "tokens": 460,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/services/devolucionService.js": {
+            "lines": 21,
+            "tokens": 217,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/services/contactoService.js": {
+            "lines": 8,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/services/authService.js": {
+            "lines": 34,
+            "tokens": 297,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/services/api.js": {
+            "lines": 69,
+            "tokens": 517,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/services/adminService.js": {
+            "lines": 54,
+            "tokens": 481,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/router/index.js": {
+            "lines": 127,
+            "tokens": 1542,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/ProductoCard.vue": {
+            "lines": 8,
+            "tokens": 50,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/PrecioProducto.vue": {
+            "lines": 14,
+            "tokens": 179,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/Paginacion.vue": {
+            "lines": 8,
+            "tokens": 94,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/MenuAcciones.vue": {
+            "lines": 67,
+            "tokens": 805,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/LogoMya.vue": {
+            "lines": 6,
+            "tokens": 31,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/HeroCarrusel.vue": {
+            "lines": 112,
+            "tokens": 1369,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/GraficaVentas.vue": {
+            "lines": 28,
+            "tokens": 418,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/EstadoPedido.vue": {
+            "lines": 9,
+            "tokens": 106,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/EstadoDevolucion.vue": {
+            "lines": 9,
+            "tokens": 106,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/DevolucionesPedido.vue": {
+            "lines": 66,
+            "tokens": 923,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/DetallePedido.vue": {
+            "lines": 9,
+            "tokens": 83,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/CarritoFlotante.vue": {
+            "lines": 17,
+            "tokens": 156,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/BuscadorCatalogo.vue": {
+            "lines": 130,
+            "tokens": 1692,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/BotonPagoWompi.vue": {
+            "lines": 31,
+            "tokens": 297,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/main.js": {
+            "lines": 24,
+            "tokens": 230,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/App.vue": {
+            "lines": 10,
+            "tokens": 94,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 3174,
+          "tokens": 34780,
+          "sources": 56,
+          "clones": 3,
+          "duplicatedLines": 26,
+          "duplicatedTokens": 286,
+          "percentage": 0.82,
+          "percentageTokens": 0.82,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "php": {
+        "sources": {
+          "../backend/bin/optimizar_imagenes.php": {
+            "lines": 71,
+            "tokens": 501,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Models/Variante.php": {
+            "lines": 328,
+            "tokens": 2788,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 6,
+            "duplicatedTokens": 133,
+            "percentage": 1.83,
+            "percentageTokens": 4.77,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Models/Usuario.php": {
+            "lines": 172,
+            "tokens": 1444,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Models/Talla.php": {
+            "lines": 49,
+            "tokens": 338,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Models/Reporte.php": {
+            "lines": 106,
+            "tokens": 812,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Models/RecuperacionPassword.php": {
+            "lines": 66,
+            "tokens": 377,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Models/ProductoImagen.php": {
+            "lines": 52,
+            "tokens": 392,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Models/Producto.php": {
+            "lines": 285,
+            "tokens": 2380,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 6,
+            "duplicatedTokens": 133,
+            "percentage": 2.11,
+            "percentageTokens": 5.59,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Models/Pedido.php": {
+            "lines": 411,
+            "tokens": 3609,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Models/Pago.php": {
+            "lines": 116,
+            "tokens": 884,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Models/Model.php": {
+            "lines": 64,
+            "tokens": 466,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Models/MensajeContacto.php": {
+            "lines": 59,
+            "tokens": 512,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Models/Marca.php": {
+            "lines": 35,
+            "tokens": 192,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Models/Devolucion.php": {
+            "lines": 256,
+            "tokens": 2185,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Models/Cupon.php": {
+            "lines": 169,
+            "tokens": 1484,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Models/Color.php": {
+            "lines": 26,
+            "tokens": 160,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Middleware/CorsMiddleware.php": {
+            "lines": 33,
+            "tokens": 189,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Middleware/AuthMiddleware.php": {
+            "lines": 83,
+            "tokens": 512,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Descuentos/EstrategiasDescuento.php": {
+            "lines": 33,
+            "tokens": 172,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Descuentos/EstrategiaDescuento.php": {
+            "lines": 21,
+            "tokens": 93,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Descuentos/DescuentoValorFijo.php": {
+            "lines": 24,
+            "tokens": 141,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Descuentos/DescuentoPorcentaje.php": {
+            "lines": 26,
+            "tokens": 196,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Core/Wompi.php": {
+            "lines": 142,
+            "tokens": 1112,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Core/Validator.php": {
+            "lines": 166,
+            "tokens": 1403,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Core/Texto.php": {
+            "lines": 27,
+            "tokens": 202,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Core/Router.php": {
+            "lines": 93,
+            "tokens": 701,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Core/Response.php": {
+            "lines": 44,
+            "tokens": 354,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Core/Request.php": {
+            "lines": 126,
+            "tokens": 1006,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Core/Jwt.php": {
+            "lines": 90,
+            "tokens": 731,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Core/Imagen.php": {
+            "lines": 119,
+            "tokens": 1105,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Core/HttpException.php": {
+            "lines": 62,
+            "tokens": 408,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Core/Database.php": {
+            "lines": 72,
+            "tokens": 408,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Core/Correo.php": {
+            "lines": 62,
+            "tokens": 489,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Controllers/VarianteController.php": {
+            "lines": 141,
+            "tokens": 1316,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 18,
+            "duplicatedTokens": 184,
+            "percentage": 12.77,
+            "percentageTokens": 13.98,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Controllers/UsuarioController.php": {
+            "lines": 110,
+            "tokens": 1185,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 9,
+            "duplicatedTokens": 97,
+            "percentage": 8.18,
+            "percentageTokens": 8.19,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Controllers/ReporteController.php": {
+            "lines": 21,
+            "tokens": 109,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Controllers/ProductoController.php": {
+            "lines": 256,
+            "tokens": 2651,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Controllers/PedidoController.php": {
+            "lines": 206,
+            "tokens": 2014,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Controllers/PagoController.php": {
+            "lines": 113,
+            "tokens": 940,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Controllers/InventarioController.php": {
+            "lines": 51,
+            "tokens": 474,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Controllers/DevolucionController.php": {
+            "lines": 91,
+            "tokens": 812,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Controllers/CuponController.php": {
+            "lines": 103,
+            "tokens": 1029,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Controllers/Controller.php": {
+            "lines": 32,
+            "tokens": 192,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Controllers/ContactoController.php": {
+            "lines": 68,
+            "tokens": 637,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Controllers/CatalogoController.php": {
+            "lines": 43,
+            "tokens": 286,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Controllers/AuthController.php": {
+            "lines": 202,
+            "tokens": 1801,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 9,
+            "duplicatedTokens": 97,
+            "percentage": 4.46,
+            "percentageTokens": 5.39,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Config/routes.php": {
+            "lines": 105,
+            "tokens": 1360,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "../backend/src/Config/Config.php": {
+            "lines": 79,
+            "tokens": 572,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 5109,
+          "tokens": 43124,
+          "sources": 48,
+          "clones": 3,
+          "duplicatedLines": 24,
+          "duplicatedTokens": 322,
+          "percentage": 0.47,
+          "percentageTokens": 0.75,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      }
+    },
+    "total": {
+      "lines": 16280,
+      "tokens": 141961,
+      "sources": 187,
+      "clones": 23,
+      "duplicatedLines": 206,
+      "duplicatedTokens": 2128,
+      "percentage": 1.27,
+      "percentageTokens": 1.5,
+      "newDuplicatedLines": 0,
+      "newClones": 0
+    }
+  },
+  "duplicates": [
+    {
+      "format": "markup",
+      "lines": 6,
+      "fragment": "oService from '@/services/productoService'\nimport { urlImagen } from '@/services/api'\nimport { useAuthStore } from '@/stores/auth'\nimport { useCatalogoStore } from '@/stores/catalogo'\nimport { formatearPrec",
+      "tokens": 61,
+      "firstFile": {
+        "name": "src\\views\\panel\\ProductosAdmin.vue",
+        "start": 76,
+        "end": 81,
+        "startLoc": {
+          "line": 76,
+          "column": 19,
+          "position": 691
+        },
+        "endLoc": {
+          "line": 81,
+          "column": 87,
+          "position": 752
+        }
+      },
+      "secondFile": {
+        "name": "src\\views\\panel\\UsuariosAdmin.vue",
+        "start": 166,
+        "end": 171,
+        "startLoc": {
+          "line": 166,
+          "column": 13,
+          "position": 2069
+        },
+        "endLoc": {
+          "line": 171,
+          "column": 87,
+          "position": 2130
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 7,
+      "fragment": "\n  } finally {\n    cargando.value = false\n  }\n}\n\nwatch(() => [filtros.marca, filtros.estado], () => {\n  filtros.pagina = 1\n  cargar()\n})\nwatch(() => filtros.q, () => {\n  clearTimeout(temporizador)\n  temporizador = setTimeout(() => {\n    filtros.pagina = 1\n    cargar()\n  }",
+      "tokens": 84,
+      "firstFile": {
+        "name": "src\\views\\panel\\ProductosAdmin.vue",
+        "start": 83,
+        "end": 89,
+        "startLoc": {
+          "line": 83,
+          "column": 182,
+          "position": 908
+        },
+        "endLoc": {
+          "line": 89,
+          "column": 84,
+          "position": 992
+        }
+      },
+      "secondFile": {
+        "name": "src\\views\\panel\\UsuariosAdmin.vue",
+        "start": 173,
+        "end": 179,
+        "startLoc": {
+          "line": 173,
+          "column": 158,
+          "position": 2283
+        },
+        "endLoc": {
+          "line": 179,
+          "column": 80,
+          "position": 2367
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 6,
+      "fragment": "r estado, búsqueda y fechas.\nimport MenuAcciones from '@/components/MenuAcciones.vue'\nimport { onMounted, reactive, ref, watch } from 'vue'\nimport { useRouter } from 'vue-router'\nimport EstadoPedido from '@/c",
+      "tokens": 63,
+      "firstFile": {
+        "name": "src\\views\\panel\\PedidosAdmin.vue",
+        "start": 56,
+        "end": 61,
+        "startLoc": {
+          "line": 56,
+          "column": 22,
+          "position": 485
+        },
+        "endLoc": {
+          "line": 61,
+          "column": 89,
+          "position": 548
+        }
+      },
+      "secondFile": {
+        "name": "src\\views\\panel\\UsuariosAdmin.vue",
+        "start": 166,
+        "end": 81,
+        "startLoc": {
+          "line": 166,
+          "column": 13,
+          "position": 2069
+        },
+        "endLoc": {
+          "line": 81,
+          "column": 93,
+          "position": 754
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 7,
+      "fragment": "'\n  try {\n    resultado.value = await pedidoService.listar(filtros)\n  } catch (e) {\n    error.value = e.message\n  } finally {\n    cargando.value = false\n  }\n}\n\nfunction reiniciarYCargar() {\n  filtros.pagina = 1\n  cargar()\n}\n\nwatch",
+      "tokens": 62,
+      "firstFile": {
+        "name": "src\\views\\panel\\PedidosAdmin.vue",
+        "start": 73,
+        "end": 79,
+        "startLoc": {
+          "line": 73,
+          "column": 9,
+          "position": 663
+        },
+        "endLoc": {
+          "line": 79,
+          "column": 101,
+          "position": 725
+        }
+      },
+      "secondFile": {
+        "name": "src\\views\\panel\\UsuariosAdmin.vue",
+        "start": 173,
+        "end": 179,
+        "startLoc": {
+          "line": 173,
+          "column": 217,
+          "position": 2305
+        },
+        "endLoc": {
+          "line": 179,
+          "column": 80,
+          "position": 2367
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 7,
+      "fragment": "ido', params: { id: pedido.id } })\n}\n\nfunction irAPagina(pagina) {\n  filtros.pagina = pagina\n  cargar()\n}\n\nonMounted(cargar)\n</script>\n\n<template>\n  <section>\n    <div class=\"panel-encabezado\">\n      <h2>Pedidos</h2>\n    </div>\n\n    <di",
+      "tokens": 73,
+      "firstFile": {
+        "name": "src\\views\\panel\\PedidosAdmin.vue",
+        "start": 87,
+        "end": 93,
+        "startLoc": {
+          "line": 87,
+          "column": 53,
+          "position": 805
+        },
+        "endLoc": {
+          "line": 93,
+          "column": 9,
+          "position": 878
+        }
+      },
+      "secondFile": {
+        "name": "src\\views\\panel\\UsuariosAdmin.vue",
+        "start": 186,
+        "end": 193,
+        "startLoc": {
+          "line": 186,
+          "column": 19,
+          "position": 2455
+        },
+        "endLoc": {
+          "line": 193,
+          "column": 11,
+          "position": 2529
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 7,
+      "fragment": " '1', pagina: 1 })\nconst resultado = ref({ items: [], total: 0, paginas: 0, umbral: 3 })\nconst cargando = ref(true)\nconst error = ref('')\nconst aviso = ref({ tipo: '', texto: '' })\n\nconst ajuste = reactive({ ",
+      "tokens": 62,
+      "firstFile": {
+        "name": "src\\views\\panel\\InventarioAdmin.vue",
+        "start": 110,
+        "end": 116,
+        "startLoc": {
+          "line": 110,
+          "column": 243,
+          "position": 1312
+        },
+        "endLoc": {
+          "line": 116,
+          "column": 79,
+          "position": 1374
+        }
+      },
+      "secondFile": {
+        "name": "src\\views\\panel\\UsuariosAdmin.vue",
+        "start": 173,
+        "end": 179,
+        "startLoc": {
+          "line": 173,
+          "column": 217,
+          "position": 2305
+        },
+        "endLoc": {
+          "line": 179,
+          "column": 80,
+          "position": 2367
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 12,
+      "fragment": "varianteId: null, tipo: 'entrada', cantidad: 1, motivo: '' })\nconst erroresAjuste = ref({})\nconst historial = ref(null) // { variante, movimientos }\nlet temporizador = null\n\nconst TIPOS = { entrada: 'Entrada', venta: 'Venta', ajuste: 'Ajuste', devolucion: 'Devolución' }\n\nasync function cargar() {\n  cargando.value = true\n  error.value = ''\n  try {\n    resultado.v",
+      "tokens": 107,
+      "firstFile": {
+        "name": "src\\views\\panel\\InventarioAdmin.vue",
+        "start": 116,
+        "end": 127,
+        "startLoc": {
+          "line": 116,
+          "column": 79,
+          "position": 1375
+        },
+        "endLoc": {
+          "line": 127,
+          "column": 27,
+          "position": 1482
+        }
+      },
+      "secondFile": {
+        "name": "src\\views\\panel\\ProductosAdmin.vue",
+        "start": 89,
+        "end": 100,
+        "startLoc": {
+          "line": 89,
+          "column": 84,
+          "position": 993
+        },
+        "endLoc": {
+          "line": 100,
+          "column": 21,
+          "position": 1100
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 8,
+      "fragment": "alue = null\n  Object.assign(ajuste, { varianteId: variante.id, tipo: 'entrada', cantidad: 1, motivo: '' })\n  erroresAjuste.value = {}\n}\n\nasync function guardarAjuste() {\n  const errores = {}\n  const cantidad = Number(ajuste.cantidad)\n  if (!Number.isInteger(cantidad) || cantidad === 0) errores.cantidad = 'Cantidad entera d",
+      "tokens": 111,
+      "firstFile": {
+        "name": "src\\views\\panel\\InventarioAdmin.vue",
+        "start": 58,
+        "end": 65,
+        "startLoc": {
+          "line": 58,
+          "column": 3,
+          "position": 594
+        },
+        "endLoc": {
+          "line": 65,
+          "column": 105,
+          "position": 705
+        }
+      },
+      "secondFile": {
+        "name": "src\\views\\panel\\ProductoEditor.vue",
+        "start": 255,
+        "end": 262,
+        "startLoc": {
+          "line": 255,
+          "column": 3,
+          "position": 2935
+        },
+        "endLoc": {
+          "line": 262,
+          "column": 117,
+          "position": 3046
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 7,
+      "fragment": "omo recibida).\nimport MenuAcciones from '@/components/MenuAcciones.vue'\nimport { onMounted, reactive, ref, watch } from 'vue'\nimport EstadoDevolucion from '@/components/EstadoDevolucion.vue'\nimport Paginacion from '@/components/Paginacion.vue'\nimport devolucionService from '@/services/devolucionService'\nimport { ESTADOS_DEVOLUCION, TIPOS_DEVOLUCION",
+      "tokens": 105,
+      "firstFile": {
+        "name": "src\\views\\panel\\DevolucionesAdmin.vue",
+        "start": 81,
+        "end": 87,
+        "startLoc": {
+          "line": 81,
+          "column": 122,
+          "position": 867
+        },
+        "endLoc": {
+          "line": 87,
+          "column": 67,
+          "position": 972
+        }
+      },
+      "secondFile": {
+        "name": "src\\views\\panel\\PedidosAdmin.vue",
+        "start": 56,
+        "end": 62,
+        "startLoc": {
+          "line": 56,
+          "column": 18,
+          "position": 483
+        },
+        "endLoc": {
+          "line": 62,
+          "column": 67,
+          "position": 588
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 15,
+      "fragment": " '', q: '', pagina: 1 })\nconst resultado = ref({ items: [], total: 0, paginas: 0, por_revisar: 0 })\nconst cargando = ref(true)\nconst error = ref('')\nconst aviso = ref({ tipo: '', texto: '' })\nconst gestion = reactive({ id: null, estado: '', respuesta: '', error: '', enviando: false })\nlet temporizador = null\n\nconst ACCIONES = {\n  aprobada: { texto: 'Aprobar', icono: 'fa-thumbs-up', clase: '' },\n  rechazada: { texto: 'Rechazar', icono: 'fa-ban', clase: 'boton-secundario' },\n  recibida: { texto: 'Marcar como recibida', icono: 'fa-box-o",
+      "tokens": 122,
+      "firstFile": {
+        "name": "src\\views\\panel\\DevolucionesAdmin.vue",
+        "start": 90,
+        "end": 104,
+        "startLoc": {
+          "line": 90,
+          "column": 53,
+          "position": 987
+        },
+        "endLoc": {
+          "line": 104,
+          "column": 106,
+          "position": 1109
+        }
+      },
+      "secondFile": {
+        "name": "src\\views\\panel\\PedidosAdmin.vue",
+        "start": 65,
+        "end": 179,
+        "startLoc": {
+          "line": 65,
+          "column": 49,
+          "position": 603
+        },
+        "endLoc": {
+          "line": 179,
+          "column": 80,
+          "position": 2367
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 14,
+      "fragment": "olucionService.listar(filtros)\n  } catch (e) {\n    error.value = e.message\n  } finally {\n    cargando.value = false\n  }\n}\n\nfunction reiniciarYCargar() {\n  filtros.pagina = 1\n  cargar()\n}\n\nwatch(() => [filtros.estado",
+      "tokens": 90,
+      "firstFile": {
+        "name": "src\\views\\panel\\DevolucionesAdmin.vue",
+        "start": 29,
+        "end": 42,
+        "startLoc": {
+          "line": 29,
+          "column": 46,
+          "position": 379
+        },
+        "endLoc": {
+          "line": 42,
+          "column": 42,
+          "position": 469
+        }
+      },
+      "secondFile": {
+        "name": "src\\views\\panel\\PedidosAdmin.vue",
+        "start": 22,
+        "end": 35,
+        "startLoc": {
+          "line": 22,
+          "column": 42,
+          "position": 244
+        },
+        "endLoc": {
+          "line": 35,
+          "column": 43,
+          "position": 334
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 8,
+      "fragment": "Debe ser posterior al inicio.'\n  errores.value = nuevos\n  return Object.keys(nuevos).length === 0\n}\n\nasync function guardar() {\n  aviso.value = { tipo: '', texto: '' }\n  if (!validar()) return\n\n  const datos = {\n  ",
+      "tokens": 73,
+      "firstFile": {
+        "name": "src\\views\\panel\\CuponesAdmin.vue",
+        "start": 193,
+        "end": 200,
+        "startLoc": {
+          "line": 193,
+          "column": 98,
+          "position": 2561
+        },
+        "endLoc": {
+          "line": 200,
+          "column": 9,
+          "position": 2634
+        }
+      },
+      "secondFile": {
+        "name": "src\\views\\panel\\UsuariosAdmin.vue",
+        "start": 163,
+        "end": 170,
+        "startLoc": {
+          "line": 163,
+          "column": 105,
+          "position": 2017
+        },
+        "endLoc": {
+          "line": 170,
+          "column": 11,
+          "position": 2090
+        }
+      }
+    },
+    {
+      "format": "css",
+      "lines": 21,
+      "fragment": "script setup>\n// \"¿Olvidaste tu contraseña?\": pide el correo y la API envía un enlace que caduca.\nimport { ref } from 'vue'\nimport authService from '@/services/authService'\nimport { REGEX_EMAIL } from '@/utils/formato'\n\nconst email = ref('')\nconst error = ref('')\nconst enviado = ref('')\nconst enviando = ref(false)\n\nasync function env",
+      "tokens": 143,
+      "firstFile": {
+        "name": "src\\views\\RecuperarView.vue",
+        "start": 56,
+        "end": 76,
+        "startLoc": {
+          "line": 56,
+          "column": 1,
+          "position": 344
+        },
+        "endLoc": {
+          "line": 76,
+          "column": 18,
+          "position": 487
+        }
+      },
+      "secondFile": {
+        "name": "src\\views\\RestablecerView.vue",
+        "start": 74,
+        "end": 94,
+        "startLoc": {
+          "line": 74,
+          "column": 1,
+          "position": 576
+        },
+        "endLoc": {
+          "line": 94,
+          "column": 8,
+          "position": 719
+        }
+      }
+    },
+    {
+      "format": "css",
+      "lines": 12,
+      "fragment": "computed(() => route.query.nuevo === '1')\n\nconst TEXTO_PAGO = { pendiente: 'en proceso', aprobado: 'aprobado', rechazado: 'rechazado', anulado: 'anulado', error: 'con error' }\nconst ICONO_PAGO = { pendiente: 'fa-hourglass-half', aprobado: 'fa-circle-check', rechazado: ",
+      "tokens": 83,
+      "firstFile": {
+        "name": "src\\views\\MiPedidoView.vue",
+        "start": 129,
+        "end": 140,
+        "startLoc": {
+          "line": 129,
+          "column": 16,
+          "position": 1272
+        },
+        "endLoc": {
+          "line": 140,
+          "column": 12,
+          "position": 1355
+        }
+      },
+      "secondFile": {
+        "name": "src\\views\\panel\\PedidoAdmin.vue",
+        "start": 132,
+        "end": 143,
+        "startLoc": {
+          "line": 132,
+          "column": 17,
+          "position": 1110
+        },
+        "endLoc": {
+          "line": 143,
+          "column": 20,
+          "position": 1193
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 7,
+      "fragment": "es cuando ya fue entregado.\nimport { computed, ref, watch } from 'vue'\nimport { useRoute } from 'vue-router'\nimport BotonPagoWompi from '@/components/BotonPagoWompi.vue'\nimport DetallePedido from '@/components/DetallePedido.vue'\nimport DevolucionesPedido",
+      "tokens": 88,
+      "firstFile": {
+        "name": "src\\views\\MiPedidoView.vue",
+        "start": 57,
+        "end": 63,
+        "startLoc": {
+          "line": 57,
+          "column": 87,
+          "position": 637
+        },
+        "endLoc": {
+          "line": 63,
+          "column": 42,
+          "position": 725
+        }
+      },
+      "secondFile": {
+        "name": "src\\views\\panel\\PedidoAdmin.vue",
+        "start": 62,
+        "end": 68,
+        "startLoc": {
+          "line": 62,
+          "column": 10,
+          "position": 581
+        },
+        "endLoc": {
+          "line": 68,
+          "column": 48,
+          "position": 669
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 7,
+      "fragment": "edido.value.id)\n    pedido.value = respuesta.data\n    aviso.value = { tipo: 'exito', texto: respuesta.mensaje }\n  } catch (e) {\n    aviso.value = { tipo: 'error', texto: e.errores?.estado ?? e.m",
+      "tokens": 85,
+      "firstFile": {
+        "name": "src\\views\\MiPedidoView.vue",
+        "start": 46,
+        "end": 52,
+        "startLoc": {
+          "line": 46,
+          "column": 73,
+          "position": 511
+        },
+        "endLoc": {
+          "line": 52,
+          "column": 2,
+          "position": 596
+        }
+      },
+      "secondFile": {
+        "name": "src\\views\\panel\\PedidoAdmin.vue",
+        "start": 44,
+        "end": 49,
+        "startLoc": {
+          "line": 44,
+          "column": 80,
+          "position": 402
+        },
+        "endLoc": {
+          "line": 49,
+          "column": 12,
+          "position": 487
+        }
+      }
+    },
+    {
+      "format": "css",
+      "lines": 14,
+      "fragment": " target=\"_blank\" rel=\"noopener\" aria-label=\"X\"><i class=\"fa-brands fa-x-twitter\"></i></a>\n          <a href=\"https://www.facebook.com/share/1AiU6GN67E/\" target=\"_blank\" rel=\"noopener\" aria-label=\"Facebook\"><i class=\"fa-brands fa-facebook-f\"></i></a>\n          <a href=\"https://ww",
+      "tokens": 113,
+      "firstFile": {
+        "name": "src\\views\\ContactoView.vue",
+        "start": 688,
+        "end": 701,
+        "startLoc": {
+          "line": 688,
+          "column": 14,
+          "position": 4984
+        },
+        "endLoc": {
+          "line": 701,
+          "column": 8,
+          "position": 5097
+        }
+      },
+      "secondFile": {
+        "name": "src\\views\\LoginView.vue",
+        "start": 673,
+        "end": 686,
+        "startLoc": {
+          "line": 673,
+          "column": 12,
+          "position": 5484
+        },
+        "endLoc": {
+          "line": 686,
+          "column": 8,
+          "position": 5597
+        }
+      }
+    },
+    {
+      "format": "css",
+      "lines": 17,
+      "fragment": "agen } from '@/services/api'\nimport { useAuthStore } from '@/stores/auth'\nimport { useCarritoStore } from '@/stores/carrito'\nimport { REGEX_TELEFONO, formatearPrecio } from '@/utils/formato'\n\nconst auth = use",
+      "tokens": 93,
+      "firstFile": {
+        "name": "src\\views\\CheckoutView.vue",
+        "start": 231,
+        "end": 247,
+        "startLoc": {
+          "line": 231,
+          "column": 56,
+          "position": 2960
+        },
+        "endLoc": {
+          "line": 247,
+          "column": 11,
+          "position": 3053
+        }
+      },
+      "secondFile": {
+        "name": "src\\views\\MiCuentaView.vue",
+        "start": 138,
+        "end": 154,
+        "startLoc": {
+          "line": 138,
+          "column": 61,
+          "position": 1847
+        },
+        "endLoc": {
+          "line": 154,
+          "column": 16,
+          "position": 1940
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 7,
+      "fragment": "turn fotos.length === 3\n    ? fotos\n    : [\n        { src: imagenAdidas, alt: 'Adidas Adi2000' },\n        { src: celular, alt: 'Perfil de Instagram de la tienda' },\n        { src: imagenPuma, alt: 'Puma x Rocket League' },\n      ]\n})\n\nconst porcentaje = (p) => Math.round((1 - p.preci",
+      "tokens": 82,
+      "firstFile": {
+        "name": "src\\components\\HeroCarrusel.vue",
+        "start": 161,
+        "end": 167,
+        "startLoc": {
+          "line": 161,
+          "column": 29,
+          "position": 1797
+        },
+        "endLoc": {
+          "line": 167,
+          "column": 35,
+          "position": 1879
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\layout\\AppFooter.vue",
+        "start": 27,
+        "end": 33,
+        "startLoc": {
+          "line": 27,
+          "column": 14,
+          "position": 246
+        },
+        "endLoc": {
+          "line": 33,
+          "column": 33,
+          "position": 328
+        }
+      }
+    },
+    {
+      "format": "css",
+      "lines": 13,
+      "fragment": "on = await pagoService.abrirWidget(datos)\n    if (transaccion?.id) {\n      router.push({ name: 'pago-resultado', query: { id: transaccion.id, pedido: props.pedidoId } })\n    }\n  } catch (e) {\n    error.value = e.message\n  } finally {\n    abriendo.value = false\n  ",
+      "tokens": 106,
+      "firstFile": {
+        "name": "src\\components\\BotonPagoWompi.vue",
+        "start": 101,
+        "end": 113,
+        "startLoc": {
+          "line": 101,
+          "column": 14,
+          "position": 768
+        },
+        "endLoc": {
+          "line": 113,
+          "column": 7,
+          "position": 874
+        }
+      },
+      "secondFile": {
+        "name": "src\\views\\LoginView.vue",
+        "start": 674,
+        "end": 686,
+        "startLoc": {
+          "line": 674,
+          "column": 14,
+          "position": 5491
+        },
+        "endLoc": {
+          "line": 686,
+          "column": 8,
+          "position": 5597
+        }
+      }
+    },
+    {
+      "format": "php",
+      "lines": 7,
+      "fragment": "],\n            'sku' => $variante['sku'],\n            'stock' => (int) $variante['stock'],\n            'activo' => (bool) $variante['activo'],\n            'talla' => ['id' => (int) $variante['talla_id'], 'valor' => self::formatearTalla($variante['talla_valor'])],\n            'color' => ['id' => (int) $variante['color_id'], 'nombre' => $variante['color_nombre'], 'hex' => $variante['color_hex']],\n        ],",
+      "tokens": 133,
+      "firstFile": {
+        "name": "..\\backend\\src\\Models\\Producto.php",
+        "start": 154,
+        "end": 160,
+        "startLoc": {
+          "line": 154,
+          "column": 41,
+          "position": 1045
+        },
+        "endLoc": {
+          "line": 160,
+          "column": 11,
+          "position": 1178
+        }
+      },
+      "secondFile": {
+        "name": "..\\backend\\src\\Models\\Variante.php",
+        "start": 39,
+        "end": 45,
+        "startLoc": {
+          "line": 39,
+          "column": 59,
+          "position": 186
+        },
+        "endLoc": {
+          "line": 45,
+          "column": 11,
+          "position": 319
+        }
+      }
+    },
+    {
+      "format": "php",
+      "lines": 10,
+      "fragment": "(Request $request): void\n    {\n        $variantes = new Variante();\n        $variante = $variantes->buscarPorId($this->idDeRuta($request));\n        if ($variante === null) {\n            throw HttpException::noEncontrado('La variante no existe.');\n        }\n\n        $datos = Validator::validar($request->cuerpo(), [\n            'tipo'",
+      "tokens": 92,
+      "firstFile": {
+        "name": "..\\backend\\src\\Controllers\\VarianteController.php",
+        "start": 106,
+        "end": 115,
+        "startLoc": {
+          "line": 106,
+          "column": 33,
+          "position": 944
+        },
+        "endLoc": {
+          "line": 115,
+          "column": 19,
+          "position": 1036
+        }
+      },
+      "secondFile": {
+        "name": "..\\backend\\src\\Controllers\\VarianteController.php",
+        "start": 80,
+        "end": 89,
+        "startLoc": {
+          "line": 80,
+          "column": 31,
+          "position": 723
+        },
+        "endLoc": {
+          "line": 89,
+          "column": 18,
+          "position": 815
+        }
+      }
+    },
+    {
+      "format": "php",
+      "lines": 10,
+      "fragment": ",\n            'telefono' => 'telefono',\n        ]);\n\n        $usuarios = new Usuario();\n        if ($usuarios->existeEmail($datos['email'])) {\n            throw HttpException::validacion(['email' => 'Ya existe una cuenta con este correo.']);\n        }\n\n        $id = $usuarios->crear($datos['nombre'], $datos['email'], $datos['password'], 'cliente'",
+      "tokens": 97,
+      "firstFile": {
+        "name": "..\\backend\\src\\Controllers\\AuthController.php",
+        "start": 75,
+        "end": 84,
+        "startLoc": {
+          "line": 75,
+          "column": 57,
+          "position": 626
+        },
+        "endLoc": {
+          "line": 84,
+          "column": 96,
+          "position": 723
+        }
+      },
+      "secondFile": {
+        "name": "..\\backend\\src\\Controllers\\UsuarioController.php",
+        "start": 43,
+        "end": 52,
+        "startLoc": {
+          "line": 43,
+          "column": 68,
+          "position": 465
+        },
+        "endLoc": {
+          "line": 52,
+          "column": 93,
+          "position": 562
+        }
+      }
+    }
+  ]
+}

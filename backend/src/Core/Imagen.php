@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Core;
 
+use finfo;
+use GdImage;
 use RuntimeException;
 
 /**
@@ -17,6 +19,8 @@ use RuntimeException;
 final class Imagen
 {
     public const MAX_LADO = 1200;
+    /** Formatos aceptados (tipo MIME real => extensión con la que se guarda). */
+    public const EXTENSIONES = ['image/jpeg' => 'jpg', 'image/png' => 'png', 'image/webp' => 'webp'];
     private const CALIDAD = 82;
     /** Límite de píxeles para no agotar la memoria con imágenes gigantes (~40 megapíxeles). */
     private const MAX_PIXELES = 40_000_000;
@@ -93,12 +97,12 @@ final class Imagen
     /** Tipo real de la imagen según su contenido (no según la extensión del nombre). */
     public static function tipoReal(string $archivo): ?string
     {
-        $tipo = (new \finfo(FILEINFO_MIME_TYPE))->file($archivo);
-        return in_array($tipo, ['image/jpeg', 'image/png', 'image/webp'], true) ? $tipo : null;
+        $tipo = (new finfo(FILEINFO_MIME_TYPE))->file($archivo);
+        return isset(self::EXTENSIONES[$tipo]) ? $tipo : null;
     }
 
     /** Las fotos de celular guardan la rotación en EXIF; aquí se aplica de verdad. */
-    private static function corregirOrientacion(\GdImage $imagen, string $archivo): \GdImage
+    private static function corregirOrientacion(GdImage $imagen, string $archivo): GdImage
     {
         if (!function_exists('exif_read_data')) {
             return $imagen;

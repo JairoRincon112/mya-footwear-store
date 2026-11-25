@@ -6,7 +6,7 @@ namespace App\Controllers;
 
 use App\Config\Config;
 use App\Core\HttpException;
-use App\Core\Imagen;
+use App\Core\ImagenSubida;
 use App\Core\Request;
 use App\Core\Response;
 use App\Core\Texto;
@@ -16,16 +16,12 @@ use App\Models\Marca;
 use App\Models\Pedido;
 use App\Models\Producto;
 use App\Models\ProductoImagen;
-use finfo;
 
 /**
  * Catálogo de productos (público) y su administración (solo admin).
  */
 final class ProductoController extends Controller
 {
-    /** Tipos de imagen aceptados (se verifica el contenido real del archivo, no su extensión). */
-    private const TIPOS_IMAGEN = ['image/jpeg' => 'jpg', 'image/png' => 'png', 'image/webp' => 'webp'];
-
     /** Carpeta pública donde se guardan las imágenes subidas por el administrador. */
     private const CARPETA_SUBIDAS = 'uploads/productos';
 
@@ -135,49 +131,30 @@ final class ProductoController extends Controller
             throw HttpException::noEncontrado('El producto no existe.');
         }
 
-        $datos = Validator::validar($request->cuerpo(), ['color_id' => 'entero']);
-        $colorId = $datos['color_id'] ?? null;
-        if ($colorId !== null && (new Color())->buscarPorId($colorId) === null) {
-            throw HttpException::validacion(['color_id' => 'El color no existe.']);
-        }
+        $colorId = $this->colorDeLaImagen($request);
 
-        $archivo = $request->archivo('imagen');
-        if ($archivo === null || $archivo['error'] === UPLOAD_ERR_NO_FILE) {
-            throw HttpException::validacion(['imagen' => 'Selecciona una imagen.']);
-        }
-        if ($archivo['error'] === UPLOAD_ERR_INI_SIZE || $archivo['error'] === UPLOAD_ERR_FORM_SIZE) {
-            throw HttpException::validacion(['imagen' => 'La imagen es demasiado grande.']);
-        }
-        if ($archivo['error'] !== UPLOAD_ERR_OK || !is_uploaded_file($archivo['tmp_name'])) {
-            throw HttpException::validacion(['imagen' => 'No se pudo recibir la imagen. Intenta de nuevo.']);
-        }
-
-        $maximoMb = Config::entero('UPLOAD_MAX_MB', 5);
-        if ($archivo['size'] > $maximoMb * 1024 * 1024) {
-            throw HttpException::validacion(['imagen' => "La imagen no puede pesar más de $maximoMb MB."]);
-        }
-
-        // Se revisa el contenido real del archivo para evitar subir scripts disfrazados de imagen.
-        $tipo = (new finfo(FILEINFO_MIME_TYPE))->file($archivo['tmp_name']);
-        $extension = self::TIPOS_IMAGEN[$tipo] ?? null;
-        if ($extension === null) {
-            throw HttpException::validacion(['imagen' => 'Solo se permiten imágenes JPG, PNG o WEBP.']);
-        }
-
-        $carpeta = self::carpetaPublica() . '/' . self::CARPETA_SUBIDAS;
-        if (!is_dir($carpeta) && !mkdir($carpeta, 0775, true) && !is_dir($carpeta)) {
-            throw new \RuntimeException('No se pudo crear la carpeta de imágenes.');
-        }
-
-        // Nombre aleatorio: no se usa el nombre original del archivo.
-        // La imagen se reduce (máx. 1200 px) y se recomprime antes de guardarla.
-        $nombreArchivo = bin2hex(random_bytes(16)) . '.' . $extension;
-        Imagen::optimizar($archivo['tmp_name'], "$carpeta/$nombreArchivo", $tipo);
+        // ImagenSubida revisa el archivo (tamaño y tipo real) y lo guarda reducido y recomprimido
+        // con un nombre aleatorio: nunca se usa el nombre original.
+        $nombreArchivo = ImagenSubida::guardar(
+            $request->archivo('imagen'),
+            self::carpetaPublica() . '/' . self::CARPETA_SUBIDAS,
+            Config::entero('UPLOAD_MAX_MB', 5)
+        );
 
         $imagenes = new ProductoImagen();
         $id = $imagenes->crear($productoId, self::CARPETA_SUBIDAS . "/$nombreArchivo", $colorId);
 
         Response::creado($imagenes->buscarPorId($id), 'Imagen agregada.');
+    }
+
+    /** Color opcional al que pertenece la foto (las fotos sin color son de todo el producto). */
+    private function colorDeLaImagen(Request $request): ?int
+    {
+        $colorId = Validator::validar($request->cuerpo(), ['color_id' => 'entero'])['color_id'] ?? null;
+        if ($colorId !== null && (new Color())->buscarPorId($colorId) === null) {
+            throw HttpException::validacion(['color_id' => 'El color no existe.']);
+        }
+        return $colorId;
     }
 
     /** DELETE /api/imagenes/{id} */

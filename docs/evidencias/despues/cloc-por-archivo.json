@@ -1,11 +1,11 @@
 {"header" : {
   "cloc_url"           : "github.com/AlDanial/cloc",
   "cloc_version"       : "1.96",
-  "elapsed_seconds"    : 0.413784980773926,
-  "n_files"            : 111,
-  "n_lines"            : 16566,
-  "files_per_second"   : 268.255265796236,
-  "lines_per_second"   : 40035.2858845086},
+  "elapsed_seconds"    : 0.52648401260376,
+  "n_files"            : 112,
+  "n_lines"            : 16576,
+  "files_per_second"   : 212.732005756636,
+  "lines_per_second"   : 31484.3368519822},
 "src/views/ContactoView.vue" :{
   "blank": 115,
   "comment": 35,
@@ -22,9 +22,9 @@
   "code": 634,
   "language": "Vuejs Component"},
 "src/views/panel/ProductoEditor.vue" :{
-  "blank": 67,
+  "blank": 64,
   "comment": 17,
-  "code": 601,
+  "code": 588,
   "language": "Vuejs Component"},
 "src/components/BuscadorCatalogo.vue" :{
   "blank": 51,
@@ -91,16 +91,16 @@
   "comment": 11,
   "code": 233,
   "language": "Vuejs Component"},
-"src/views/panel/InventarioAdmin.vue" :{
-  "blank": 26,
-  "comment": 2,
-  "code": 227,
-  "language": "Vuejs Component"},
 "../backend/src/Models/Producto.php" :{
   "blank": 31,
   "comment": 33,
   "code": 221,
   "language": "PHP"},
+"src/views/panel/InventarioAdmin.vue" :{
+  "blank": 25,
+  "comment": 3,
+  "code": 216,
+  "language": "Vuejs Component"},
 "src/views/panel/UsuariosAdmin.vue" :{
   "blank": 24,
   "comment": 1,
@@ -471,6 +471,11 @@
   "comment": 4,
   "code": 26,
   "language": "PHP"},
+"src/composables/useAjusteStock.js" :{
+  "blank": 5,
+  "comment": 7,
+  "code": 25,
+  "language": "JavaScript"},
 "../backend/src/Controllers/Controller.php" :{
   "blank": 6,
   "comment": 13,
@@ -562,7 +567,7 @@
   "code": 2,
   "language": "JavaScript"},
 "SUM": {
-  "blank": 2093,
-  "comment": 1146,
-  "code": 13327,
-  "nFiles": 111} }
+  "blank": 2094,
+  "comment": 1154,
+  "code": 13328,
+  "nFiles": 112} }

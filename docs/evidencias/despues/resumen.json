@@ -1,15 +1,15 @@
 {
   "etapa": "despues",
-  "fecha": "2026-11-25T03:53:59.129Z",
-  "commit": "1bf2796",
-  "lineas_codigo": 13327,
-  "archivos": 111,
+  "fecha": "2026-11-25T04:09:42.141Z",
+  "commit": "4382a5a",
+  "lineas_codigo": 13328,
+  "archivos": 112,
   "lenguajes": {
     "Vuejs Component": {
       "archivos": 42,
-      "codigo": 8603,
-      "comentarios": 261,
-      "blancos": 1184
+      "codigo": 8579,
+      "comentarios": 262,
+      "blancos": 1180
     },
     "PHP": {
       "archivos": 50,
@@ -18,10 +18,10 @@
       "blancos": 718
     },
     "JavaScript": {
-      "archivos": 18,
-      "codigo": 650,
-      "comentarios": 113,
-      "blancos": 131
+      "archivos": 19,
+      "codigo": 675,
+      "comentarios": 120,
+      "blancos": 136
     },
     "CSS": {
       "archivos": 1,
@@ -81,9 +81,9 @@
       ]
     },
     "javascript": {
-      "funciones": 394,
-      "total": 882,
-      "promedio": 2.24,
+      "funciones": 398,
+      "total": 884,
+      "promedio": 2.22,
       "maxima": 15,
       "mayores_a_10": 3,
       "top": [
@@ -131,10 +131,10 @@
     }
   },
   "duplicidad": {
-    "clones": 21,
-    "lineas_duplicadas": 185,
-    "lineas_analizadas": 16340,
-    "porcentaje": 1.13
+    "clones": 20,
+    "lineas_duplicadas": 174,
+    "lineas_analizadas": 16350,
+    "porcentaje": 1.06
   },
   "problemas": {
     "calidad": 20,
@@ -156,8 +156,8 @@
     "ocultar_errores_php": 6
   },
   "deuda_tecnica": {
-    "minutos": 1105,
-    "horas": 18.4,
+    "minutos": 1095,
+    "horas": 18.3,
     "modelo_minutos": {
       "phpstan": 15,
       "complejidad": 30,
@@ -178,7 +178,7 @@
       "fallidas": 0
     },
     "frontend": {
-      "aprobadas": 24,
+      "aprobadas": 26,
       "fallidas": 0
     }
   }

@@ -19,16 +19,12 @@ Clone found (markup):
    src\views\panel\UsuariosAdmin.vue [158:19 - 165:11]
 
 Clone found (markup):
- - src\views\panel\InventarioAdmin.vue [80:243 - 86:79] (6 lines, 62 tokens)
+ - src\views\panel\InventarioAdmin.vue [69:243 - 75:79] (6 lines, 62 tokens)
    src\views\panel\UsuariosAdmin.vue [145:217 - 151:80]
 
 Clone found (markup):
- - src\views\panel\InventarioAdmin.vue [86:79 - 97:27] (11 lines, 107 tokens)
+ - src\views\panel\InventarioAdmin.vue [75:79 - 86:27] (11 lines, 107 tokens)
    src\views\panel\ProductosAdmin.vue [61:84 - 72:21]
-
-Clone found (javascript):
- - src\views\panel\InventarioAdmin.vue [32:3 - 43:10] (11 lines, 132 tokens)
-   src\views\panel\ProductoEditor.vue [256:3 - 267:19]
 
 Clone found (markup):
  - src\views\panel\DevolucionesAdmin.vue [54:122 - 60:67] (6 lines, 105 tokens)
@@ -89,14 +85,14 @@ Clone found (php):
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ markup     │ 42             │ 2283        │ 28502        │ 12           │ 84 (3.68%)       │ 982 (3.45%)       │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ javascript │ 58             │ 3110        │ 33937        │ 2            │ 17 (0.55%)       │ 217 (0.64%)       │
+│ javascript │ 59             │ 3120        │ 33930        │ 1            │ 6 (0.19%)        │ 85 (0.25%)        │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ php        │ 50             │ 5233        │ 43798        │ 2            │ 12 (0.23%)       │ 207 (0.47%)       │
 ├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:     │ 191            │ 16340       │ 141792       │ 21           │ 185 (1.13%)      │ 1944 (1.37%)      │
+│ Total:     │ 192            │ 16350       │ 141785       │ 20           │ 174 (1.06%)      │ 1812 (1.28%)      │
 └────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 21 clones.
-time: 1.541s
+Found 20 clones.
+time: 1.982s
 
 💡 Auto-refactor with AI: npx skills add kucherenko/jscpd
 🎩 New: Gangsta Agents — discipline your AI coding → gangsta.page

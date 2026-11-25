@@ -16,9 +16,9 @@ C:\Users\Usuario\Desktop\MyA FOOTWEAR STORE\frontend\src\views\panel\CuponesAdmi
   74:1  warning  Function 'validar' has a complexity of 15. Maximum allowed is 10  complexity
 
 C:\Users\Usuario\Desktop\MyA FOOTWEAR STORE\frontend\src\views\panel\ProductoEditor.vue
-  107:1  warning  Function 'validarFormulario' has a complexity of 15. Maximum allowed is 10  complexity
-  126:1  warning  Async function 'guardar' has a complexity of 11. Maximum allowed is 10      complexity
-  561:1  warning  File has too many lines (605). Maximum allowed is 500                       max-lines
+  112:1  warning  Function 'validarFormulario' has a complexity of 15. Maximum allowed is 10  complexity
+  131:1  warning  Async function 'guardar' has a complexity of 11. Maximum allowed is 10      complexity
+  560:1  warning  File has too many lines (592). Maximum allowed is 500                       max-lines
 
 ✖ 9 problems (0 errors, 9 warnings)
 

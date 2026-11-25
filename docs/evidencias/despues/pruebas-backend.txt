@@ -5,7 +5,7 @@ Configuration: C:\Users\Usuario\Desktop\MyA FOOTWEAR STORE\backend\phpunit.xml
 
 ...................................................               51 / 51 (100%)
 
-Time: 00:01.973, Memory: 10.00 MB
+Time: 00:02.773, Memory: 10.00 MB
 
 Cotizacion Cupon (Tests\Integracion\CotizacionCupon)
  ✔ Sin cupon cotiza sin descuento

@@ -1,6 +1,6 @@
 {
   "statistics": {
-    "detectionDate": "2026-11-25T03:53:23.797Z",
+    "detectionDate": "2026-11-25T04:08:51.281Z",
     "formats": {
       "css": {
         "sources": {
@@ -1069,14 +1069,14 @@
             "newClones": 0
           },
           "src/views/panel/ProductoEditor.vue": {
-            "lines": 273,
-            "tokens": 3194,
+            "lines": 257,
+            "tokens": 3008,
             "sources": 1,
-            "clones": 1,
-            "duplicatedLines": 11,
-            "duplicatedTokens": 132,
-            "percentage": 4.03,
-            "percentageTokens": 4.13,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
             "newDuplicatedLines": 0,
             "newClones": 0
           },
@@ -1141,14 +1141,14 @@
             "newClones": 0
           },
           "src/views/panel/InventarioAdmin.vue": {
-            "lines": 67,
-            "tokens": 781,
+            "lines": 56,
+            "tokens": 606,
             "sources": 1,
-            "clones": 1,
-            "duplicatedLines": 11,
-            "duplicatedTokens": 132,
-            "percentage": 16.42,
-            "percentageTokens": 16.9,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
             "newDuplicatedLines": 0,
             "newClones": 0
           },
@@ -1536,6 +1536,18 @@
             "newDuplicatedLines": 0,
             "newClones": 0
           },
+          "src/composables/useAjusteStock.js": {
+            "lines": 37,
+            "tokens": 354,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
           "src/components/ProductoCard.vue": {
             "lines": 8,
             "tokens": 50,
@@ -1730,14 +1742,14 @@
           }
         },
         "total": {
-          "lines": 3110,
-          "tokens": 33937,
-          "sources": 58,
-          "clones": 2,
-          "duplicatedLines": 17,
-          "duplicatedTokens": 217,
-          "percentage": 0.55,
-          "percentageTokens": 0.64,
+          "lines": 3120,
+          "tokens": 33930,
+          "sources": 59,
+          "clones": 1,
+          "duplicatedLines": 6,
+          "duplicatedTokens": 85,
+          "percentage": 0.19,
+          "percentageTokens": 0.25,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
@@ -2360,14 +2372,14 @@
       }
     },
     "total": {
-      "lines": 16340,
-      "tokens": 141792,
-      "sources": 191,
-      "clones": 21,
-      "duplicatedLines": 185,
-      "duplicatedTokens": 1944,
-      "percentage": 1.13,
-      "percentageTokens": 1.37,
+      "lines": 16350,
+      "tokens": 141785,
+      "sources": 192,
+      "clones": 20,
+      "duplicatedLines": 174,
+      "duplicatedTokens": 1812,
+      "percentage": 1.06,
+      "percentageTokens": 1.28,
       "newDuplicatedLines": 0,
       "newClones": 0
     }
@@ -2556,21 +2568,21 @@
     {
       "format": "markup",
       "lines": 7,
-      "fragment": "oute()\nconst catalogo = useCatalogoStore()\n\nconst { filtros, resultado, cargando, error, cargar, irAPagina } = useListadoPanel(\n  (f) => pedidoService.inventario({ ...f, bajo_stock: f.bajo_stock ? 1 : '' }),\n",
+      "fragment": "resultado, cargando, error, cargar, irAPagina } = useListadoPanel(\n  (f) => pedidoService.inventario({ ...f, bajo_stock: f.bajo_stock ? 1 : '' }),\n  { marca: '', bajo_stock: route.query.bajo_stock === '1' },\n",
       "tokens": 62,
       "firstFile": {
         "name": "src\\views\\panel\\InventarioAdmin.vue",
-        "start": 80,
-        "end": 86,
+        "start": 69,
+        "end": 75,
         "startLoc": {
-          "line": 80,
+          "line": 69,
           "column": 243,
-          "position": 970
+          "position": 795
         },
         "endLoc": {
-          "line": 86,
+          "line": 75,
           "column": 79,
-          "position": 1032
+          "position": 857
         }
       },
       "secondFile": {
@@ -2592,21 +2604,21 @@
     {
       "format": "markup",
       "lines": 12,
-      "fragment": "  { marca: '', bajo_stock: route.query.bajo_stock === '1' },\n  { umbral: 3 },\n)\nconst aviso = ref({ tipo: '', texto: '' })\n\nconst ajuste = reactive({ varianteId: null, tipo: 'entrada', cantidad: 1, motivo: '' })\nconst erroresAjuste = ref({})\nconst historial = ref(null) // { variante, movimientos }\n\nconst TIPOS = { entrada: 'Entrada', venta: 'Venta', ajuste: 'Aju",
+      "fragment": "  { umbral: 3 },\n)\nconst aviso = ref({ tipo: '', texto: '' })\n\nconst historial = ref(null) // { variante, movimientos }\n\nconst { ajuste, erroresAjuste, abrirAjuste: abrirFormularioAjuste, guardarAjuste } = useAjusteStock({\n  alGuardar: (respuesta) => {\n    aviso.value = { tipo: 'exito', texto: `${respuesta.data.sku}: stock actualizado a ${respuesta.data.stock}.`",
       "tokens": 107,
       "firstFile": {
         "name": "src\\views\\panel\\InventarioAdmin.vue",
-        "start": 86,
-        "end": 97,
+        "start": 75,
+        "end": 86,
         "startLoc": {
-          "line": 86,
+          "line": 75,
           "column": 79,
-          "position": 1033
+          "position": 858
         },
         "endLoc": {
-          "line": 97,
+          "line": 86,
           "column": 27,
-          "position": 1140
+          "position": 965
         }
       },
       "secondFile": {
@@ -2622,42 +2634,6 @@
           "line": 72,
           "column": 21,
           "position": 853
-        }
-      }
-    },
-    {
-      "format": "javascript",
-      "lines": 12,
-      "fragment": "alue = null\n  Object.assign(ajuste, { varianteId: variante.id, tipo: 'entrada', cantidad: 1, motivo: '' })\n  erroresAjuste.value = {}\n}\n\nasync function guardarAjuste() {\n  const { errores, datos } = validarAjusteStock(ajuste)\n  erroresAjuste.value = errores\n  if (Object.keys(errores).length) return\n\n  try {\n    const respuesta = await productoService.ajustarStock(ajuste.varianteId, da",
-      "tokens": 132,
-      "firstFile": {
-        "name": "src\\views\\panel\\InventarioAdmin.vue",
-        "start": 32,
-        "end": 43,
-        "startLoc": {
-          "line": 32,
-          "column": 3,
-          "position": 377
-        },
-        "endLoc": {
-          "line": 43,
-          "column": 10,
-          "position": 509
-        }
-      },
-      "secondFile": {
-        "name": "src\\views\\panel\\ProductoEditor.vue",
-        "start": 256,
-        "end": 267,
-        "startLoc": {
-          "line": 256,
-          "column": 3,
-          "position": 2947
-        },
-        "endLoc": {
-          "line": 267,
-          "column": 19,
-          "position": 3079
         }
       }
     },

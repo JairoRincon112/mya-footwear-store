@@ -8,5 +8,5 @@ Generic.Files.LineLength.TooLong                                 70
 A TOTAL OF 70 SNIFF VIOLATIONS WERE FOUND IN 1 SOURCE
 ----------------------------------------------------------------------
 
-Time: 1.06 secs; Memory: 12MB
+Time: 1.84 secs; Memory: 12MB
 

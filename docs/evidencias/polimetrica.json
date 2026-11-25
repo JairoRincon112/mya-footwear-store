@@ -133,10 +133,10 @@
     {
       "nombre": "InventarioAdmin.vue",
       "existe": true,
-      "lineas": 227,
-      "metodos": 6,
+      "lineas": 216,
+      "metodos": 7,
       "complejidad_maxima": 4,
-      "complejidad_total": 13
+      "complejidad_total": 11
     },
     {
       "nombre": "useListadoPanel.js",

@@ -11,6 +11,7 @@ use App\Controllers\AuthController;
 use App\Controllers\CatalogoController;
 use App\Controllers\ContactoController;
 use App\Controllers\CuponController;
+use App\Controllers\DevolucionController;
 use App\Controllers\InventarioController;
 use App\Controllers\PagoController;
 use App\Controllers\PedidoController;
@@ -91,6 +92,11 @@ return static function (Router $router): void {
     $router->post('/api/cupones', [CuponController::class, 'crear'], $soloAdmin);
     $router->put('/api/cupones/{id}', [CuponController::class, 'actualizar'], $soloAdmin);
     $router->patch('/api/cupones/{id}/activo', [CuponController::class, 'cambiarActivo'], $soloAdmin);
+
+    // ---------------- Devoluciones ----------------
+    $router->post('/api/pedidos/{id}/devoluciones', [DevolucionController::class, 'solicitar'], $soloCliente);
+    $router->get('/api/devoluciones', [DevolucionController::class, 'index'], $personal);
+    $router->patch('/api/devoluciones/{id}/estado', [DevolucionController::class, 'cambiarEstado'], $personal);
 
     // ---------------- Pagos en línea (Wompi) ----------------
     $router->post('/api/pedidos/{id}/pago', [PagoController::class, 'iniciar'], $soloCliente);

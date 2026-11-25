@@ -160,6 +160,21 @@ final class Variante extends Model
     }
 
     /**
+     * Reingresa al inventario las unidades de una devolución recibida en la tienda
+     * y registra el movimiento "devolucion" con el número de la devolución.
+     */
+    public function reingresarPorDevolucion(int $id, int $cantidad, int $usuarioId, int $pedidoId, int $devolucionId): int
+    {
+        return Database::transaccion(function () use ($id, $cantidad, $usuarioId, $pedidoId, $devolucionId): int {
+            $nuevoStock = $this->stockBloqueado($id) + $cantidad;
+            $this->guardarStock($id, $nuevoStock);
+            $this->registrarMovimiento($id, $usuarioId, 'devolucion', $cantidad, $nuevoStock, "Devolución #$devolucionId del pedido #$pedidoId", $pedidoId);
+
+            return $nuevoStock;
+        });
+    }
+
+    /**
      * Reglas de un movimiento manual: la cantidad no puede ser cero, solo el tipo "ajuste"
      * puede restar unidades y todo ajuste debe explicar su motivo (queda en el historial).
      */

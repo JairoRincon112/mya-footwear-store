@@ -77,7 +77,8 @@ final class Reporte extends Model
         $conteos = $this->obtenerUno(
             "SELECT (SELECT COUNT(*) FROM productos WHERE activo = 1) AS productos,
                     (SELECT COUNT(*) FROM usuarios WHERE rol = 'cliente') AS clientes,
-                    (SELECT COUNT(*) FROM mensajes_contacto WHERE leido = 0) AS mensajes_no_leidos"
+                    (SELECT COUNT(*) FROM mensajes_contacto WHERE leido = 0) AS mensajes_no_leidos,
+                    (SELECT COUNT(*) FROM devoluciones WHERE estado IN ('solicitada', 'aprobada')) AS devoluciones_por_revisar"
         );
 
         return [
@@ -99,6 +100,7 @@ final class Reporte extends Model
             'productos_activos' => (int) $conteos['productos'],
             'clientes' => (int) $conteos['clientes'],
             'mensajes_no_leidos' => (int) $conteos['mensajes_no_leidos'],
+            'devoluciones_por_revisar' => (int) $conteos['devoluciones_por_revisar'],
         ];
     }
 }

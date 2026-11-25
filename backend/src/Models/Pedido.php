@@ -317,6 +317,8 @@ final class Pedido extends Model
             'detalle' => $detalle,
             // Último intento de pago en línea (Wompi), o null si nunca se intentó
             'pago' => (new Pago())->ultimoDePedido((int) $pedido['id']),
+            'devoluciones' => (new Devolucion())->dePedido((int) $pedido['id']),
+            'devolucion_dias_plazo' => Devolucion::DIAS_PLAZO,
         ];
     }
 
